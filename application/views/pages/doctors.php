@@ -1,12 +1,12 @@
 <section class="section admin-header">
     <div class="container">
-        <h1>Facturas</h1>
+        <h1>Doctores</h1>
 
         <div class="row">
             <nav>
                 <a href="/">Inicio</a>
                 <a href="/admin">Dashboard</a>
-                <a href="/admin/facturas">Facturas</a>
+                <a href="/admin/doctores">Doctores</a>
             </nav>
 
             <a href="/logout" class="logout">
@@ -21,9 +21,16 @@
 <section class="section admin">
     <div class="container">
         <div class="row">
-            <form id="invoices-search" class="mio-form search" novalidate></form>
+            <form id="doctors-search" class="mio-form search" novalidate></form>
+
+            <button type="button" id="doctor-create" class="btn primary-btn" aria-label="Crear doctor">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                </svg>
+                <span>Crear doctor</span>
+            </button>
         </div>
 
-        <div id="invoices-table"></div>
+        <div id="doctors-table"></div>
     </div>
 </section>

@@ -1,4 +1,4 @@
-<section class="section blog-header">
+<section class="section admin-header">
     <div class="container">
         <h1>Categorías blog</h1>
 
@@ -23,7 +23,12 @@
         <div class="row">
             <form id="blog-categories-search" class="mio-form search" novalidate></form>
 
-            <button type="button" id="blog-categories-create" class="btn primary-btn" aria-label="Crear categoría">Crear categoría</button>
+            <button type="button" id="blog-categories-create" class="btn primary-btn" aria-label="Crear categoría">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                </svg>
+                <span>Crear categoría</span>
+            </button>
         </div>
 
         <div id="blog-categories-table"></div>

@@ -2,12 +2,15 @@
 
 namespace Models;
 
-class Invoice {
-    private string $table = 'invoices';
-    private array $columns = ['id', 'budget_id', 'number', 'created_at'];
+class Doctor {
+    private string $table = 'doctors';
+    private array $columns = ['id', 'name', 'surname', 'email', 'phone', 'number', 'created_at'];
 
     private ?int $id;
-    private string $budget_id;
+    private string $name;
+    private string $surname;
+    private string $email;
+    private string $phone;
     private string $number;
     private string $created_at;
 
@@ -15,7 +18,10 @@ class Invoice {
 
     public function __construct($args = []) {
         $this->id = $args['id'] ?? null;
-        $this->budget_id = $args['budget_id'] ?? '';
+        $this->name = $args['name'] ?? '';
+        $this->surname = $args['surname'] ?? '';
+        $this->email = $args['email'] ?? '';
+        $this->phone = $args['phone'] ?? '';
         $this->number = $args['number'] ?? '';
         $this->created_at = $args['created_at'] ?? '';
     }
@@ -28,12 +34,36 @@ class Invoice {
         $this->id = $id;
     }
 
-    public function getBudgetId(): string {
-        return $this->budget_id;
+    public function getName(): string {
+        return $this->name;
     }
 
-    public function setBudgetId(string $budget_id): void {
-        $this->budget_id = $budget_id;
+    public function setName(string $name): void {
+        $this->name = $name;
+    }
+
+    public function getSurname(): string {
+        return $this->surname;
+    }
+
+    public function setSurname(string $surname): void {
+        $this->surname = $surname;
+    }
+
+    public function getEmail(): string {
+        return $this->email;
+    }
+
+    public function setEmail(string $email): void {
+        $this->email = $email;
+    }
+
+    public function getPhone(): string {
+        return $this->phone;
+    }
+
+    public function setPhone(string $phone): void {
+        $this->phone = $phone;
     }
 
     public function getNumber(): string {
@@ -82,12 +112,13 @@ class Invoice {
     }
 
     public function validate(): array {
-        if (empty($this->number)) {
-            $this->errors['number'] = 'El número de factura es obligatorio';
+        if (!$this->name) {
+            $this->errors['name'] = 'El nombre es obligatorio';
         }
-        if (empty($this->created_at)) {
-            $this->errors['created_at'] = 'La fecha de creación es obligatoria';
+        if ($this->email && !filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
+            $this->errors['email'] = 'El email no es válido';
         }
+
         return $this->errors;
     }
 }

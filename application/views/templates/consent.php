@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Factura</title>
+    <title>Consentimiento</title>
 
     <style>
         * {
@@ -14,12 +14,12 @@
         }
 
         @page {
-            margin: 80px !important;
+            margin: 60px 80px !important;
         }
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 14px;
+            font-size: 12px;
         }
 
         .row {
@@ -128,8 +128,16 @@
             margin-top: 60px
         }
 
+        .mt-80 {
+            margin-top: 80px
+        }
+
         .mt-100 {
             margin-top: 100px
+        }
+
+        .text-xs {
+            font-size: 13px;
         }
 
         .text-sm {
@@ -263,105 +271,38 @@
     $imageData = base64_encode(file_get_contents($image));
     $src = 'data:image/png;base64,' . $imageData;
 
-    $date = DateTime::createFromFormat('d/m/Y', $data['created_at']);
-    $format = new IntlDateFormatter('es_ES', IntlDateFormatter::FULL, IntlDateFormatter::FULL, 'Europe/Madrid', IntlDateFormatter::GREGORIAN, "d 'de' LLLL 'de' yyyy");
-
-    $discount = false;
-    $subtotal = 0;
-    $total = 0;
-
-    foreach ($data['budget']['budgeteds'] as $budgeted) {
-        if (!$discount && $budgeted['discount'] > 0) {
-            $discount = true;
+    if ($data['consent_id'] !== 1) {
+        if (!empty($data['representative_name']) && !empty($data['representative_nif'])) {
+            $description = str_replace("{intro}", "Yo, " . $data['representative_name'] . " , con DNI " . $data['representative_nif'] . " mayor de edad, en calidad de (representante legal) de " . $data['patient']['name'] . " " . $data['patient']['surname'] . " DECLARO:", $data['consent']['description']);
+        } else {
+            $description = str_replace("{intro}", "Yo, " . $data['patient']['name'] . " " . $data['patient']['surname'] . " (como paciente), con DNI " . $data['patient']['nif'] . ", mayor de edad DECLARO:", $data['consent']['description']);
         }
-        $subtotal += $budgeted['unit_price'];
-        $total += $budgeted['unit_price'] - $budgeted['unit_price'] * $budgeted['discount'] / 100;
+        $description = str_replace("{doctor}", $data['doctor']['name'] . " " . $data['doctor']['surname'], $description);
+        $description = str_replace("{date}", $data['created_at'], $description);
+    } else {
+        $description = $data['consent']['description'];
     }
     ?>
 
-    <div class="row">
-        <h1 class="col-6">
-            <img src="<?php echo $src ?>" alt="Logo">
-        </h1>
-        <h3 class="col-6 text-right uppercase">Factura nº <?php echo $data['number'] ?></h3>
+    <div class="row text-center">
+        <img src="<?php echo $src ?>" width="180px" alt="Logo">
+    </div>
+
+    <div class="row mt-60 ">
+        <p class="text-md font-bold letter-spacing-1">
+            <?php echo $data['consent']['name'] ?>
+        </p>
     </div>
 
     <div class="row mt-20">
-        <div class="col-12 leading-snug">
-            <p class="text-right"><?php echo $data['full_patient_name'] ?></p>
-            <p class="text-right"><?php echo $data['patient']['nif'] ?></p>
-            <p class="text-right"><?php echo $data['patient']['address'] ?></p>
-            <p class="text-right"><?php echo $data['patient']['postcode'] . " " . $data['patient']['location'] ?> </p>
-        </div>
+        <p class="text-justify leading-snug text-xs">
+            <?php echo nl2br($description) ?>
+        </p>
     </div>
 
-    <div class="row">
-        <div class="col-12 leading-snug">
-            <p class="font-bold uppercase">Dentiny S.C</p>
-            <p>J44514651</p>
-            <p>C/Marqués de la Ensenada, 42</p>
-            <p>12003 Castellón</p>
-            <p>Tel. 964 09 97 21</p>
-        </div>
+    <div class="row mt-20 text-right">
+        <img src="<?php echo $data['signature']['signature'] ?>" width="300px" alt="Firma">
     </div>
-
-    <div class="row">
-        <div class="col-12 leading-snug">
-            <p class="uppercase text-right">Fecha: <?php echo $data['created_at'] ?></p>
-        </div>
-    </div>
-
-    <div class="row mt-20">
-        <table class="items col-12">
-            <thead>
-                <tr>
-                    <th class="text-left">Tratamiento</th>
-                    <th class="text-center">Pieza</th>
-                    <?php if ($discount) : ?>
-                        <th class="text-right">Precio u.</th>
-                        <th class="text-center">Descuento</th>
-                        <th class="text-right">Total</th>
-                    <?php else : ?>
-                        <th class="text-right">Precio</th>
-                    <?php endif; ?>
-                </tr>
-            </thead>
-
-            <tbody>
-                <?php foreach ($data['budget']['budgeteds'] as $budgeted) : ?>
-                    <tr>
-                        <td class="w-100 text-left"><?php echo $budgeted['treatment']['name'] ?></td>
-                        <?php if ($discount) : ?>
-                            <td class="text-right"><?php echo $budgeted['piece'] ?></td>
-                            <td class="text-right"><?php echo number_format($budgeted['unit_price'], 2, ',', '') ?> €</td>
-                            <td class="text-center"><?php echo number_format($budgeted['discount'], 2, ',', '') ?> %</td>
-                            <td class="text-right"><?php echo number_format($budgeted['total_price'], 2, ',', '') ?> €</td>
-                        <?php else : ?>
-                            <td class="min-w-100 text-right"><?php echo $budgeted['piece'] ?></td>
-                            <td class="min-w-100 text-right"><?php echo number_format($budgeted['total_price'], 2, ',', '') ?> €</td>
-                        <?php endif; ?>
-                    </tr>
-                <?php endforeach ?>
-            </tbody>
-
-            <tfoot>
-                <tr>
-                    <?php if ($discount) : ?>
-                        <td></td>
-                        <td class="text-right font-bold">Total</td>
-                        <td class="text-right font-bold"><?php echo number_format($subtotal, 2, ',', '') ?> €</td>
-                        <td class="text-right font-bold">Total con dto.</td>
-                        <td class="text-right font-bold"><?php echo number_format($total, 2, ',', '') ?> €</td>
-                    <?php else : ?>
-                        <td></td>
-                        <td class="text-right font-bold">Total</td>
-                        <td class="text-right font-bold"><?php echo number_format($total, 2, ',', '') ?> €</td>
-                    <?php endif; ?>
-                </tr>
-            </tfoot>
-        </table>
-    </div>
-
 </body>
 
 </html>

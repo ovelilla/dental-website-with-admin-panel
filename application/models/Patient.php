@@ -4,7 +4,7 @@ namespace Models;
 
 class Patient {
     private string $table = 'patients';
-    private array $columns = ['id', 'name', 'surname', 'phone', 'email', 'nif', 'birth_date', 'gender', 'meet', 'insurance', 'address', 'postcode', 'location', 'province', 'country', 'comment', 'created_at'];
+    private array $columns = ['id', 'name', 'surname', 'phone', 'email', 'nif', 'birth_date', 'gender', 'meet', 'insurance', 'address', 'postcode', 'location', 'province', 'country', 'reason', 'medication', 'allergies', 'diseases', 'smoker', 'infectious', 'comment', 'active', 'created_at'];
 
     private ?int $id;
     private string $name;
@@ -21,7 +21,14 @@ class Patient {
     private string $location;
     private string $province;
     private string $country;
+    private string $reason;
+    private string $medication;
+    private string $allergies;
+    private string $diseases;
+    private string $smoker;
+    private string $infectious;
     private string $comment;
+    private bool $active;
     private string $created_at;
 
     private array $errors = [];
@@ -42,7 +49,14 @@ class Patient {
         $this->location = $args['location'] ?? '';
         $this->province = $args['province'] ?? '';
         $this->country = $args['country'] ?? '';
+        $this->reason = $args['reason'] ?? '';
+        $this->medication = $args['medication'] ?? '';
+        $this->allergies = $args['allergies'] ?? '';
+        $this->diseases = $args['diseases'] ?? '';
+        $this->smoker = $args['smoker'] ?? '';
+        $this->infectious = $args['infectious'] ?? '';
         $this->comment = $args['comment'] ?? '';
+        $this->active = $args['active'] ?? 1;
         $this->created_at = $args['created_at'] ?? '';
     }
 
@@ -166,12 +180,68 @@ class Patient {
         $this->country = $country;
     }
 
+    public function getReason(): string {
+        return $this->reason;
+    }
+
+    public function setReason(string $reason): void {
+        $this->reason = $reason;
+    }
+
+    public function getMedication(): string {
+        return $this->medication;
+    }
+
+    public function setMedication(string $medication): void {
+        $this->medication = $medication;
+    }
+
+    public function getAllergies(): string {
+        return $this->allergies;
+    }
+
+    public function setAllergies(string $allergies): void {
+        $this->allergies = $allergies;
+    }
+
+    public function getDiseases(): string {
+        return $this->diseases;
+    }
+
+    public function setDiseases(string $diseases): void {
+        $this->diseases = $diseases;
+    }
+
+    public function getSmoker(): string {
+        return $this->smoker;
+    }
+
+    public function setSmoker(string $smoker): void {
+        $this->smoker = $smoker;
+    }
+
+    public function getInfectious(): string {
+        return $this->infectious;
+    }
+
+    public function setInfectious(string $infectious): void {
+        $this->infectious = $infectious;
+    }
+
     public function getComment(): string {
         return $this->comment;
     }
 
     public function setComment(string $comment): void {
         $this->comment = $comment;
+    }
+
+    public function getActive(): bool {
+        return $this->active;
+    }
+
+    public function setActive(bool $active): void {
+        $this->active = $active;
     }
 
     public function getCreatedAt(): string {

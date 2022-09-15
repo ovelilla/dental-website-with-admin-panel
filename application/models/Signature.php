@@ -2,21 +2,23 @@
 
 namespace Models;
 
-class Invoice {
-    private string $table = 'invoices';
-    private array $columns = ['id', 'budget_id', 'number', 'created_at'];
+class Signature {
+    private string $table = 'signatures';
+    private array $columns = ['id', 'consent_id', 'patient_id', 'signature', 'created_at'];
 
     private ?int $id;
-    private string $budget_id;
-    private string $number;
+    private string $consent_id;
+    private string $patient_id;
+    private string $signature;
     private string $created_at;
 
     private array $errors = [];
 
     public function __construct($args = []) {
         $this->id = $args['id'] ?? null;
-        $this->budget_id = $args['budget_id'] ?? '';
-        $this->number = $args['number'] ?? '';
+        $this->consent_id = $args['consent_id'] ?? '';
+        $this->patient_id = $args['patient_id'] ?? '';
+        $this->signature = $args['signature'] ?? '';
         $this->created_at = $args['created_at'] ?? '';
     }
 
@@ -28,20 +30,28 @@ class Invoice {
         $this->id = $id;
     }
 
-    public function getBudgetId(): string {
-        return $this->budget_id;
+    public function getConsentId(): string {
+        return $this->consent_id;
     }
 
-    public function setBudgetId(string $budget_id): void {
-        $this->budget_id = $budget_id;
+    public function setConsentId(string $consent_id): void {
+        $this->consent_id = $consent_id;
     }
 
-    public function getNumber(): string {
-        return $this->number;
+    public function getPatientId(): string {
+        return $this->patient_id;
     }
 
-    public function setNumber(string $number): void {
-        $this->number = $number;
+    public function setPatientId(string $patient_id): void {
+        $this->patient_id = $patient_id;
+    }
+
+    public function getSignature(): string {
+        return $this->signature;
+    }
+
+    public function setSignature(string $signature): void {
+        $this->signature = $signature;
     }
 
     public function getCreatedAt(): string {
@@ -79,15 +89,5 @@ class Invoice {
 
     public function getTable(): string {
         return $this->table;
-    }
-
-    public function validate(): array {
-        if (empty($this->number)) {
-            $this->errors['number'] = 'El número de factura es obligatorio';
-        }
-        if (empty($this->created_at)) {
-            $this->errors['created_at'] = 'La fecha de creación es obligatoria';
-        }
-        return $this->errors;
     }
 }

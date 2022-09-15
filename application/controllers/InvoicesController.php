@@ -22,7 +22,7 @@ class InvoicesController {
 
             foreach ($invoices as $key1 => $invoice) {
                 $date = new DateTime($invoice['created_at']);
-                $invoices[$key1]['created_at'] = $date->format('d/m/Y');
+                $invoices[$key1]['created_at_format'] = $date->format('d/m/Y');
 
                 $budget = DB::table('budgets')
                     ->select()
@@ -110,7 +110,7 @@ class InvoicesController {
                 ->getOne();
 
             $date = new DateTime($invoice['created_at']);
-            $invoice['created_at'] = $date->format('d/m/Y');
+            $invoice['created_at_format'] = $date->format('d/m/Y');
 
             $budget = DB::table('budgets')
                 ->select()
@@ -176,7 +176,7 @@ class InvoicesController {
             $response = [
                 'status' => 'success',
                 'message' => 'Factura obtenida correctamente',
-                'budget' => $budget
+                'invoice' => $invoice
             ];
         } catch (Exception | Error $e) {
             $response = [
@@ -285,7 +285,9 @@ class InvoicesController {
             return;
         }
 
-        $invoice->setCreatedAt($invoice_exists['created_at']);
+        $created_at = date('Y-m-d H:i:s', strtotime($data['created_at']));
+
+        $invoice->setCreatedAt($created_at);
 
         try {
             DB::table('invoices')
@@ -293,7 +295,7 @@ class InvoicesController {
                 ->where('id', '=', $invoice->getId())
                 ->execute();
 
-            $invoice = self::readInvoice($invoice->getId());
+            $invoice = self::readInvoice($invoice->getId())['invoice'];
 
             $response = [
                 'status' => 'success',
@@ -381,8 +383,6 @@ class InvoicesController {
 
         $name = 'factura-dentiny-' . $parts[0] . '-' . $parts[1] . '.pdf';
 
-        $success = file_put_contents(__DIR__ . '/../../uploads/invoices/' . $name, $output);
-
         $base64 = base64_encode($output);
 
         $response = [
@@ -391,7 +391,6 @@ class InvoicesController {
             'base64' => $base64,
             'fileName' => $name
         ];
-
 
         $router->response($response);
     }

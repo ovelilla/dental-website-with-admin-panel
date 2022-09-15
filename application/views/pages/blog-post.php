@@ -1,4 +1,4 @@
-<section class="section blog-header">
+<section class="section admin-header">
     <div class="container">
         <h2>Blog Dentiny</h2>
 

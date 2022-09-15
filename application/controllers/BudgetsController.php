@@ -610,8 +610,6 @@ class BudgetsController {
 
         $name = 'presupuesto-dentiny-' . str_pad($data['id'], 4, '0', STR_PAD_LEFT) . '-' .  date("Y") . '.pdf';
 
-        $success = file_put_contents(__DIR__ . '/../../uploads/budgets/' . $name, $output);
-
         $base64 = base64_encode($output);
 
         $response = [
@@ -620,7 +618,6 @@ class BudgetsController {
             'base64' => $base64,
             'fileName' => $name
         ];
-
 
         $router->response($response);
     }

@@ -16,6 +16,8 @@ use Controllers\PatientsController;
 use Controllers\TreatmentsController;
 use Controllers\BudgetsController;
 use Controllers\InvoicesController;
+use Controllers\ConsentsController;
+use Controllers\DoctorsController;
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
@@ -84,6 +86,8 @@ $router->get('/admin/pacientes', [PagesController::class, 'patients'], true);
 $router->get('/admin/tratamientos', [PagesController::class, 'adminTreatments'], true);
 $router->get('/admin/presupuestos', [PagesController::class, 'budgets'], true);
 $router->get('/admin/facturas', [PagesController::class, 'invoices'], true);
+$router->get('/admin/consentimientos', [PagesController::class, 'consents'], true);
+$router->get('/admin/doctores', [PagesController::class, 'doctors'], true);
 
 $router->post('/api/contact', [PagesController::class, 'sendMessage']);
 
@@ -131,8 +135,11 @@ $router->delete('/api/admin/cases-categories/multiple', [CasesCategoriesControll
 $router->get('/api/admin/patients', [PatientsController::class, 'readAllPatients'], true);
 $router->post('/api/admin/patients', [PatientsController::class, 'createPatient'], true);
 $router->put('/api/admin/patients', [PatientsController::class, 'updatePatient'], true);
+$router->put('/api/admin/patients/active', [PatientsController::class, 'updatePatientActive'], true);
+$router->put('/api/admin/patients/history', [PatientsController::class, 'updatePatientHistory'], true);
 $router->delete('/api/admin/patients', [PatientsController::class, 'deletePatient'], true);
 $router->delete('/api/admin/patients/multiple', [PatientsController::class, 'deletePatients'], true);
+$router->post('/api/admin/patients/pdf', [PatientsController::class, 'generatePDF'], true);
 
 $router->get('/api/admin/treatments', [TreatmentsController::class, 'readAllTreatments'], true);
 $router->post('/api/admin/treatments', [TreatmentsController::class, 'createTreatment'], true);
@@ -156,5 +163,19 @@ $router->put('/api/admin/invoices', [InvoicesController::class, 'updateInvoice']
 $router->delete('/api/admin/invoices', [InvoicesController::class, 'deleteInvoice'], true);
 $router->delete('/api/admin/invoices/multiple', [InvoicesController::class, 'deleteInvoices'], true);
 $router->post('/api/admin/invoices/pdf', [InvoicesController::class, 'generatePDF'], true);
+
+$router->get('/api/admin/consents', [ConsentsController::class, 'readAllConsents'], true);
+$router->post('/api/admin/consents', [ConsentsController::class, 'createConsent'], true);
+$router->put('/api/admin/consents', [ConsentsController::class, 'updateConsent'], true);
+$router->delete('/api/admin/consents', [ConsentsController::class, 'deleteConsent'], true);
+$router->delete('/api/admin/consents/multiple', [ConsentsController::class, 'deleteConsents'], true);
+$router->post('/api/admin/consents/pdf', [ConsentsController::class, 'generatePDF'], true);
+$router->post('/api/admin/consents/accepted', [ConsentsController::class, 'createConsentAccepted'], true);
+
+$router->get('/api/admin/doctors', [DoctorsController::class, 'readAllDoctors'], true);
+$router->post('/api/admin/doctors', [DoctorsController::class, 'createDoctor'], true);
+$router->put('/api/admin/doctors', [DoctorsController::class, 'updateDoctor'], true);
+$router->delete('/api/admin/doctors', [DoctorsController::class, 'deleteDoctor'], true);
+$router->delete('/api/admin/doctors/multiple', [DoctorsController::class, 'deleteDoctors'], true);
 
 $router->check();

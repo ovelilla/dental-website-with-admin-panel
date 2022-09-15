@@ -148,7 +148,7 @@ class BlogController {
                 'status' => 'success',
                 'message' => 'Posts obtenidos correctamente',
                 'posts' => $posts,
-                'login' => $router->session()->get('login')
+                'auth' => $router->session()->get('auth')
             ];
         } catch (Exception | Error $e) {
             $response = [
@@ -174,7 +174,7 @@ class BlogController {
                 'status' => 'success',
                 'message' => 'Posts obtenidos correctamente',
                 'post' => $post,
-                'login' => $router->session()->get('login')
+                'auth' => $router->session()->get('auth')
             ];
         } catch (Exception | Error $e) {
             $response = [
@@ -210,7 +210,7 @@ class BlogController {
             return;
         }
 
-        $post->setAlias($post->getTitle());
+        $post->setAlias($post->getSlugTitle());
         $image->setSrc($file->getSlugName());
 
         $exists_post = DB::table('blog_posts')
@@ -332,7 +332,7 @@ class BlogController {
             return;
         }
 
-        $post->setAlias($post->getTitle());
+        $post->setAlias($post->getSlugTitle());
 
         try {
             $exists_post_alias = DB::table('blog_posts')

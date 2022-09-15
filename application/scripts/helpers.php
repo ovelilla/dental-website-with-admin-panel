@@ -35,3 +35,21 @@ function slugify($text, string $divider = '-'): string {
 
     return $text;
 }
+
+function base64toImage($base64_string, $output_file): string {
+    $file = fopen($output_file, "wb");
+    $data = explode(',', $base64_string);
+    fwrite($file, base64_decode($data[1]));
+    fclose($file);
+    return $output_file;
+}
+
+function calculateAge(?string $birth_date): string {
+    if (empty($birth_date)) {
+        return '';
+    } else {
+        $current_date = date('Y-m-d');
+        $age = date_diff(date_create($birth_date), date_create($current_date));
+        return $age->y;
+    }
+}

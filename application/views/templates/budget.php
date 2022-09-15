@@ -13,10 +13,13 @@
             padding: 0
         }
 
+        @page {
+            margin: 80px !important;
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 14px;
-            width: 210mm
         }
 
         .row {
@@ -129,8 +132,16 @@
             margin-top: 100px
         }
 
+        .text-sm {
+            font-size: 14px
+        }
+
+        .text-md {
+            font-size: 16px
+        }
+
         .text-lg {
-            font-size: 1.125rem
+            font-size: 18px
         }
 
         .text-right {
@@ -145,8 +156,20 @@
             text-align: center
         }
 
+        .text-justify {
+            text-align: justify
+        }
+
+        .text-last-left {
+            text-align-last: left
+        }
+
         .font-bold {
             font-weight: 700
+        }
+
+        .letter-spacing-1 {
+            letter-spacing: -1px
         }
 
         .leading-snug {
@@ -167,10 +190,6 @@
 
         .uppercase {
             text-transform: uppercase
-        }
-
-        .wrapper {
-            margin: 80px;
         }
 
         h1 {
@@ -260,75 +279,73 @@
     }
     ?>
 
-    <div class="wrapper">
-        <div class="row">
-            <h1 class="col-6">
-                <img src="<?php echo $src ?>" alt="Logo">
-            </h1>
+    <div class="row">
+        <h1 class="col-6">
+            <img src="<?php echo $src ?>" alt="Logo">
+        </h1>
 
-            <div class="col-6">
-                <h2>Presupuesto</h2>
-                <hr class="mt-10">
-                <p class="mt-20">PACIENTE: <?php echo $data['full_patient_name'] ?></p>
-                <p class="mt-10">FECHA: <?php echo $format->format($date) ?></p>
-            </div>
+        <div class="col-6">
+            <h2>Presupuesto</h2>
+            <hr class="mt-10">
+            <p class="mt-20">PACIENTE: <?php echo $data['full_patient_name'] ?></p>
+            <p class="mt-10">FECHA: <?php echo $format->format($date) ?></p>
         </div>
+    </div>
 
-        <div class="row mt-60">
-            <table class="items col-12">
-                <thead>
+    <div class="row mt-60">
+        <table class="items col-12">
+            <thead>
+                <tr>
+                    <th class="text-left">Tratamiento</th>
+                    <th class="text-center">Pieza</th>
+                    <?php if ($discount) : ?>
+                        <th class="text-right">Precio u.</th>
+                        <th class="text-center">Descuento</th>
+                        <th class="text-right">Total</th>
+                    <?php else : ?>
+                        <th class="text-right">Precio</th>
+                    <?php endif; ?>
+                </tr>
+            </thead>
+
+            <tbody>
+                <?php foreach ($data['budgeteds'] as $budgeted) : ?>
                     <tr>
-                        <th class="text-left">Tratamiento</th>
-                        <th class="text-center">Pieza</th>
+                        <td class="w-100 text-left"><?php echo $budgeted['treatment']['name'] ?></td>
                         <?php if ($discount) : ?>
-                            <th class="text-right">Precio u.</th>
-                            <th class="text-center">Descuento</th>
-                            <th class="text-right">Total</th>
+                            <td class="text-right"><?php echo $budgeted['piece'] ?></td>
+                            <td class="text-right"><?php echo number_format($budgeted['unit_price'], 2, ',', '') ?> €</td>
+                            <td class="text-center"><?php echo number_format($budgeted['discount'], 2, ',', '') ?> %</td>
+                            <td class="text-right"><?php echo number_format($budgeted['total_price'], 2, ',', '') ?> €</td>
                         <?php else : ?>
-                            <th class="text-right">Precio</th>
+                            <td class="min-w-100 text-right"><?php echo $budgeted['piece'] ?></td>
+                            <td class="min-w-100 text-right"><?php echo number_format($budgeted['total_price'], 2, ',', '') ?> €</td>
                         <?php endif; ?>
                     </tr>
-                </thead>
+                <?php endforeach ?>
+            </tbody>
 
-                <tbody>
-                    <?php foreach ($data['budgeteds'] as $budgeted) : ?>
-                        <tr>
-                            <td class="w-100 text-left"><?php echo $budgeted['treatment']['name'] ?></td>
-                            <?php if ($discount) : ?>
-                                <td class="text-right"><?php echo $budgeted['piece'] ?></td>
-                                <td class="text-right"><?php echo number_format($budgeted['unit_price'], 2, ',', '') ?> €</td>
-                                <td class="text-center"><?php echo number_format($budgeted['discount'], 2, ',', '') ?> %</td>
-                                <td class="text-right"><?php echo number_format($budgeted['total_price'], 2, ',', '') ?> €</td>
-                            <?php else : ?>
-                                <td class="min-w-100 text-right"><?php echo $budgeted['piece'] ?></td>
-                                <td class="min-w-100 text-right"><?php echo number_format($budgeted['total_price'], 2, ',', '') ?> €</td>
-                            <?php endif; ?>
-                        </tr>
-                    <?php endforeach ?>
-                </tbody>
+            <tfoot>
+                <tr>
+                    <?php if ($discount) : ?>
+                        <td></td>
+                        <td class="text-right font-bold">Total</td>
+                        <td class="text-right font-bold"><?php echo number_format($subtotal, 2, ',', '') ?> €</td>
+                        <td class="text-right font-bold">Total con dto.</td>
+                        <td class="text-right font-bold"><?php echo number_format($total, 2, ',', '') ?> €</td>
+                    <?php else : ?>
+                        <td></td>
+                        <td class="text-right font-bold">Total</td>
+                        <td class="text-right font-bold"><?php echo number_format($total, 2, ',', '') ?> €</td>
+                    <?php endif; ?>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
 
-                <tfoot>
-                    <tr>
-                        <?php if ($discount) : ?>
-                            <td></td>
-                            <td class="text-right font-bold">Total</td>
-                            <td class="text-right font-bold"><?php echo number_format($subtotal, 2, ',', '') ?> €</td>
-                            <td class="text-right font-bold">Total con dto.</td>
-                            <td class="text-right font-bold"><?php echo number_format($total, 2, ',', '') ?> €</td>
-                        <?php else : ?>
-                            <td></td>
-                            <td class="text-right font-bold">Total</td>
-                            <td class="text-right font-bold"><?php echo number_format($total, 2, ',', '') ?> €</td>
-                        <?php endif; ?>
-                    </tr>
-                </tfoot>
-            </table>
-        </div>
-
-        <div class="row mt-60">
-            <div class="col-12 text-left leading-loose">
-                <p><?php echo $data['comment'] ?></p>
-            </div>
+    <div class="row mt-60">
+        <div class="col-12 text-left leading-loose">
+            <p><?php echo $data['comment'] ?></p>
         </div>
     </div>
 

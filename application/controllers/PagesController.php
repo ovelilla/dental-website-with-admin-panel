@@ -473,6 +473,20 @@ class PagesController {
         ]);
     }
 
+    public static function consents(Router $router) {
+        $router->render('pages/consents', [
+            'title' => 'Consentimientos',
+            'page' => 'consents'
+        ]);
+    }
+
+    public static function doctors(Router $router) {
+        $router->render('pages/doctors', [
+            'title' => 'Doctores',
+            'page' => 'doctors'
+        ]);
+    }
+
     public static function error(Router $router) {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $response = [

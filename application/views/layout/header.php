@@ -1,4 +1,4 @@
-<header id="main-header" class="main-header <?php echo $page === 'index' ? 'home' : '' ?>" data-page ="<?php echo $page?>">
+<header id="main-header" class="main-header <?php echo $page === 'index' ? 'home' : '' ?>">
     <div class="container">
         <div class="logo">
             <a href="/">

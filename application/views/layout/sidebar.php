@@ -2,9 +2,37 @@
     <div class="container">
 
         <nav class="menu">
-            <a href="/clinica">Clínica</a>
-            <a href="/tratamientos">Tratamientos</a>
-            <a href="/financiación">Financiación</a>
+            <button type="button">
+                <span>Clínica</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="384" height="512" fill="currentColor" viewBox="0 0 384 512">
+                    <path d="M365.3 256l-22.6 22.6-192 192L128 493.3 82.7 448l22.6-22.6L274.7 256 105.4 86.6 82.7 64 128 18.7l22.6 22.6 192 192L365.3 256z" />
+                </svg>
+            </button>
+
+            <div class="collapse">
+                <a href="/sobre-nosotros">Sobre nosotros</a>
+                <a href="/equipo">Equipo</a>
+                <a href="/instalaciones">Instalaciones</a>
+                <a href="/financiacion">Financiación</a>
+                <a href="/login">Area privada</a>
+            </div>
+
+            <button type="button">
+                <span>Tratamientos</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="384" height="512" fill="currentColor" viewBox="0 0 384 512">
+                    <path d="M365.3 256l-22.6 22.6-192 192L128 493.3 82.7 448l22.6-22.6L274.7 256 105.4 86.6 82.7 64 128 18.7l22.6 22.6 192 192L365.3 256z" />
+                </svg>
+            </button>
+
+            <div class="collapse">
+                <a href="/tratamientos/ortodoncia">Ortodoncia</a>
+                <a href="/tratamientos/ortodoncia-invisible">Ortodoncia invisible</a>
+                <a href="/tratamientos/implantes-dentales">Implantes dentales</a>
+                <a href="/tratamientos/blanqueamiento-dental">Blanqueamiento dental</a>
+                <a href="/tratamientos/periodoncia">Priodoncia</a>
+                <a href="/tratamientos/endodoncia">Endodoncia</a>
+            </div>
+ 
             <a href="/casos">Casos</a>
             <a href="/blog">Blog</a>
             <a href="/contacto">Contacto</a>

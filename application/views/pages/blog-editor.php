@@ -1,4 +1,4 @@
-<section class="section blog-header">
+<section class="section admin-header">
     <div class="container">
         <h1>Editor de Posts Dentiny</h1>
 
