@@ -260,6 +260,10 @@
             border-bottom: 1px solid #f0f0f0;
             /* white-space: nowrap; */
         }
+
+        .page_break {
+            page-break-before: always;
+        }
     </style>
 </head>
 
@@ -425,7 +429,9 @@
         </div>
     </div>
 
-    <div class="row" style="min-height: 500px;">
+    <div class="page_break"></div>
+
+    <div class="row" style="min-height: 600px;">
         <table class="col-12">
             <thead>
                 <tr>
