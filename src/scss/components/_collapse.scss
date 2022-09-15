@@ -1,0 +1,8 @@
+@use "../abstract/variables"as v;
+@use "../abstract/mixins"as m;
+
+.collapse {
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s ease;
+}

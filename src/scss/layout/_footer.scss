@@ -1,0 +1,159 @@
+@use "../abstract/mixins" as m;
+@use "../abstract/variables" as v;
+
+footer {
+    // background-color: #eef5ff;
+    background-color: v.$blue-light-50;
+
+    .container {
+        margin: 0 auto;
+        padding: 0 15px;
+
+        @include m.mobile {
+            padding: 0 20px;
+            max-width: 620px;
+        }
+
+        @include m.tablet {
+            padding: 0 25px;
+            max-width: 920px;
+        }
+
+        @include m.desktop {
+            padding: 0 30px;
+            max-width: 1040px;
+        }
+
+        @include m.desktopXL {
+            max-width: 1200px;
+        }
+
+        .row-top {
+            padding: 60px 0 40px 0;
+            border-bottom: 1px solid v.$blue-50;
+
+            @include m.tablet {
+                padding: 80px 0 50px 0;
+            }
+
+            @include m.desktop {
+                padding: 100px 0 60px 0;
+            }
+
+            .grid {
+                @include m.grid(1, 30px, 30px);
+                justify-items: center;
+
+                @include m.tablet {
+                    @include m.grid(2, 30px, 30px);
+                }
+
+                @include m.desktop {
+                    @include m.grid(3, 30px, 30px);
+                }
+
+                @include m.desktopXL {
+                    @include m.grid(4, 40px, 40px);
+                }
+
+                .logo {
+                    margin-top: 6px;
+                }
+
+                .about-us,
+                .treatments,
+                .social {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 6px;
+
+                    @include m.tablet {
+                        align-items: initial;
+                        gap: 10px;
+                    }
+
+                    h2 {
+                        font-size: 1.8rem;
+                        font-weight: 600;
+                        letter-spacing: normal;
+                    }
+
+                    nav {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 4px;
+
+                        @include m.mobile {
+                            gap: 6px;
+                        }
+
+                        @include m.tablet {
+                            align-items: initial;
+                            gap: 8px;
+                        }
+
+                        a {
+                            color: v.$blue-600;
+                            font-size: 1.4rem;
+                            font-weight: 400;
+
+                            @include m.tablet {
+                                font-size: 1.5rem;
+                            }
+
+                            @include m.desktop {
+                                font-size: 1.6rem;
+                            }
+                        }
+                    }
+
+                    .row {
+                        display: flex;
+                        gap: 30px;
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+
+        .row-bottom {
+            padding: 30px 0;
+
+            @include m.tablet {
+                padding: 35px 0;
+            }
+
+            @include m.desktop {
+                padding: 40px 0;
+            }
+
+            .grid {
+                @include m.grid(1, 8px, 8px);
+                justify-items: center;
+
+                @include m.tablet {
+                    @include m.grid(3, 30px, 30px);
+                }
+
+                a,
+                p {
+                    color: v.$blue-600;
+                    font-size: 1.4rem;
+                    font-weight: 400;
+
+                    @include m.desktop {
+                        &:first-child {
+                            justify-self: start;
+                        }
+
+                        &:last-child {
+                            justify-self: end;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

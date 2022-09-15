@@ -1,0 +1,126 @@
+@use "../abstract/mixins" as m;
+@use "../abstract/variables" as v;
+
+.financing {
+    .container {
+        display: flex;
+        flex-direction: column;
+
+        >.row {
+            display: flex;
+            flex-direction: column;
+
+            @include m.tablet {
+                flex-direction: row;
+                gap: 40px;
+            }
+
+            .col-left {
+                display: flex;
+                justify-content: center;
+                flex: 1 1 50%;
+            }
+
+            .col-right {
+                display: flex;
+                justify-content: center;
+                flex: 1 1 50%;
+            }
+
+            img {
+                align-self: center;
+                justify-self: center;
+                width: 90%;
+                height: 90%;
+                object-fit: contain;
+            }
+
+            .steps {
+                display: flex;
+                flex-direction: column;
+
+                .step {
+                    display: flex;
+                    gap: 30px;
+
+                    .left {
+                        display: flex;
+                        flex-direction: column;
+
+                        .icon {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 60px;
+                            height: 60px;
+                            background-color: v.$blue-light-50;
+                            border-radius: 50%;
+                        }
+
+                        .line {
+                            flex-grow: 1;
+                            position: relative;
+
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                width: 1px;
+                                height: 60%;
+                                transform: translate(-50%, -50%);
+                                background-color: v.$blue-100;
+                            }
+                        }
+                    }
+
+                    .right {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+                        padding-bottom: 40px;
+
+                        @include m.tablet {
+                            padding-bottom: 50px;
+                        }
+
+                        .title {
+                            font-size: 2.4rem;
+                            font-weight: 600;
+                            letter-spacing: normal;
+                        }
+
+                        .text {
+                            color: v.$blue-600;
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+
+                p {
+                    font-style: 1.6rem;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .row:last-child {
+            .col-left {
+                order: 1;
+            }
+
+            .col-right {
+                order: 0;
+            }
+            @include m.tablet {
+                .col-left {
+                    order: 0;
+                }
+
+                .col-right {
+                    order: 1;
+                }
+            }
+        }
+    }
+}

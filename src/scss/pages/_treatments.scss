@@ -1,0 +1,110 @@
+@use "../abstract/mixins" as m;
+@use "../abstract/variables" as v;
+
+.all-treatments {
+    .container {
+        .grid {
+            @include m.grid(1, 20px, 0);
+
+            @include m.tablet {
+                @include m.grid(2, 30px, 10px);
+            }
+
+            @include m.desktop {
+                @include m.grid(3, 40px, 20px);
+            }
+
+            .card {
+                display: flex;
+                padding: 24px 16px;
+                gap: 10px;
+                border-radius: 8px;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: v.$gray-50;
+
+                    .more svg {
+                        transform: translateX(6px);
+                    }
+                }
+
+                @include m.desktopXL {
+                    gap: 20px;
+                }
+
+                .icon {
+                    display: flex;
+                    align-items: flex-start;
+
+                    .icon-container {
+                        position: relative;
+                        min-width: 70px;
+                        min-height: 70px;
+
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 60px;
+                            height: 60px;
+                            background-color: v.$blue-light-400;
+                            border-radius: 50%;
+                        }
+
+                        img {
+                            z-index: 1;
+                            position: absolute;
+                            right: 0;
+                            bottom: 0;
+                        }
+                    }
+                }
+
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+
+                    .title {
+                        font-size: 1.6rem;
+                        font-weight: 600;
+                        letter-spacing: normal;
+
+                        @include m.desktop {
+                            font-size: 1.8rem;
+                        }
+                    }
+
+                    .description {
+                        color: v.$blue-600;
+                        font-size: 1.4rem;
+                    }
+
+                    .more {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        margin-top: 4px;
+                        color: v.$blue-tw-300;
+                        font-size: 1.4rem;
+                        text-decoration: underline;
+                        text-underline-offset: 4px;
+
+                        svg {
+                            width: 18px;
+                            height: 18px;
+                            transition: transform 0.3s ease;
+                        }
+                    }
+                }
+            }
+        }
+
+        > a {
+            align-self: center;
+            margin-top: 40px;
+        }
+    }
+}

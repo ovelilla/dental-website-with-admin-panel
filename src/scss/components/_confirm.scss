@@ -1,0 +1,159 @@
+@use "../abstract/mixins" as m;
+@use "../abstract/variables" as v;
+
+.confirm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 500;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.3s forwards;
+
+    &.fadeOut {
+        animation: fadeOut 0.3s forwards;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+        width: 95%;
+        margin: auto;
+        background-color: v.$white;
+        border-radius: 8px;
+        animation: slideInTop 0.3s both;
+
+        @include m.tablet {
+            width: 100%;
+        }
+
+        &.slideOutTop {
+            animation: slideOutTop 0.3s forwards;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+
+            @include m.tablet {
+                padding: 20px 25px;
+            }
+
+            .title {
+                font-size: 1.6rem;
+                font-weight: 500;
+                color: v.$blue-900;
+                
+                @include m.desktop {
+                    font-size: 1.8rem;
+                }
+            }
+
+            .close {
+                color: v.$gray-400;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: v.$blue-900;
+                }
+            }
+        }
+
+        .body {
+            display: flex;
+            flex-direction: column;
+            padding: 15px 20px;
+
+            @include m.tablet {
+                padding: 20px 25px;
+            }
+
+            .description {
+                font-size: 1.4rem;
+                font-weight: 400;
+                color: v.$blue-900;
+
+                @include m.desktop {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+
+        .footer {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            padding: 15px 20px;
+
+            @include m.tablet {
+                gap: 20px;
+                padding: 20px 25px;
+            }
+
+            .cancel,
+            .accept {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 40px;
+                padding: 0 20px;
+                border-radius: 6px;
+                border-width: 2px;
+                border-style: solid;
+                font-weight: 500;
+                font-size: 1.4rem;
+                letter-spacing: -1px;
+                transition: background-color, color, border, .3s ease;
+
+                @include m.mobile() {
+                    height: 42px;
+                    padding: 0 24px;
+                }
+
+                @include m.tablet {
+                    height: 44px;
+                    padding: 0 28px;
+                }
+
+                @include m.desktop {
+                    height: 46px;
+                    padding: 0 30px;
+                    font-size: 1.6rem;
+                }
+
+                @include m.desktopXL {
+                    height: 48px;
+                }
+            }
+
+            .cancel {
+                color: v.$gray-400;
+                border: 2px solid v.$gray-300;
+
+                &:hover {
+                    color: v.$blue-700;
+                    border-color: v.$blue-600;
+                }
+            }
+
+            .accept {
+                border-color: v.$blue-900;
+                color: v.$white;
+                background-color: v.$blue-900;
+
+                &:hover {
+                    border-color: v.$blue-800;
+                    background-color: v.$blue-800;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+@use "../abstract/mixins" as m;
+@use "../abstract/variables" as v;
+
+.section {
+    padding: 50px 0;
+
+    @include m.mobile {
+        padding: 60px 0;
+    }
+
+    @include m.tablet {
+        padding: 80px 0;
+    }
+
+    @include m.desktop {
+        padding: 90px 0;
+    }
+
+    @include m.desktopXL {
+        padding: 100px 0;
+    }
+
+    > .container {
+        margin: 0 auto;
+        padding: 0 15px;
+
+        @include m.mobile {
+            padding: 0 20px;
+            max-width: 620px;
+        }
+
+        @include m.tablet {
+            padding: 0 25px;
+            max-width: 920px;
+        }
+
+        @include m.desktop {
+            padding: 0 30px;
+            max-width: 1040px;
+        }
+
+        @include m.desktopXL {
+            max-width: 1200px;
+        }
+    }
+}

@@ -1,0 +1,252 @@
+@use "../abstract/mixins" as m;
+@use "../abstract/variables" as v;
+
+.editor {
+    padding: 10px 0 20px 0;
+
+    @include m.mobile {
+        padding: 20px 0 40px 0;
+    }
+
+    @include m.tablet {
+        padding: 30px 0 60px 0;
+    }
+
+    @include m.desktop {
+        padding: 40px 0 80px 0;
+    }
+
+    @include m.desktopXL {
+        padding: 50px 0 100px 0;
+    }
+
+    form {
+        gap: 20px;
+
+        @include m.tablet {
+            gap: 25px;
+        }
+
+        @include m.desktop {
+            gap: 30px;
+        }
+
+        .col {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            > div {
+                flex-grow: 1;
+            }
+        }
+
+        .row,
+        .col {
+            h2 {
+                font-size: 1.8rem;
+                font-weight: 500;
+
+                @include m.mobile {
+                    font-size: 1.9rem;
+                }
+
+                @include m.tablet {
+                    font-size: 2rem;
+                }
+            }
+
+            p {
+                font-size: 1.5rem;
+                color: v.$blue-700;
+                font-weight: 400;
+
+                @include m.tablet {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+
+        .field,
+        .mio-field {
+            margin-top: 10px;
+
+            .ck-editor {
+                overflow: hidden;
+            }
+
+            .ck-toolbar {
+                border: 1px solid v.$blue_50;
+                border-bottom-width: 0;
+                height: 50px;
+
+                @include m.tablet {
+                    height: 60px;
+                }
+            }
+
+            .ck-rounded-corners .ck.ck-editor__top .ck-sticky-panel .ck-toolbar {
+                border-radius: 6px;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+
+            .ck-rounded-corners .ck.ck-editor__main > .ck-editor__editable {
+                border-radius: 6px;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+
+            .ck-editor__editable {
+                min-height: 600px;
+                padding: 0 20px;
+                border: 1px solid v.$blue_50;
+
+                h2 {
+                    font-size: 2.4rem;
+                    font-weight: 500;
+
+                    @include m.mobile {
+                        font-size: 2.8rem;
+                    }
+
+                    @include m.tablet {
+                        font-size: 3.2rem;
+                    }
+                }
+
+                h3 {
+                    font-size: 2.2rem;
+                    font-weight: 500;
+
+                    @include m.mobile {
+                        font-size: 2.6rem;
+                    }
+
+                    @include m.tablet {
+                        font-size: 3rem;
+                    }
+                }
+
+                h4 {
+                    font-size: 2rem;
+                    font-weight: 500;
+
+                    @include m.mobile {
+                        font-size: 2.4rem;
+                    }
+
+                    @include m.tablet {
+                        font-size: 2.8rem;
+                    }
+                }
+
+                p {
+                    padding: 10px 0;
+                    text-align: justify;
+                    font-weight: 400;
+                }
+
+                a {
+                    text-decoration: underline;
+                }
+
+                ul,
+                ol {
+                    list-style: initial;
+                    font-weight: 400;
+
+                    li {
+                        display: list-item;
+                    }
+                }
+
+                ol {
+                    list-style: decimal;
+                }
+            }
+
+            label.hidden {
+                display: none;
+            }
+
+            .image-preview {
+                display: flex;
+                position: relative;
+
+                img {
+                    width: 300px;
+                    height: 200px;
+                    object-fit: cover;
+                }
+
+                .close {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    width: 42px;
+                    height: 42px;
+                    border-radius: 50%;
+                    background-color: rgba(0, 0, 0, 0.3);
+
+                    &:hover {
+                        background-color: rgba(0, 0, 0, 0.5);
+                    }
+
+                    svg {
+                        color: v.$white;
+                    }
+                }
+            }
+        }
+
+        .field.error {
+            .ck-toolbar {
+                border-color: v.$red_600;
+            }
+
+            .ck-editor__editable {
+                border-color: v.$red_600;
+            }
+        }
+
+        .field.baf-preview {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            background-color: v.$blue-light-50;
+            border-radius: 6px;
+
+            @include m.tablet {
+                padding: 30px;
+            }
+
+            @include m.desktop {
+                padding: 40px;
+            }
+
+            .before-and-after {
+                max-width: 600px;
+                max-height: 400px;
+            }
+        }
+
+        input[type="submit"] {
+            @include m.tablet {
+                align-self: flex-end;
+            }
+        }
+    }
+}

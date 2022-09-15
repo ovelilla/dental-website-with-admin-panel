@@ -1,0 +1,257 @@
+@use "../abstract/mixins" as m;
+@use "../abstract/variables" as v;
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    gap: 18px;
+    min-width: 0;
+
+    @include m.tablet {
+        gap: 20px;
+    }
+
+    @include m.desktop {
+        gap: 22px;
+    }
+
+    .field:not(.accept):not(.file) {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        label {
+            position: absolute;
+            top: 14px;
+            left: 10px;
+            padding: 0 8px;
+            background-color: v.$white;
+            font-weight: 400;
+            cursor: text;
+            transform-origin: left;
+            transition: transform 0.2s cubic-bezier(0, 0, 0.2, 1);
+            font-size: 1.4rem;
+
+            @include m.mobile {
+                font-size: 1.5rem;
+            }
+
+            @include m.tablet {
+                top: 16px;
+                left: 12px;
+                font-size: 1.6rem;
+            }
+
+            @include m.desktop {
+                top: 16px;
+                left: 14px;
+            }
+        }
+
+        input:not([type="submit"]):not([type="file"]),
+        select,
+        textarea {
+            width: 100%;
+            min-width: 0;
+            border: 1px solid v.$blue-50;
+            border-radius: 6px;
+            outline: none;
+            padding: 14px 18px;
+            color: v.$blue-900;
+            font-weight: 400;
+            font-size: 1.4rem;
+
+            @include m.mobile {
+                font-size: 1.5rem;
+            }
+
+            @include m.tablet {
+                padding: 16px 20px;
+                font-size: 1.6rem;
+            }
+
+            @include m.desktop {
+                padding: 16px 22px;
+            }
+
+            &:hover {
+                border-color: v.$blue-200;
+            }
+        }
+
+        &.focus {
+            label {
+                transform: translate(3px, -26px) scale(0.75);
+
+                @include m.tablet {
+                    transform: translate(3px, -28px) scale(0.75);
+                }
+
+                @include m.desktop {
+                    transform: translate(3px, -28px) scale(0.75);
+                }
+            }
+
+            input:not([type="submit"]):not([type="file"]),
+            select,
+            textarea {
+                outline: auto;
+                outline-width: 2px;
+                outline-style: solid;
+                outline-color: v.$blue-400;
+                border-color: transparent;
+            }
+        }
+
+        input[type="submit"] {
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        &.error {
+            label {
+                color: v.$red-600;
+            }
+
+            input:not([type="submit"]):not([type="file"]),
+            select,
+            textarea {
+                border-color: v.$red-600;
+            }
+
+            .error-message {
+                color: v.$red-600;
+                font-size: 1.3rem;
+                font-weight: 400;
+                margin-top: 4px;
+                padding-left: 14px;
+
+                @include m.tablet {
+                    padding-left: 16px;
+                }
+
+                @include m.desktop {
+                    padding-left: 18px;
+                }
+            }
+        }
+
+        &.error.focus {
+            input:not([type="submit"]):not([type="file"]),
+            select,
+            textarea {
+                outline-width: 1px;
+                outline-color: v.$red-600;
+            }
+        }
+    }
+
+    .field.accept {
+        display: flex;
+        gap: 10px;
+        font-weight: 400;
+    }
+
+    .field.file {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 10px;
+        background-color: v.$blue-light-50;
+        border-radius: 6px;
+
+        @include m.tablet {
+            padding: 30px 10px;
+        }
+
+        @include m.desktop {
+            padding: 40px 10px;
+        }
+
+        label {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.6rem;
+            font-weight: 600;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            color: v.$blue-900;
+            cursor: pointer;
+            transition: background-color, color 0.3s ease;
+
+            &:hover {
+                color: v.$blue-700;
+
+                figure {
+                    background-color: v.$blue-700;
+                }
+            }
+
+            @include m.tablet {
+                font-size: 1.8rem;
+            }
+
+            figure {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 60px;
+                height: 60px;
+                margin: 0;
+                padding: 0;
+                border-radius: 50%;
+                background-color: v.$blue-900;
+                transition: background-color .3s ease;
+
+                @include m.tablet {
+                    width: 70px;
+                    height: 70px;
+                }
+
+                @include m.desktop {
+                    width: 80px;
+                    height: 80px;
+                }
+
+                svg {
+                    width: 50%;
+                    height: 50%;
+                    color: v.$blue-light-50;
+                    margin-top: -0.25em;
+                }
+            }
+        }
+
+        input[type="file"] {
+            visibility: hidden;
+            width: 0px;
+            height: 0px;
+        }
+
+        &.error {
+            background-color: v.$red-50;
+
+            .error-message {
+                color: v.$red_600;
+                font-size: 1.3rem;
+                font-weight: 400;
+                margin-top: 4px;
+                padding-left: 14px;
+
+                @include m.tablet {
+                    padding-left: 16px;
+                }
+
+                @include m.desktop {
+                    padding-left: 18px;
+                }
+            }
+        }
+    }
+}

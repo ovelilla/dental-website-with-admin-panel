@@ -1,0 +1,33 @@
+@use "../abstract/variables"as v;
+
+.mt-0 {
+    margin-top: 0;
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}
+
+.mt-10 {
+    margin-top: 10rem;
+}
+
+.text-indigo-600 {
+    color: v.$indigo-600;
+}
+
+.flex {
+    display: flex;
+}
+
+.grow {
+    flex-grow: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+.rotate-90 {
+    transform: rotate(90deg);
+}

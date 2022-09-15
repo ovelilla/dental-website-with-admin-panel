@@ -1,0 +1,165 @@
+@use "../abstract/mixins" as m;
+@use "../abstract/variables" as v;
+
+.main-header {
+    z-index: 500;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: background-color, box-shadow 0.3s ease;
+    background-color: v.$white;
+    box-shadow: v.$shadow-md;
+
+    &.home {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    &.active {
+        background-color: v.$white;
+        box-shadow: v.$shadow-md;
+    }
+
+    > .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
+        height: 60px;
+        margin: 0 auto;
+        padding: 0 15px;
+        transition: height 0.3s ease;
+        margin: 0 auto;
+        padding: 0 15px;
+
+        @include m.mobile {
+            padding: 0 20px;
+            max-width: 620px;
+            height: 70px;
+        }
+
+        @include m.tablet {
+            padding: 0 25px;
+            max-width: 920px;
+            height: 80px;
+        }
+
+        @include m.desktop {
+            gap: 40px;
+            padding: 0 30px;
+            max-width: 1040px;
+            height: 100px;
+        }
+
+        @include m.desktopXL {
+            gap: 60px;
+            max-width: 1200px;
+            height: 110px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            height: 60px;
+            width: 160px;
+
+            @include m.mobile {
+                width: 170px;
+            }
+
+            @include m.tablet {
+                width: 180px;
+            }
+
+            @include m.desktop {
+                width: 190px;
+            }
+
+            @include m.desktopXL {
+                width: 200px;
+            }
+        }
+
+        nav {
+            display: none;
+            flex: 1 1 auto;
+            align-items: center;
+            gap: 25px;
+            height: 60px;
+
+            @include m.desktop {
+                display: flex;
+            }
+
+            > a,
+            > button {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                position: relative;
+                height: 40px;
+                font-size: 1.4rem;
+                font-weight: 600;
+                letter-spacing: -0.05rem;
+                color: v.$blue-900;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    width: 0;
+                    height: 2px;
+                    max-width: 100%;
+                    background: v.$blue-900;
+                    transition: 0.33s all ease;
+                }
+
+                &:hover::after {
+                    left: 0;
+                    width: 100%;
+                }
+
+                span {
+                    display: block;
+
+                    &::first-letter {
+                        font-size: 1.6rem;
+                        font-weight: 500;
+                    }
+                }
+
+                svg {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+
+        .contact {
+            display: none;
+            align-items: center;
+            gap: 20px;
+            height: 60px;
+
+            @include m.desktop {
+                display: flex;
+            }
+
+            a:first-child {
+                display: none;
+                align-items: center;
+                gap: 5px;
+                height: 40px;
+                font-size: 1.6rem;
+                font-weight: 600;
+                letter-spacing: -1px;
+
+                @include m.desktopXL {
+                    display: flex;
+                }
+            }
+        }
+    }
+}

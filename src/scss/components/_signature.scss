@@ -1,0 +1,66 @@
+@use "../abstract/mixins" as m;
+@use "../abstract/variables" as v;
+
+.signature {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    height: 140px;
+
+    .title {
+        position: absolute;
+        top: 14px;
+        left: 18px;
+        color: v.$blue-gray-500;
+        font-size: 1.4rem;
+        font-weight: 400;
+
+        @include m.tablet {
+            font-size: 1.5rem;
+        }
+
+        @include m.desktop {
+            top: 16px;
+            left: 20px;
+            font-size: 1.6rem;
+        }
+    }
+
+    canvas {
+        border: 1px solid v.$blue-50;
+        border-radius: 6px;
+    }
+
+    .clear {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 6px;
+        right: 8px;
+        width: 40px;
+        height: 40px;
+        color: v.$blue-gray-500;
+        font-size: 1.4rem;
+        font-weight: 400;
+        border-radius: 50%;
+
+        @include m.tablet {
+            width: 48px;
+            height: 48px;
+            font-size: 1.5rem;
+        }
+
+        @include m.desktop {
+            top: 8px;
+            right: 10px;
+            font-size: 1.6rem;
+        }
+
+        &:hover {
+            color: v.$blue-900;
+            background-color: v.$blue-light-50;
+        }
+    }
+}

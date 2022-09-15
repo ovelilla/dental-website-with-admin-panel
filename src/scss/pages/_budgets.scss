@@ -1,0 +1,265 @@
+@use "../abstract/mixins" as m;
+@use "../abstract/variables" as v;
+
+.budgeted {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .wrapper {
+        overflow-x: auto;
+
+        &::-webkit-scrollbar {
+            width: 16px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 8px;
+            border: 4px solid transparent;
+            background-clip: content-box;
+            background-color: v.$blue-gray-200;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background-color: v.$blue-gray-100;
+        }
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+
+        thead {
+            height: 46px;
+
+            @include m.tablet {
+                height: 48px;
+            }
+
+            @include m.desktop {
+                height: 50px;
+            }
+
+            tr th {
+                min-width: 80px;
+                padding: 0 10px;
+                color: v.$blue-900;
+                border-bottom: 1px solid v.$gray-200;
+                text-align: left;
+                font-weight: 500;
+                font-size: 1.4rem;
+
+                &:first-child {
+                    width: 100%;
+                }
+
+                &:nth-child(2) {
+                    min-width: 100px;
+                }
+
+                &:nth-child(4) {
+                    min-width: 50px;
+                }
+
+                &:last-child {
+                    min-width: 50px;
+                }
+
+                @include m.tablet {
+                    min-width: 85px;
+                    font-size: 1.5rem;
+
+                    &:nth-child(2) {
+                        min-width: 110px;
+                    }
+
+                    &:nth-child(4) {
+                        min-width: 55px;
+                    }
+
+                    &:last-child {
+                        min-width: 55px;
+                    }
+                }
+
+                @include m.desktop {
+                    min-width: 90px;
+                    font-size: 1.6rem;
+
+                    &:nth-child(2) {
+                        min-width: 120px;
+                    }
+
+                    &:nth-child(4) {
+                        min-width: 60px;
+                    }
+
+                    &:last-child {
+                        min-width: 60px;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            td {
+                min-width: 80px;
+                height: 46px;
+                font-weight: 400;
+                border-bottom: 1px solid v.$gray-200;
+
+                &:first-child {
+                    width: 100%;
+                }
+
+                &:nth-child(2) {
+                    min-width: 100px;
+                    input {
+                        text-overflow: ellipsis;
+                    }
+                }
+
+                &:nth-child(4) {
+                    min-width: 50px;
+                }
+
+                &:last-child {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 6px;
+                    min-width: 50px;
+
+                    button {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+
+                        &:hover {
+                            background-color: v.$blue-light-100;
+                        }
+
+                        &:active {
+                            background-color: v.$blue-light-200;
+                        }
+
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                            color: v.$gray-700;
+                        }
+                    }
+                }
+
+                @include m.tablet {
+                    min-width: 85px;
+                    height: 48px;
+
+                    &:nth-child(2) {
+                        min-width: 100px;
+                    }
+
+                    &:nth-child(4) {
+                        min-width: 55px;
+                    }
+
+                    &:last-child {
+                        min-width: 55px;
+                    }
+                }
+
+                @include m.desktop {
+                    min-width: 90px;
+                    height: 50px;
+
+                    &:nth-child(2) {
+                        min-width: 120px;
+                    }
+
+                    &:nth-child(4) {
+                        min-width: 60px;
+                    }
+
+                    &:last-child {
+                        min-width: 60px;
+                    }
+                }
+
+                input {
+                    width: 100%;
+                    height: 100%;
+                    padding: 0 10px;
+                    border: none;
+                    color: v.$blue-900;
+                    font-weight: 400;
+                    font-size: 1.4rem;
+
+                    &:focus {
+                        outline: none;
+                    }
+
+                    &::placeholder {
+                        color: v.$gray-300;
+                    }
+
+                    &.error::placeholder {
+                        color: v.$red-600;
+                    }
+
+                    @include m.tablet {
+                        font-size: 1.5rem;
+                    }
+
+                    @include m.desktop {
+                        font-size: 1.6rem;
+                    }
+                }
+
+                input::-webkit-outer-spin-button,
+                input::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+
+                input[type="number"] {
+                    -moz-appearance: textfield;
+                }
+            }
+        }
+
+        tfoot {
+            height: 46px;
+
+            @include m.tablet {
+                height: 48px;
+            }
+
+            @include m.desktop {
+                height: 50px;
+            }
+
+            tr td {
+                padding: 0 10px;
+                color: v.$blue-900;
+                font-weight: 500;
+                font-size: 1.4rem;
+
+                @include m.tablet {
+                    font-size: 1.5rem;
+                }
+
+                @include m.desktop {
+                    font-size: 1.6rem;
+                }
+
+                &:first-child {
+                    text-align: right;
+                }
+            }
+        }
+    }
+}

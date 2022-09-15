@@ -1,0 +1,66 @@
+@use "../abstract/mixins" as m;
+@use "../abstract/variables" as v;
+
+.financing {
+    .container {
+        display: flex;
+        flex-direction: column;
+
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .row {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                overflow: hidden;
+                max-height: 1000px;
+
+                @include m.tablet {
+                    flex-direction: row;
+                    height: 500px;
+                }
+
+                .item {
+                    display: flex;
+                    flex-grow: 1;
+
+                    &.order-0 {
+                        order: 0;
+                    }
+                    
+                    &.order-1 {
+                        order: 1;
+                    }
+
+                    @include m.tablet {
+
+                        &.order-0 {
+                            order: initial;
+                        }
+                        
+                        &.order-1 {
+                            order: initial;
+                        }
+                    }
+
+                    img {
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                        max-width: 500px;
+                        max-height: 600px;
+                        margin: 0 auto;
+
+                        @include m.tablet {
+                            flex-direction: row;
+                            max-width: none,
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

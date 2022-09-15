@@ -1,0 +1,48 @@
+@use "../abstract/variables"as v;
+@use "../abstract/mixins"as m;
+
+.primary-btn {
+    @include m.btn(600);
+    background-color: v.$blue-900;
+    color: v.$white;
+    border: 2px solid v.$blue-900;
+
+    &:hover {
+        background-color: v.$blue-800;
+        border: 2px solid v.$blue-800;
+    }
+}
+
+.secondary-btn {
+    @include m.btn(600);
+    background-color: v.$white;
+    color: v.$blue-900;
+    border: 2px solid v.$white;
+
+    &:hover {
+        background-color: v.$white;
+        color: v.$blue-900;
+        border-color: v.$white;
+
+        &.shadow {
+            box-shadow: 0 10px 40px -5px rgb(32 66 137 / 0.3);
+        }
+    }
+
+    &.shadow {
+        box-shadow: 0 10px 30px -5px rgb(32 66 137 / 0.1);
+    }
+}
+
+.tertiary-btn {
+    @include m.btn(600);
+    background-color: v.$transparent;
+    color: v.$gray-400;
+    border: 2px solid v.$gray-300;
+
+    &:hover {
+        background-color: v.$transparent;
+        color: v.$blue-700;
+        border-color: v.$blue-600;
+    }
+}

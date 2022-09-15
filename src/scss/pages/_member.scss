@@ -1,0 +1,149 @@
+@use "../abstract/mixins" as m;
+@use "../abstract/variables" as v;
+
+.member {
+    padding: 0;
+    padding-top: 50px;
+
+    @include m.mobile {
+        padding-top: 60px;
+    }
+
+    @include m.tablet {
+        padding-top: 80px;
+    }
+
+    @include m.desktop {
+        padding-top: 90px;
+    }
+
+    @include m.desktopXL {
+        padding-top: 100px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        @include m.tablet {
+            flex-direction: row;
+        }
+
+        .col-left {
+            display: flex;
+            flex: 1 1 50%;
+            justify-content: center;
+            align-items: flex-end;
+            order: 1;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                width: 300px;
+                height: 340px;
+                background-color: v.$blue-light-200;
+                border-top-left-radius: 120px;
+                border-top-right-radius: 30px;
+
+                @include m.mobile {
+                    width: 330px;
+                    height: 380px;
+                    border-top-left-radius: 130px;
+                    border-top-right-radius: 33px;
+                }
+
+                @include m.tablet {
+                    order: 0;
+                    width: 360px;
+                    height: 420px;
+                    border-top-left-radius: 140px;
+                    border-top-right-radius: 36px;
+                }
+
+                @include m.desktop {
+                    width: 400px;
+                    height: 450px;
+                    border-top-left-radius: 160px;
+                    border-top-right-radius: 40px;
+                }
+            }
+
+            img {
+                z-index: 1;
+                max-width: 220px;
+                max-height: 373px;
+
+                @include m.mobile {
+                    max-width: 240px;
+                    max-height: 407px;
+                }
+
+                @include m.tablet {
+                    max-width: 260px;
+                    max-height: 441px;
+                }
+
+                @include m.desktop {
+                    max-width: initial;
+                    max-height: initial;
+                }
+            }
+        }
+
+        .col-right {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex: 1 1 50%;
+            order: 0;
+            padding-bottom: 20px;
+
+            @include m.mobile {
+                padding-bottom: 30px;
+            }
+
+            @include m.tablet {
+                order: 1;
+                padding-bottom: 80px;
+            }
+
+            @include m.desktop {
+                padding-bottom: 90px;
+            }
+
+            @include m.desktopXL {
+                padding-bottom: 100px;
+            }
+
+            p {
+                color: v.$blue-tw-300;
+            }
+
+            ul {
+                gap: 8px;
+                margin-top: 20px;
+
+                @include m.tablet {
+                    margin-top: 30px;
+                }
+
+                li {
+                    gap: 10px;
+
+                    svg {
+                        min-width: 24px;
+                        min-height: 24px;
+                    }
+                }
+            }
+
+            a {
+                margin-top: 30px;
+                align-self: flex-start;
+            }
+        }
+    }
+}

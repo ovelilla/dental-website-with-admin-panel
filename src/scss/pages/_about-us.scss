@@ -1,0 +1,141 @@
+@use "../abstract/mixins" as m;
+@use "../abstract/variables" as v;
+
+.about-us-page {
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include m.tablet {
+            gap: 60px;
+        }
+
+        @include m.desktop {
+            gap: 100px;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid v.$blue-light-400;
+
+            @include m.tablet {
+                flex-direction: row;
+                gap: 40px;
+                padding-bottom: 60px;
+            }
+
+            @include m.desktop {
+                gap: 60px;
+                padding-bottom: 100px;
+            }
+
+            &:nth-child(1) {
+                .col img {
+                    border-top-left-radius: 100px;
+                }
+            }
+
+            &:nth-child(2) {
+                .col:first-child {
+                    order: 2;
+                }
+
+                .col:last-child {
+                    order: 1;
+                }
+
+                @include m.tablet {
+                    .col:first-child {
+                        order: 1;
+                    }
+
+                    .col:last-child {
+                        order: 2;
+                    }
+                }
+                .col img {
+                    border-top-right-radius: 100px;
+                }
+            }
+
+            &:nth-child(3) {
+                padding-bottom: 40px;
+                border-bottom: none;
+
+                .col img {
+                    border-top-left-radius: 100px;
+                }
+            }
+
+            .col {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 10px;
+                flex: 1 1 50%;
+
+                p:first-child {
+                    font-size: 1.6rem;
+                    color: v.$blue-tw-300;
+                }
+
+                h2 {
+                    font-size: 2rem;
+
+                    @include m.mobile {
+                        font-size: 2.4rem;
+                    }
+
+                    @include m.tablet {
+                        font-size: 2.8rem;
+                    }
+
+                    @include m.desktop {
+                        font-size: 3.2rem;
+                    }
+
+                    @include m.desktopXL {
+                        font-size: 3.6rem;
+                    }
+                }
+
+                p {
+                    margin-top: 10px;
+                    font-weight: 400;
+
+                    @include m.tablet {
+                        margin-top: 20px;
+                    }
+                }
+
+                ul {
+                    gap: 12px;
+                    margin-top: 20px;
+
+                    @include m.tablet {
+                        margin-top: 30px;
+                    }
+
+                    li {
+                        gap: 10px;
+
+                        svg {
+                            min-width: 24px;
+                            min-height: 24px;
+                        }
+                    }
+                }
+
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                    border-radius: 8px;
+                }
+            }
+        }
+    }
+}

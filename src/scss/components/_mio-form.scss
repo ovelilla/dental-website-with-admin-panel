@@ -1,0 +1,198 @@
+@use "../abstract/mixins" as m;
+@use "../abstract/variables" as v;
+
+.mio-form {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    gap: 18px;
+    min-width: 0;
+
+    @include m.tablet {
+        gap: 20px;
+    }
+
+    @include m.desktop {
+        gap: 22px;
+    }
+
+    .mio-double {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+
+        @include m.tablet {
+            gap: 20px;
+        }
+
+        @include m.desktop {
+            gap: 22px;
+        }
+    }
+
+    .mio-field {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        &.active {
+            .mio-label {
+                transform: translate(3px, -22px) scale(0.75);
+
+                @include m.desktop {
+                    transform: translate(3px, -25px) scale(0.75);
+                }
+            }
+        }
+
+        &.focus {
+            .mio-wrapper:hover .mio-input {
+                border-color: transparent;
+            }
+
+            .mio-label {
+                color: v.$blue-900;
+            }
+
+            .mio-input {
+                outline: 2px solid v.$blue-400;
+                border-color: transparent;
+            }
+        }
+
+        &.error {
+            .mio-wrapper:hover .mio-input {
+                border-color: v.$red-600;
+            }
+            
+            .mio-label {
+                color: v.$red-600;
+            }
+
+            .mio-input {
+                border-color: v.$red-600;
+            }
+
+            &.focus {
+                .mio-wrapper:hover .mio-input {
+                    border-color: transparent;
+                }
+
+                .mio-input {
+                    outline: 2px solid v.$red-600;
+                    border-color: transparent;
+                }
+            }
+
+            .mio-message {
+                color: v.$red-600;
+            }
+        }
+
+        .mio-wrapper {
+            display: flex;
+            position: relative;
+
+            &:hover .mio-input {
+                border-color: v.$blue-200;
+            }
+        }
+
+        .mio-label {
+            position: absolute;
+            top: 14px;
+            left: 10px;
+            max-width: calc(100% - 20px);
+            padding: 0 8px;
+            background-color: v.$white;
+            color: v.$blue-gray-500;
+            font-size: 1.4rem;
+            font-weight: 400;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            cursor: text;
+            transform-origin: left top;
+            transition: transform 0.2s cubic-bezier(0, 0, 0.2, 1);
+
+            @include m.tablet {
+                font-size: 1.5rem;
+            }
+
+            @include m.desktop {
+                top: 16px;
+                left: 12px;
+                font-size: 1.6rem;
+            }
+        }
+
+        .mio-input {
+            width: 100%;
+            min-width: 0;
+            padding: 14px 18px;
+            border: 1px solid v.$blue-50;
+            border-radius: 6px;
+            color: v.$blue-900;
+            font-weight: 400;
+            font-size: 1.4rem;
+            cursor: text;
+
+            @include m.tablet {
+                font-size: 1.5rem;
+            }
+
+            @include m.desktop {
+                padding: 16px 20px;
+                font-size: 1.6rem;
+            }
+        }
+
+        .mio-message {
+            padding-left: 16px;
+            font-size: 1.2rem;
+            font-weight: 400;
+
+            @include m.desktop {
+                padding-left: 18px;
+                font-size: 1.3rem;
+            }
+        }
+
+        .mio-adornment {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            right: 6px;
+            width: 40px;
+            height: 40px;
+            transform: translateY(-50%);
+            background-color: v.$white;
+            color: v.$gray-500;
+        }
+
+        select {
+            overflow: hidden;
+            width: 0;
+            height: 0;
+            opacity: 0;
+            border: none;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+        .mio-checkbox-label {
+            padding-left: 10px;
+            font-weight: 400;
+        }
+    }
+}

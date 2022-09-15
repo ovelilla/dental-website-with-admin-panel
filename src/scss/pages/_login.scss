@@ -1,0 +1,17 @@
+@use "../abstract/mixins" as m;
+@use "../abstract/variables" as v;
+
+.login {
+    .container {
+        display: flex;
+        justify-content: center;
+
+        form {
+            max-width: 520px;
+
+            input[type="submit"] {
+                margin-top: 30px;
+            }
+        }
+    }
+}

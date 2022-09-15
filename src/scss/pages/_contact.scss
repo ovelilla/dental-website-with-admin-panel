@@ -1,0 +1,97 @@
+@use "../abstract/mixins" as m;
+@use "../abstract/variables" as v;
+
+.contact-info {
+    padding: 0;
+
+    .container {
+        padding: 60px 15px;
+        border-bottom: 1px solid v.$blue-light-400;
+
+        @include m.mobile {
+            padding: 70px 20px;
+        }
+
+        @include m.tablet {
+            padding: 80px 25px;
+        }
+
+        @include m.desktop {
+            padding: 90px 30px;
+        }
+
+        @include m.desktopXL {
+            padding: 100px 30px;
+        }
+
+        .grid {
+            @include m.grid(1, 20px, 20px);
+
+            @include m.tablet {
+                @include m.grid(2, 20px, 20px);
+            }
+
+            @include m.desktop {
+                @include m.grid(3, 30px, 30px);
+            }
+
+            .card {
+                display: flex;
+                padding: 20px;
+                gap: 20px;
+                border-radius: 8px;
+
+
+                @include m.desktop {
+                    gap: 10px;
+                }
+
+                @include m.desktopXL {
+                    gap: 20px;
+                }
+
+                .icon {
+                    display: flex;
+                    align-items: flex-start;
+
+                    .icon-container {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        min-width: 60px;
+                        min-height: 60px;
+                        background-color: v.$blue-light-400;
+                        border-radius: 50%;
+                    }
+                }
+
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+
+                    .title {
+                        color: v.$blue-light-900;
+                        font-size: 1.8rem;
+                        font-weight: 600;
+                        letter-spacing: normal;
+                    }
+
+                    .info {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4px;
+
+                        > * {
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.map {
+    display: flex;
+}

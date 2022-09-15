@@ -1,0 +1,337 @@
+@use "../abstract/mixins" as m;
+@use "../abstract/variables" as v;
+
+.section.admin-header {
+    background-color: v.$blue-light-50;
+    margin-top: 60px;
+    padding: 15px 0 10px 0;
+
+    @include m.mobile {
+        margin-top: 70px;
+        padding: 20px 0 15px 0;
+    }
+
+    @include m.tablet {
+        margin-top: 80px;
+        padding: 20px 0;
+    }
+
+    @include m.desktop {
+        margin-top: 100px;
+        padding: 30px 0;
+    }
+
+    @include m.desktopXL {
+        margin-top: 110px;
+        padding: 40px 0;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0;
+
+        @include m.tablet {
+            gap: 10px;
+        }
+
+        @include m.tablet {
+            gap: 20px;
+        }
+
+        h1 {
+            font-size: 2.6rem;
+
+            @include m.mobile {
+                font-size: 3rem;
+            }
+
+            @include m.tablet {
+                font-size: 3.4rem;
+            }
+
+            @include m.desktop {
+                font-size: 3.8rem;
+            }
+
+            @include m.desktopXL {
+                font-size: 4.2rem;
+            }
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            height: 48px;
+
+            a {
+                align-self: stretch;
+                display: flex;
+                align-items: center;
+                font-size: 1.5rem;
+                font-weight: 400;
+
+                @include m.tablet {
+                    font-size: 1.6rem;
+                }
+
+                &:not(:last-child)::after {
+                    content: "|";
+                    display: inline-flex;
+                    padding: 0 5px;
+                }
+
+                &:last-child {
+                    color: v.$blue-gray-600;
+                    pointer-events: none;
+                }
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .logout {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 50px;
+            min-height: 50px;
+            border-radius: 50%;
+
+            &:hover {
+                background-color: v.$blue-light-200;
+            }
+
+            svg {
+                width: 28px;
+                height: 28px;
+                margin-top: -2px;
+            }
+        }
+    }
+}
+
+.admin {
+    padding: 30px 0;
+
+    @include m.mobile {
+        padding: 40px 0;
+    }
+
+    @include m.tablet {
+        gap: 40px;
+        padding: 60px 0;
+    }
+
+    @include m.desktop {
+        padding: 70px 0;
+    }
+
+    @include m.desktopXL {
+        padding: 80px 0;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include m.tablet {
+            gap: 40px;
+        }
+
+        .menu {
+            @include m.grid(2, 20px, 20px);
+
+            @include m.tablet {
+                @include m.grid(3, 40px, 40px);
+            }
+
+            @include m.desktop {
+                @include m.grid(4, 60px, 60px);
+            }
+
+            .card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+                gap: 20px;
+                border-radius: 8px;
+                background-color: v.$blue-light-50;
+                transition: background-color 0.3s ease;
+
+                @include m.mobile {
+                    padding: 30px 20px;
+                }
+
+                @include m.tablet {
+                    padding: 40px 20px;
+                }
+
+                @include m.desktop {
+                    padding: 50px 20px;
+                }
+
+                @include m.desktopXL {
+                    padding: 60px 20px;
+                }
+
+                &:hover {
+                    background-color: v.$blue-light-100;
+                }
+
+                .icon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    background-color: v.$white;
+
+                    @include m.tablet {
+                        width: 70px;
+                        height: 70px;
+                    }
+
+                    @include m.desktop {
+                        width: 80px;
+                        height: 80px;
+                    }
+
+                    svg {
+                        width: 24px;
+                        height: 24px;
+
+                        @include m.mobile {
+                            width: 26px;
+                            height: 26px;
+                        }
+
+                        @include m.tablet {
+                            width: 28px;
+                            height: 28px;
+                        }
+
+                        @include m.desktop {
+                            width: 30px;
+                            height: 30px;
+                        }
+
+                        @include m.desktopXL {
+                            width: 32px;
+                            height: 32px;
+                        }
+                    }
+                }
+
+                span {
+                    display: flex;
+                    text-align: center;
+                    font-weight: 400;
+                    font-size: 1.5rem;
+
+                    @include m.tablet {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            @include m.mobile {
+                gap: 20px;
+            }
+
+            @include m.tablet {
+                gap: 30px;
+            }
+
+            @include m.desktop {
+                gap: 40px;
+            }
+
+            form.search {
+                align-self: stretch;
+
+                .mio-field input {
+                    padding: 14px 24px;
+                    border-radius: 50px;
+
+                    @include m.tablet {
+                        padding: 16px 26px;
+                    }
+
+                    @include m.desktop {
+                        padding: 16px 28px;
+                    }
+                }
+
+                .mio-field label {
+                    left: 16px;
+
+                    @include m.tablet {
+                        left: 18px;
+                    }
+
+                    @include m.desktop {
+                        left: 20px;
+                    }
+                }
+            }
+
+            .btn {
+                padding: 0;
+                width: 48px;
+                height: 48px;
+
+                span {
+                    display: none;
+                }
+
+                @include m.mobile {
+                    width: initial;
+                    height: 48px;
+                    padding: 0 24px;
+
+                    span {
+                        display: block;
+                    }
+
+                    svg {
+                        display: none;
+                    }
+                }
+
+                @include m.tablet {
+                    height: 50px;
+                    padding: 0 28px;
+                }
+
+                @include m.desktop {
+                    height: 52px;
+                    padding: 0 30px;
+                }
+
+                @include m.desktopXL {
+                    height: 52px;
+                }
+            }
+        }
+    }
+}
