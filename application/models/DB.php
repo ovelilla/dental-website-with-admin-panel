@@ -28,6 +28,7 @@ class DB {
 
         try {
             self::$connection = new mysqli(self::$db_host, self::$db_user, self::$db_pass, self::$db_name);
+            self::$connection->set_charset('utf8mb4');
         } catch (Exception | Error $e) {
             throw new Exception($e->getMessage());
         }
