@@ -37,6 +37,7 @@
             align-items: flex-end;
             order: 1;
             position: relative;
+            min-height: 340px;
 
             &::after {
                 content: "";
