@@ -1,137 +1,120 @@
 <section class="section page-header">
     <div class="container">
         <h1>Ortodoncia invisible</h1>
-        <p>Lorem ipsum dolor sit amet, consect adipiscing elit. Nunc volutpat pellentesque leo.</p>
+        <p>La última tecnología de alineamiento dental</p>
     </div>
 </section>
 
 <section class="section treatment">
     <div class="container">
-        <img src="/build/img/tratamientos/tratamiento1.jpg" alt="Imagen 1">
+        <img src="/build/img/tratamientos/banner-ortodoncia-invisible.jpg" alt="Banner ortodoncia invisible">
 
-        <p>Ut ac ultrices augue. Donec in arcu ac neque feugiat tempus. Curabitur magna urna, scelerisque id purus eget, mollis varius lacus. <strong>Donec congue, tellus sit amet posuere mattis, lacus magna scelerisque elit, quis gravida lectus leo at sem. Sed bibendum quam sit amet tempor consequat.</strong> In id luctus lacus. In vehicula sollicitudin justo non dictum. Praesent sed justo vel nisl porttitor accumsan non non elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque in tortor id urna molestie feugiat. Donec fermentum dolor a bibendum egestas. Cras nec scelerisque nisl.</p>
+        <div class="col">
+            <p>La ortodoncia Invisible es la <strong>última técnica utilizada por los mejores ortodoncistas</strong> mediante la cual, utilizando férulas transparentes de movimiento, conseguimos unos resultados más rápidos, mayor comodidad que la ortodoncia convencional y mucho más precisa, ya que la precisión con este tipo de ortodoncia es milimétrica.</p>
+
+            <p>Para llevar a cabo el tratamiento es necesario realizar un <strong>estudio Digital 3D</strong>, la boca del paciente se escanea con un escáner intraoral de última tecnología, una vez realzado este, nuestros ortodoncistas planifican cada caso y nos muestran la evolución por fases y el resultado final del tratamiento. Podrás ver tu boca antes y después, viendo los resultados antes de aceptar el caso.</p>
+
+            <p>Existen numerosas marcas low cost de ortodoncia Invisible. Nosotros en Dentiny <strong>apostamos por la mejor calidad y trabajamos de la mano de las dos mejores y pioneras marcas en el mundo</strong>: Spark, Secretaligner e Invisalign teniendo la certeza de que nuestros pacientes siempre tendrán en sus tratamientos dentales la <strong>máxima calidad y los últimos avances mundiales</strong> y con férulas de movimiento ilimitadas sin afectar a su presupuesto. Garantizamos la sonrisa de tus sueños.</p>
+
+            <p>Como tenemos un gran volumen de pacientes de ortodoncia Invisible podemos conseguir los mejores precios del mercado sin renunciar a la mejor calidad. Beneficiándose de la mejor ortodoncia Invisible del mundo con el mejor precio garantizado. <a href="/contacto">Pregunta a nuestro equipo expertos</a> cualquier duda sobre el tratamiento o los métodos de pago. Nunca ha sido tan fácil tener la mejor sonrisa. Apuesta por la mejor calidad y la última tecnología con el mejor precio en Dentiny.</p>
+        </div>
+
 
         <div class="row">
             <div class="col">
-                <h2>Sed felis velit, volutpat nec ultricies eget</h2>
+                <h2>¿Cuántas horas al día tengo que llevar las férulas de ortodoncia invisible?</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Ut sit amet elementum orci.</strong> Nulla tristique magna nibh, at tincidunt nunc lacinia in. Duis tincidunt tellus et ipsum ultricies, quis auctor ex dapibus. Mauris eu metus suscipit, ullamcorper mi eu, porta odio. Ut volutpat, nibh non sagittis fringilla, lectus sapien tempor nisl, quis laoreet justo tellus posuere felis.</p>
-                <p>Sed felis velit, volutpat nec ultricies eget, consequat id justo. <strong>Maecenas hendrerit, nulla a vulputate sagittis, dui mauris porttitor tortor, non sollicitudin neque augue ut odio.</strong> Integer nibh elit, convallis eu facilisis vel, accumsan et ex. Quisque a elit non lorem elementum placerat at sed nulla. In molestie vehicula finibus.</p>
+                <p>La ortodoncia invisible requiere de una gran colaboración con el paciente, tendrás que llevar tus férulas de ortodonica invisible un mínimo de 22 horas al dia. </p>
+
+                <h2>¿Cuándo tengo que ir a la clínica cuando use mi ortodoncia invisible?</h2>
+
+                <p>A diferencia de otras clínicas y franquicias low-cost de ortodoncia invisible que te dan las férulas sin hacer un seguimiento. En Dentiny, tendrás que acudir a tu cita mensual mínimo una vez cada 2 meses para que verifiquen nuestros odontólogos ortodoncistas que en todo momento tu tratamiento se está llevando con éxito, estarás en todo momento bajo la supervisión de los mejores ortodoncistas de la provincia con un teléfono 24h los 7 días de la semana.</p>
             </div>
             <div class="col">
-                <img src="/build/img/blog/blog16.jpg" alt="Imagen 1">
+                <img src="/build/img/tratamientos/mujer-poniendose-ortodoncia-invisible.jpg" alt="Mujer poniéndose ortodoncia invisible">
             </div>
+        </div>
+
+        <div class="col">
+            <h2>¿Para qué pacientes no es recomendable la ortodoncia Invisible?</h2>
+
+            <p>Ya que la ortodoncia invisible requiere de una gran colaboración del paciente, si eres una persona olvidadiza, no eres constante o lo pierdes todo no sería la ortodoncia recomendada para ti, nosotros te recomendaríamos otro tipo de ortodoncia, igual de efectiva y que se adapte a ti.</p>
         </div>
 
         <div class="row">
             <div class="col">
-                <img src="/build/img/blog/blog19.jpg" alt="Imagen 2">
+                <img src="/build/img/tratamientos/ortodoncia-invisible-detalle.jpg" alt="Imagen 2">
             </div>
             <div class="col">
-                <h2>Mauris eu metus suscipit, ullamcorper mi</h2>
-                <p>Nulla tristique magna nibh, at tincidunt nunc lacinia in. Duis tincidunt tellus et ipsum ultricies, quis auctor ex dapibus. Mauris eu metus suscipit, ullamcorper mi eu, porta odio.</p>
+                <h2>¿Que ventajas tiene la ortodoncia invisible frente a las otras ortodoncias?</h2>
+                <p>Al utilizar la última tecnología dental con un proceso de máxima digitalización con parámetros milimétricos conseguimos una eficacia en el tratamiento de ortodoncia invisible 3d insuperables. Bienvenidos al futuro.</p>
 
                 <ul class="custom-list">
                     <li>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                        <span>Es prácticamente invisible, nadie notará que la llevas puesta.</span>
                     </li>
 
                     <li>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <span>Aliquam vel ornare diam. Aliquam erat volutpat.</span>
+                        <span>Cómoda de llevar, di adiós a las molestas llagas causadas por los brackets.</span>
                     </li>
 
                     <li>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <span>Cras congue urna malesuada neque porttitor, vel sollicitudin.</span>
+                        <span>Al ser removible podremos limpiar nuestra boca perfectamente.</span>
                     </li>
 
                     <li>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <span>Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</span>
+                        <span>Resultados precisos gracias al escáner dental 3d de última generación.</span>
                     </li>
 
                     <li>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <span>Vivamus vel massa lorem. Vestibulum quis dignissim ligula.</span>
+                        <span>Conoce el antes y después de tus dientes con la máxima calidad 3d.</span>
+                    </li>
+
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>Duración del tratamiento hasta la mitad de tiempo frente a los brackets.</span>
                     </li>
                 </ul>
             </div>
         </div>
 
         <blockquote>
-            <p><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet elementum orci. Nulla tristique magna nibh, at tincidunt nunc lacinia in. Duis tincidunt tellus et ipsum ultricies, quis auctor ex dapibus. Mauris eu metus suscipit</em></p>
+            <p><em>Como tenemos un gran volumen de pacientes de ortodoncia Invisible podemos conseguir los mejores precios del mercado sin renunciar a la mejor calidad. Beneficiándose de la mejor ortodoncia Invisible del mundo con el mejor precio garantizado. <a href="/contacto">Pregunta a nuestro equipo expertos</a> cualquier duda sobre el tratamiento o los métodos de pago. Nunca ha sido tan fácil tener la mejor sonrisa. Apuesta por la mejor calidad y la última tecnología con el mejor precio en Dentiny.</em></p>
         </blockquote>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet elementum orci. Nulla tristique magna nibh, at tincidunt nunc lacinia in. Duis tincidunt tellus et ipsum ultricies, quis auctor ex dapibus. Mauris eu metus suscipit, ullamcorper mi eu, porta odio. Ut volutpat, nibh non sagittis fringilla, lectus sapien tempor nisl, quis laoreet justo tellus posuere felis. In ornare diam et nibh congue tempor. Mauris ullamcorper tincidunt condimentum. Nulla vitae tristique ante. Sed vitae leo in nunc congue porta. Integer a lorem id sapien sollicitudin mollis pretium vitae enim.</p>
+        <div class="col">
+            <h2>¿Son todas las ortodoncias invisibles iguales?</h2>
 
-        <div class="row">
-            <div class="col">
-                <h2>Sed felis velit, volutpat nec ultricies eget</h2>
-
-                <p>Nulla tristique magna nibh, at tincidunt nunc lacinia in. Duis tincidunt tellus et ipsum ultricies, quis auctor ex dapibus. Mauris eu metus suscipit, ullamcorper mi eu, porta odio.</p>
-
-                <ul class="standard-list">
-                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                    <li>Aliquam vel ornare diam. Aliquam erat volutpat.</li>
-                    <li>Cras congue urna malesuada neque porttitor, vel sollicitudin.</li>
-                    <li>Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</li>
-                    <li>Vivamus vel massa lorem. Vestibulum quis dignissim ligula.</li>
-                </ul>
-            </div>
-            <div class="col">
-                <img src="/build/img/blog/blog15.jpg" alt="Imagen 1">
-            </div>
+            <p>En absoluto, las mejores y únicas marcas que te corrigen toda la mordida con la mínima invasión dental son Spark, Secretaligner e Insisalign. Huye de ofertas low-cost. Lo barato cuando se trata de salud puede llegar a salirte muy muy caro. Por favor, infórmate bien antes de tomar alguna decisión sin compromiso con nuestro equipo humano de expertos.</p>
         </div>
 
+        <div class="col">
+            <h2>¿Qué hago con las férulas que ya he usado?</h2>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis turpis id augue suscipit, in gravida augue laoreet. Aliquam tincidunt, turpis quis consequat posuere, odio erat sagittis arcu, in tempor purus diam eget nisl. Curabitur sit amet eros nec nisi pharetra vulputate. Sed fringilla purus eu leo rhoncus, ut ornare ex aliquam. Donec ut bibendum est. Nam mauris felis, pharetra at feugiat non, consequat vitae ligula. Quisque nisl diam, euismod vel sem pulvinar, venenatis congue magna. Nam maximus massa sit amet varius ultrices. Nulla sed feugiat felis. Vestibulum tempor porta arcu, sed accumsan quam condimentum at. Suspendisse vel porta odio, in mattis ante. Aliquam rutrum lacus non nulla placerat.</p>
+            <p>Guarda en todo momento las férulas de ortodoncia invisible, aunque ya las hayas usado. Imagínate que has acabado con la férula 7 y la 8 no la encuentras. Comunicaras de inmediato a la clínica informándonos de tu situación y mientras tendrás que llevar esa férula hasta que te fabriquen nuevamente la férula perdida Otro caso voy por la férula 5 y la pierdo; en ese caso tendrás que informar inmediatamente a la clínica y ponerte la férula 4. Por eso es Importantísimo guardarte las férulas hasta acabar tu ortodoncia. ¡Además, tendrás un bonito recuerdo de la evolución de tus dientes!</p>
+        </div>
 
+        <div class="col">
+            <h2>¿Puedo a mi hijo menor de edad ponerle ortodoncia invisible?</h2>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Columna</th>
-                    <th>Columna</th>
-                    <th>Columna</th>
-                    <th>Columna</th>
-                    <th>Columna</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                </tr>
-                <tr>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                </tr>
-                <tr>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                </tr>
-            </tbody>
-        </table>
+            <p>Por supuesto que sí, aunque queremos que sepas que la ortodoncia invisible requiere de una gran colaboración con el paciente, ya que tiene que llevar las férulas al menos 22 horas al día. Si crees que tus hijos van a ser cuidadosos y responsables con las pautas de la ortodoncia invisible, sería una gran opción a tener en cuenta. ¡Sin ir más lejos, Leo el hijo de 14 años de nuestra odontóloga Claudia Rada disfruta de los beneficios de esta ortodoncia y esta super contento!</p>
+        </div>
     </div>
 </section>

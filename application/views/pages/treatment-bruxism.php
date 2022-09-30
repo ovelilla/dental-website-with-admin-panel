@@ -1,137 +1,59 @@
 <section class="section page-header">
     <div class="container">
         <h1>Bruxismo</h1>
-        <p>Lorem ipsum dolor sit amet, consect adipiscing elit. Nunc volutpat pellentesque leo.</p>
+        <p>Dolor provocado por apretar los dientes</p>
     </div>
 </section>
 
 <section class="section treatment">
     <div class="container">
-        <img src="/build/img/tratamientos/tratamiento1.jpg" alt="Imagen 1">
+        <div class="col">
+            <h2>¿Qué es el bruxismo?</h2>
 
-        <p>Ut ac ultrices augue. Donec in arcu ac neque feugiat tempus. Curabitur magna urna, scelerisque id purus eget, mollis varius lacus. <strong>Donec congue, tellus sit amet posuere mattis, lacus magna scelerisque elit, quis gravida lectus leo at sem. Sed bibendum quam sit amet tempor consequat.</strong> In id luctus lacus. In vehicula sollicitudin justo non dictum. Praesent sed justo vel nisl porttitor accumsan non non elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque in tortor id urna molestie feugiat. Donec fermentum dolor a bibendum egestas. Cras nec scelerisque nisl.</p>
-
-        <div class="row">
-            <div class="col">
-                <h2>Sed felis velit, volutpat nec ultricies eget</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Ut sit amet elementum orci.</strong> Nulla tristique magna nibh, at tincidunt nunc lacinia in. Duis tincidunt tellus et ipsum ultricies, quis auctor ex dapibus. Mauris eu metus suscipit, ullamcorper mi eu, porta odio. Ut volutpat, nibh non sagittis fringilla, lectus sapien tempor nisl, quis laoreet justo tellus posuere felis.</p>
-                <p>Sed felis velit, volutpat nec ultricies eget, consequat id justo. <strong>Maecenas hendrerit, nulla a vulputate sagittis, dui mauris porttitor tortor, non sollicitudin neque augue ut odio.</strong> Integer nibh elit, convallis eu facilisis vel, accumsan et ex. Quisque a elit non lorem elementum placerat at sed nulla. In molestie vehicula finibus.</p>
-            </div>
-            <div class="col">
-                <img src="/build/img/blog/blog16.jpg" alt="Imagen 1">
-            </div>
+            <p>El bruxismo es una condición donde la persona por diferentes motivos; bien puede ser estrés, malos contactos oclusales, prótesis desajustadas; <strong>aprieta los dietes generando daño</strong>, bien en el propio diente, en el esmalte, desgastándolo, incluso hasta llegas a la pulpa o puede afectar a la articulación, generando dolores de oído, acufenos… o puede afectar al sistema muscular generando dolores de cabeza.</p>
         </div>
 
         <div class="row">
             <div class="col">
-                <img src="/build/img/blog/blog19.jpg" alt="Imagen 2">
+                <p>El sistema estomatognático esta principalmente dividido entre los dientes, la articulación y todo el sistema de engranaje muscular. La mandíbula es un hueso que es flotante que está sujeta por una serie de músculos y el principal es el musculo macetero que es un musculo masticatorio.</p>
+                <p>El <strong>exceso de estrés y rechinar los dientes producen desde fisuras</strong>, fracturas en esmalte hasta problemas articulares, dolores de cabeza, migrañas, cefaleas etc.</p>
+                <p>Es muy importante que te <strong>diagnostique un profesional</strong> a ver cuál es la causa del bruxismo, ya que muchas veces el bruxismo está oculto en una doble mordida o problemas de mal oclusión.</p>
+                <p>Una vez efectuado el diagnostico terminaremos en casos de mucho desgaste recomendamos devolver el volumen de todo el tejido dentario perdido, a través de restauraciones y a posteriori colocar una <strong>férula de descarga personalizada</strong> en donde se equilibren todos los contactos y en donde la oclusión sea estable, produciendo una mejoría de los síntomas del bruxismo.</p>
             </div>
+
             <div class="col">
-                <h2>Mauris eu metus suscipit, ullamcorper mi</h2>
-                <p>Nulla tristique magna nibh, at tincidunt nunc lacinia in. Duis tincidunt tellus et ipsum ultricies, quis auctor ex dapibus. Mauris eu metus suscipit, ullamcorper mi eu, porta odio.</p>
-
-                <ul class="custom-list">
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                    </li>
-
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span>Aliquam vel ornare diam. Aliquam erat volutpat.</span>
-                    </li>
-
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span>Cras congue urna malesuada neque porttitor, vel sollicitudin.</span>
-                    </li>
-
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span>Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</span>
-                    </li>
-
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span>Vivamus vel massa lorem. Vestibulum quis dignissim ligula.</span>
-                    </li>
-                </ul>
+                <img src="/build/img/tratamientos/chico-joven-con-problemas-de-bruxismo.jpg" alt="Dentista y paciente en una clinica dental">
             </div>
         </div>
 
         <blockquote>
-            <p><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet elementum orci. Nulla tristique magna nibh, at tincidunt nunc lacinia in. Duis tincidunt tellus et ipsum ultricies, quis auctor ex dapibus. Mauris eu metus suscipit</em></p>
+            <p><em>Es muy importante que te diagnostique un profesional a ver cuál es la causa del bruxismo, ya que muchas veces el bruxismo está oculto en una doble mordida o problemas de mal oclusión</em></p>
         </blockquote>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet elementum orci. Nulla tristique magna nibh, at tincidunt nunc lacinia in. Duis tincidunt tellus et ipsum ultricies, quis auctor ex dapibus. Mauris eu metus suscipit, ullamcorper mi eu, porta odio. Ut volutpat, nibh non sagittis fringilla, lectus sapien tempor nisl, quis laoreet justo tellus posuere felis. In ornare diam et nibh congue tempor. Mauris ullamcorper tincidunt condimentum. Nulla vitae tristique ante. Sed vitae leo in nunc congue porta. Integer a lorem id sapien sollicitudin mollis pretium vitae enim.</p>
+        <div class="col">
+            <h2>Si tengo un bruxismo avanzo, ¿qué tratamientos hay?</h2>
+
+            <p>Además de poder prescribir analgésicos, relajantes musculares, terapia de frio calor. Es aconsejable también acudir también a <strong>terapias de fisioterapia</strong>, hacer ejercicios de la mandíbula y realizar la férula de descarga.</p>
+
+            <h2>¿Se puede utilizar Botox para el bruxismo?</h2>
+
+            <p>En casos puede llegar a ser un tratamiento complementario para el bruxismo para inhibir un poco su función muscular… aunque normalmente cuando rehabilitas los dientes, los pacientes notan una mejora inmediata, siendo esta opción junto con la férula de descarga la más recomendable.</p>
+        </div>
 
         <div class="row">
             <div class="col">
-                <h2>Sed felis velit, volutpat nec ultricies eget</h2>
-
-                <p>Nulla tristique magna nibh, at tincidunt nunc lacinia in. Duis tincidunt tellus et ipsum ultricies, quis auctor ex dapibus. Mauris eu metus suscipit, ullamcorper mi eu, porta odio.</p>
-
-                <ul class="standard-list">
-                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                    <li>Aliquam vel ornare diam. Aliquam erat volutpat.</li>
-                    <li>Cras congue urna malesuada neque porttitor, vel sollicitudin.</li>
-                    <li>Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</li>
-                    <li>Vivamus vel massa lorem. Vestibulum quis dignissim ligula.</li>
-                </ul>
+                <img src="/build/img/tratamientos/mujer-con-ferula-de-descarga.jpg" alt="Dentista y paciente en una clinica dental">
             </div>
+
             <div class="col">
-                <img src="/build/img/blog/blog15.jpg" alt="Imagen 1">
+                <h2>¿Qué tipos de férulas para el bruxismo existen?</h2>
+
+                <p>Para el bruxismo las férulas más recomendables son las <strong>férulas rígidas de tipo Michigan o de descarga</strong>, en donde el protésico ajusta perfectamente la oclusión devolviendo las guías caninas. Las férulas blandas no son recomendables para el bruxismo.</p>
+
+                <h2>¿Cuanta gente padece bruxismo?</h2>
+
+                <p>Mas de la <strong>mitad de la población</strong> sufre de bruxismo y muchos no son conscientes de ello, por eso es recomendable acudir a tu dentista de confianza ante cualquier duda.</p>
             </div>
         </div>
-
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis turpis id augue suscipit, in gravida augue laoreet. Aliquam tincidunt, turpis quis consequat posuere, odio erat sagittis arcu, in tempor purus diam eget nisl. Curabitur sit amet eros nec nisi pharetra vulputate. Sed fringilla purus eu leo rhoncus, ut ornare ex aliquam. Donec ut bibendum est. Nam mauris felis, pharetra at feugiat non, consequat vitae ligula. Quisque nisl diam, euismod vel sem pulvinar, venenatis congue magna. Nam maximus massa sit amet varius ultrices. Nulla sed feugiat felis. Vestibulum tempor porta arcu, sed accumsan quam condimentum at. Suspendisse vel porta odio, in mattis ante. Aliquam rutrum lacus non nulla placerat.</p>
-
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Columna</th>
-                    <th>Columna</th>
-                    <th>Columna</th>
-                    <th>Columna</th>
-                    <th>Columna</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                </tr>
-                <tr>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                </tr>
-                <tr>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                </tr>
-            </tbody>
-        </table>
     </div>
 </section>

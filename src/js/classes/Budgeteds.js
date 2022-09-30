@@ -192,6 +192,7 @@ class Budgeteds {
                 budgeted.unit_price = treatment ? treatment.price : null;
                 inputPrice.value = treatment ? treatment.price : "";
                 inputTotal.value = this.getTotalTreatment(budgeted).toFixed(2);
+                this.callback();
             },
         });
 

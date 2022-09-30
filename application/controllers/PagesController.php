@@ -435,7 +435,7 @@ class PagesController {
     public static function logout(Router $router) {
         $router->session()->destroy();
 
-        header('Location: /blog');
+        header('Location: /');
     }
 
     public static function admin(Router $router) {

@@ -26,7 +26,13 @@
 
         .row {
             display: flex;
-            gap: 80px;
+            gap: 40px;
+            flex-direction: column;
+
+            @include m.tablet {
+                flex-direction: row;
+                gap: 60px;
+            }
         }
 
         .col {
@@ -57,14 +63,19 @@
         }
 
         ul.custom-list {
-            gap: 10px;
+            gap: 15px;
+            line-height: 1.6;
+            letter-spacing: -0.05rem;
 
             li {
                 gap: 10px;
+                text-align: justify;
 
                 svg {
+                    align-self: flex-start;
                     min-width: 24px;
                     min-height: 24px;
+                    margin-top: 4px;
                 }
             }
         }
@@ -80,17 +91,27 @@
         }
 
         p {
-            padding: 12px 0;
+            padding: 8px 0;
             text-align: justify;
             font-weight: 400;
+
+            @include m.tablet {
+                padding: 12px 0;
+            }
+        }
+
+        a {
+            text-decoration: underline;
         }
 
         img {
             width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         blockquote {
-            padding: 20px;
+            padding: 20px 40px;
             background-color: v.$blue-light-100;
             border-left: 4px solid v.$blue-900;
         }
@@ -100,19 +121,19 @@
             text-align: left;
             border-collapse: collapse;
         }
-        
+
         table td,
         table th {
             border: 1px solid v.$blue-gray-100;
             padding: 10px;
         }
-        
+
         table thead th {
             font-size: 1.6rem;
             font-weight: 500;
-            background-color: v.$blue-gray-50 ;
+            background-color: v.$blue-gray-50;
         }
-        
+
         table tbody td {
             font-size: 1.6rem;
             font-weight: 400;

@@ -1,9 +1,9 @@
 <section class="section home-header">
     <div class="container">
         <div class="col-left">
-            <p>Aliquam vel ornare diam</p>
-            <h1>Nuestro destino es tu sonrisa</h1>
-            <p>Lorem ipsum dolor sit amet <strong>quis orci imperdiet</strong> consect adipiscing elit. Nunc volutpat pellentesque leo consectetur adipiscing elit.</p>
+            <p>Nuestro destino tu sonrisa</p>
+            <h1>Dentiny, tu clínica dental en Castellón</h1>
+            <p>En Dentiny Clínica Dental en Castellón, encontraras a los <strong>mejores especialistas de la provincia</strong>, que trabajando conjuntamente y de la mano de las últimas tecnologías dentales ofrecen los mejores diagnósticos y tratamientos</p>
 
             <div class="row">
                 <a href="/contacto" class="btn primary-btn">Cita Online</a>
@@ -14,7 +14,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M15.71,12.71a1,1,0,0,0,.21-.33,1,1,0,0,0,0-.76,1,1,0,0,0-.21-.33l-3-3a1,1,0,0,0-1.42,1.42L12.59,11H9a1,1,0,0,0,0,2h3.59l-1.3,1.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0ZM22,12A10,10,0,1,0,12,22,10,10,0,0,0,22,12ZM4,12a8,8,0,1,1,8,8A8,8,0,0,1,4,12Z" />
                 </svg>
-                <span><strong>¿Lorem ipsum?</strong> Nunc volutpat pellent rutrum dui malesuada quis.</span>
+                <span><strong>¿Ofreceís financiación?</strong> Si, pregúntanos sin compromiso</span>
             </a>
         </div>
 
@@ -36,19 +36,7 @@
                 </div>
                 <div class="text">
                     <h2 class="title">Implantes dentales</h2>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </a>
-
-            <a href="/tratamientos/blanqueamiento-dental" class="card">
-                <div class="icon">
-                    <div class="icon-container">
-                        <img loading="lazy" src="/build/img/iconos/07.png" alt="Icono blanqueamiento dental">
-                    </div>
-                </div>
-                <div class="text">
-                    <h2 class="title">Blanqueamiento dental</h2>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="description">Utilizamos los mejores Implantes del mercado.</p>
                 </div>
             </a>
 
@@ -60,7 +48,19 @@
                 </div>
                 <div class="text">
                     <h2 class="title">Ortodoncia invisible</h2>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="description">Pioneros en la mejor ortodoncia Invisible del mundo.</p>
+                </div>
+            </a>
+
+            <a href="/tratamientos/blanqueamiento-dental" class="card">
+                <div class="icon">
+                    <div class="icon-container">
+                        <img loading="lazy" src="/build/img/iconos/23.png" alt="Icono blanqueamiento dental">
+                    </div>
+                </div>
+                <div class="text">
+                    <h2 class="title">Rehabilitación oral y prótesis dentales</h2>
+                    <p class="description">Éxito asegurado, confía en los mejores, Dentiny</p>
                 </div>
             </a>
         </div>
@@ -145,6 +145,25 @@
         <p>Lorem ipsum dolor sit amet, consect adipiscing elit. Nunc volutpat pellentesque leo.</p>
 
         <div class="grid">
+            <a href="/tratamientos/rehabilitacion-oral-protesis-dentales" class="card">
+                <div class="icon">
+                    <div class="icon-container">
+                        <img loading="lazy" src="/build/img/iconos/23.png" alt="Icono rehabilitación oral y protesis dentales">
+                    </div>
+                </div>
+                <div class="text">
+                    <h3 class="title">Rehabilitación oral y prótesis dentales</h3>
+                    <p class="description">Lorem ipsum dolor sit amet, consect adipi elit nunc portum.</p>
+                    <p class="description">Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</p>
+                    <p class="more">
+                        <span>Saber más</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </p>
+                </div>
+            </a>
+
             <a href="/tratamientos/implantes-dentales" class="card">
                 <div class="icon">
                     <div class="icon-container">
@@ -164,14 +183,14 @@
                 </div>
             </a>
 
-            <a href="/tratamientos/blanqueamiento-dental" class="card">
+            <a href="/tratamientos/estetica-dental" class="card">
                 <div class="icon">
                     <div class="icon-container">
-                        <img loading="lazy" src="/build/img/iconos/07.png" alt="Icono blanqueamiento dental">
+                        <img loading="lazy" src="/build/img/iconos/27.png" alt="Icono estética dental">
                     </div>
                 </div>
                 <div class="text">
-                    <h3 class="title">Blanqueamiento dental</h3>
+                    <h3 class="title">Estética dental</h3>
                     <p class="description">Lorem ipsum dolor sit amet, consect adipi elit nunc portum.</p>
                     <p class="description">Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</p>
                     <p class="more">
@@ -221,6 +240,44 @@
                 </div>
             </a>
 
+            <a href="/tratamientos/blanqueamiento-dental" class="card">
+                <div class="icon">
+                    <div class="icon-container">
+                        <img loading="lazy" src="/build/img/iconos/07.png" alt="Icono blanqueamiento dental">
+                    </div>
+                </div>
+                <div class="text">
+                    <h3 class="title">Blanqueamiento dental</h3>
+                    <p class="description">Lorem ipsum dolor sit amet, consect adipi elit nunc portum.</p>
+                    <p class="description">Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</p>
+                    <p class="more">
+                        <span>Saber más</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </p>
+                </div>
+            </a>
+
+            <a href="/tratamientos/cirugia-dental" class="card">
+                <div class="icon">
+                    <div class="icon-container">
+                        <img loading="lazy" src="/build/img/iconos/34.png" alt="Icono cirugía dental">
+                    </div>
+                </div>
+                <div class="text">
+                    <h3 class="title">Cirugía dental</h3>
+                    <p class="description">Lorem ipsum dolor sit amet, consect adipi elit nunc portum.</p>
+                    <p class="description">Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</p>
+                    <p class="more">
+                        <span>Saber más</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </p>
+                </div>
+            </a>
+
             <a href="/tratamientos/periodoncia" class="card">
                 <div class="icon">
                     <div class="icon-container">
@@ -258,63 +315,6 @@
                     </p>
                 </div>
             </a>
-
-            <a href="/tratamientos/estetica-dental" class="card">
-                <div class="icon">
-                    <div class="icon-container">
-                        <img loading="lazy" src="/build/img/iconos/27.png" alt="Icono estética dental">
-                    </div>
-                </div>
-                <div class="text">
-                    <h3 class="title">Estética dental</h3>
-                    <p class="description">Lorem ipsum dolor sit amet, consect adipi elit nunc portum.</p>
-                    <p class="description">Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</p>
-                    <p class="more">
-                        <span>Saber más</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                    </p>
-                </div>
-            </a>
-
-            <a href="/tratamientos/rehabilitacion-oral-protesis-dentales" class="card">
-                <div class="icon">
-                    <div class="icon-container">
-                        <img loading="lazy" src="/build/img/iconos/23.png" alt="Icono rehabilitación oral y protesis dentales">
-                    </div>
-                </div>
-                <div class="text">
-                    <h3 class="title">Rehabilitación oral y prótesis dentales</h3>
-                    <p class="description">Lorem ipsum dolor sit amet, consect adipi elit nunc portum.</p>
-                    <p class="description">Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</p>
-                    <p class="more">
-                        <span>Saber más</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                    </p>
-                </div>
-            </a>
-
-            <a href="/tratamientos/cirugia-dental" class="card">
-                <div class="icon">
-                    <div class="icon-container">
-                        <img loading="lazy" src="/build/img/iconos/34.png" alt="Icono cirugía dental">
-                    </div>
-                </div>
-                <div class="text">
-                    <h3 class="title">Cirugía dental</h3>
-                    <p class="description">Lorem ipsum dolor sit amet, consect adipi elit nunc portum.</p>
-                    <p class="description">Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</p>
-                    <p class="more">
-                        <span>Saber más</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                    </p>
-                </div>
-            </a>
         </div>
 
         <a href="/tratamientos" class="btn primary-btn">Descubre todos nuestros tratamientos</a>
@@ -324,7 +324,7 @@
 <section class="section team">
     <div class="container">
         <h2>Conoce a nuestro equipo</h2>
-        <p>Lorem ipsum dolor sit amet, consect adipiscing elit. Nunc volutpat pellentesque leo.</p>
+        <p>Estamos orgullosos de contar con los mejores especialistas de la provincia.</p>
 
         <div class="grid">
             <a href="/equipo/dra-claudia" class="card">
@@ -379,7 +379,7 @@
 <section class="section latest-posts-home">
     <div class="container">
         <h2>Últimos artículos del blog</h2>
-        <p>Lorem ipsum dolor sit amet, consect adipiscing elit. Nunc volutpat pellentesque leo.</p>
+        <p>Conoce las últimas noticias relacionadas con nuestra clínica dental o la odontología.</p>
 
         <div class="grid">
             <?php foreach ($posts as $post) : ?>
@@ -394,38 +394,6 @@
                     </div>
                 </a>
             <?php endforeach ?>
-            <!-- <a href="#" class="article">
-                <div class="image">
-                    <img loading="lazy" src="/build/img/blog/blog1.jpg" alt="Imagen blog 1">
-                </div>
-                <div class="text">
-                    <h3 class="title">Título artículo blog</h3>
-                    <hr>
-                    <p class="description">Lorem ipsum dolor sit amet, consect adipi elit nunc portum. Nunc volutpat pellentesque leo.</p>
-                </div>
-            </a>
-
-            <a href="#" class="article">
-                <div class="image">
-                    <img loading="lazy" src="/build/img/blog/blog5.jpg" alt="Imagen blog 5">
-                </div>
-                <div class="text">
-                    <h3 class="title">Título artículo blog</h3>
-                    <hr>
-                    <p class="description">Lorem ipsum dolor sit amet, consect adipi elit nunc portum. Nunc volutpat pellentesque leo.</p>
-                </div>
-            </a>
-
-            <a href="#" class="article">
-                <div class="image">
-                    <img loading="lazy" src="/build/img/blog/blog3.jpg" alt="Imagen blog 3">
-                </div>
-                <div class="text">
-                    <h3 class="title">Título artículo blog</h3>
-                    <hr>
-                    <p class="description">Lorem ipsum dolor sit amet, consect adipi elit nunc portum. Nunc volutpat pellentesque leo.</p>
-                </div>
-            </a> -->
         </div>
 
         <a href="/blog" class="btn primary-btn">Visitar el blog</a>

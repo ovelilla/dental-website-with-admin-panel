@@ -1,0 +1,28 @@
+@use "../abstract/variables" as v;
+@use "../abstract/mixins" as m;
+
+.whatsapp {
+    position: fixed;
+    bottom: 15px;
+    right: 10px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: v.$blue-900;
+    box-shadow: v.$shadow-md;
+
+    &:hover {
+        background-color: v.$blue-800;
+        box-shadow: v.$shadow-lg;
+    }
+
+    svg {
+        width: 30px;
+        height: 30px;
+        color: v.$white;
+    }
+}

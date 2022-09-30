@@ -8,6 +8,25 @@
 <section class="section all-treatments">
     <div class="container">
         <div class="grid">
+            <a href="/tratamientos/rehabilitacion-oral-protesis-dentales" class="card">
+                <div class="icon">
+                    <div class="icon-container">
+                        <img loading="lazy" src="/build/img/iconos/23.png" alt="Icono rehabilitación oral y protesis dentales">
+                    </div>
+                </div>
+                <div class="text">
+                    <h3 class="title">Rehabilitación oral y prótesis dentales</h3>
+                    <p class="description">Lorem ipsum dolor sit amet, consect adipi elit nunc portum.</p>
+                    <p class="description">Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</p>
+                    <p class="more">
+                        <span>Saber más</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </p>
+                </div>
+            </a>
+
             <a href="/tratamientos/implantes-dentales" class="card">
                 <div class="icon">
                     <div class="icon-container">
@@ -27,14 +46,14 @@
                 </div>
             </a>
 
-            <a href="/tratamientos/blanqueamiento-dental" class="card">
+            <a href="/tratamientos/estetica-dental" class="card">
                 <div class="icon">
                     <div class="icon-container">
-                        <img loading="lazy" src="/build/img/iconos/07.png" alt="Icono blanqueamiento dental">
+                        <img loading="lazy" src="/build/img/iconos/27.png" alt="Icono estética dental">
                     </div>
                 </div>
                 <div class="text">
-                    <h3 class="title">Blanqueamiento dental</h3>
+                    <h3 class="title">Estética dental</h3>
                     <p class="description">Lorem ipsum dolor sit amet, consect adipi elit nunc portum.</p>
                     <p class="description">Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</p>
                     <p class="more">
@@ -84,6 +103,44 @@
                 </div>
             </a>
 
+            <a href="/tratamientos/blanqueamiento-dental" class="card">
+                <div class="icon">
+                    <div class="icon-container">
+                        <img loading="lazy" src="/build/img/iconos/07.png" alt="Icono blanqueamiento dental">
+                    </div>
+                </div>
+                <div class="text">
+                    <h3 class="title">Blanqueamiento dental</h3>
+                    <p class="description">Lorem ipsum dolor sit amet, consect adipi elit nunc portum.</p>
+                    <p class="description">Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</p>
+                    <p class="more">
+                        <span>Saber más</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </p>
+                </div>
+            </a>
+
+            <a href="/tratamientos/cirugia-dental" class="card">
+                <div class="icon">
+                    <div class="icon-container">
+                        <img loading="lazy" src="/build/img/iconos/34.png" alt="Icono cirugía dental">
+                    </div>
+                </div>
+                <div class="text">
+                    <h3 class="title">Cirugía dental</h3>
+                    <p class="description">Lorem ipsum dolor sit amet, consect adipi elit nunc portum.</p>
+                    <p class="description">Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</p>
+                    <p class="more">
+                        <span>Saber más</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </p>
+                </div>
+            </a>
+
             <a href="/tratamientos/periodoncia" class="card">
                 <div class="icon">
                     <div class="icon-container">
@@ -111,63 +168,6 @@
                 </div>
                 <div class="text">
                     <h3 class="title">Endodoncia</h3>
-                    <p class="description">Lorem ipsum dolor sit amet, consect adipi elit nunc portum.</p>
-                    <p class="description">Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</p>
-                    <p class="more">
-                        <span>Saber más</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                    </p>
-                </div>
-            </a>
-
-            <a href="/tratamientos/estetica-dental" class="card">
-                <div class="icon">
-                    <div class="icon-container">
-                        <img loading="lazy" src="/build/img/iconos/27.png" alt="Icono estética dental">
-                    </div>
-                </div>
-                <div class="text">
-                    <h3 class="title">Estética dental</h3>
-                    <p class="description">Lorem ipsum dolor sit amet, consect adipi elit nunc portum.</p>
-                    <p class="description">Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</p>
-                    <p class="more">
-                        <span>Saber más</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                    </p>
-                </div>
-            </a>
-
-            <a href="/tratamientos/rehabilitacion-oral-protesis-dentales" class="card">
-                <div class="icon">
-                    <div class="icon-container">
-                        <img loading="lazy" src="/build/img/iconos/23.png" alt="Icono rehabilitación oral y protesis dentales">
-                    </div>
-                </div>
-                <div class="text">
-                    <h3 class="title">Rehabilitación oral y prótesis dentales</h3>
-                    <p class="description">Lorem ipsum dolor sit amet, consect adipi elit nunc portum.</p>
-                    <p class="description">Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</p>
-                    <p class="more">
-                        <span>Saber más</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                    </p>
-                </div>
-            </a>
-
-            <a href="/tratamientos/cirugia-dental" class="card">
-                <div class="icon">
-                    <div class="icon-container">
-                        <img loading="lazy" src="/build/img/iconos/34.png" alt="Icono cirugía dental">
-                    </div>
-                </div>
-                <div class="text">
-                    <h3 class="title">Cirugía dental</h3>
                     <p class="description">Lorem ipsum dolor sit amet, consect adipi elit nunc portum.</p>
                     <p class="description">Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</p>
                     <p class="more">

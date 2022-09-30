@@ -3,6 +3,7 @@ import Collapse from "./Collapse.js";
 import Input from "./mio/Input.js";
 import Textarea from "./mio/Textarea.js";
 import Checkbox from "./mio/Checkbox.js";
+import {icon} from "../modules/Icon.js";
 
 class Layout {
     constructor() {
@@ -47,6 +48,8 @@ class Layout {
         sidebar.querySelectorAll("button").forEach((button) => {
             new Collapse(button, button.nextElementSibling, true);
         });
+
+        this.createWhatsappButton();
     }
 
     loadEvent() {
@@ -259,8 +262,6 @@ class Layout {
             callback: (value) => {
                 this.values.name = value;
                 this.errors = null;
-                console.log(this.values);
-                console.log(this.errors);
             },
         });
         this.contactForm.appendChild(name.getField());
@@ -384,6 +385,19 @@ class Layout {
         this.errors = null;
         this.contactForm.remove();  
         this.createContactForm();
+    }
+
+    createWhatsappButton() {
+        if (window.innerWidth < 768) {
+            const whatsapp = document.createElement("a");
+            whatsapp.classList.add("whatsapp");
+            whatsapp.href = "https://wa.me/34622348982";
+            whatsapp.target = "_blank";
+            whatsapp.rel = "noopener noreferrer";
+            document.body.appendChild(whatsapp);
+
+            whatsapp.appendChild(icon.get("whatsapp"));
+        }
     }
 }
 

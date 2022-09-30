@@ -13,7 +13,7 @@
 
         <div class="col-right">
             <h2>Formación academica</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Regeneración ósea e implantes, cirugía bucal.</p>
 
             <ul>
                 <li>

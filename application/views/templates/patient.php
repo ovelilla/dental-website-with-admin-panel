@@ -408,7 +408,7 @@
     </div>
 
     <div class="row mt-15 px-2 py-4 border" style="min-height: 150px;">
-        <p class="col-12 text-justify"><?php echo nl2br($data['history']['examination']) ?></p>
+        <p class="col-12 text-justify"><?php echo isset($data['history']['examination']) ? nl2br($data['history']['examination']) : "" ?></p>
     </div>
 
     <div class="row mt-6 px-2 py-4" style="font-size: 8px">

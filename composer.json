@@ -7,13 +7,16 @@
             "Controllers\\": "application/controllers"
         }
     },
-    "authors": [{
-        "name": "Oscar",
-        "email": "o.velillaa@gmail.com"
-    }],
+    "authors": [
+        {
+            "name": "Oscar",
+            "email": "o.velillaa@gmail.com"
+        }
+    ],
     "require": {
         "vlucas/phpdotenv": "^5.4",
         "phpmailer/phpmailer": "^6.6",
-        "dompdf/dompdf": "^2.0"
+        "dompdf/dompdf": "^2.0",
+        "ext-mbstring": "*"
     }
 }
