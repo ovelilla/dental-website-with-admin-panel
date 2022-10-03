@@ -1,7 +1,7 @@
 <section class="section page-header">
     <div class="container">
         <h1>Sobre nosotros</h1>
-        <p>Lorem ipsum dolor sit amet, consect adipiscing elit. Nunc volutpat pellentesque leo.</p>
+        <p>Aspiramos a la excelencia e innovación con cada caso.</p>
     </div>
 </section>
 
@@ -11,8 +11,7 @@
             <div class="col">
                 <p>Nuestra misión</p>
                 <h2>Quienes somos</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel ornare diam. <strong>Aliquam erat volutpat.</strong> Pellentesque quis arcu nisi. Cras congue urna malesuada neque porttitor.</p>
-                <p>Nunc volutpat pellentesque leo, at rutrum dui malesuada quis. Aenean quis orci imperdiet, dictum lacus non, dapibus lorem. Pellentesque vulputate pulvinar eros.</p>
+                <p>En Dentiny somos personas tratando a personas, donde nuestros dentistas trabajando de manera coordinada entregamos <strong>resultados excepcionales</strong> a nuestros pacientes</p>
             </div>
 
             <div class="col">
@@ -28,28 +27,21 @@
             <div class="col">
                 <p>Nuestra visión</p>
                 <h2>Porque elegirnos</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel ornare diam. <strong>Aliquam erat volutpat.</strong> Pellentesque quis arcu nisi. Cras congue urna malesuada neque porttitor.</p>
+                <p>Nuestro centro de salud dental está <strong>formado por los mejores especialistas de la provincia</strong> que trabajando de manera conjunta logran los mejores resultados en cada tratamiento.</p>
 
                 <ul>
                     <li>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                        <span>Nuestros pacientes confían en nosotros su salud dental y no les podemos fallar en ningún ámbito ni económico ni clínico ni personal.</span>
                     </li>
 
                     <li>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <span>Aliquam vel ornare diam. Aliquam erat volutpat.</span>
-                    </li>
-
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span>Cras congue urna malesuada neque porttitor, vel sollicitudin.</span>
+                        <span>No somos franquicia.</span>
                     </li>
                 </ul>
             </div>
@@ -59,8 +51,7 @@
             <div class="col">
                 <p>Nuestros valores</p>
                 <h2>Que hacemos</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel ornare diam. <strong>Aliquam erat volutpat.</strong> Pellentesque quis arcu nisi. Cras congue urna malesuada neque porttitor.</p>
-                <p>Nunc volutpat pellentesque leo, at rutrum dui malesuada quis. Aenean quis orci imperdiet, dictum lacus non, dapibus lorem. Pellentesque vulputate pulvinar eros.</p>
+                <p>Nuestro equipo de profesionales <strong>crea las mejores sonrisas</strong> ayudados de los últimos avances dentales, trabajando con una odontología estudiada y planificada desde el principio.</p>
             </div>
 
             <div class="col">

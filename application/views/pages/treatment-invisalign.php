@@ -54,42 +54,42 @@
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <span>Es prácticamente invisible, nadie notará que la llevas puesta.</span>
+                        <span>Es prácticamente <strong>invisible</strong>, nadie notará que la llevas puesta.</span>
                     </li>
 
                     <li>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <span>Cómoda de llevar, di adiós a las molestas llagas causadas por los brackets.</span>
+                        <span><strong>Cómoda</strong> de llevar, di adiós a las molestas llagas causadas por los brackets.</span>
                     </li>
 
                     <li>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <span>Al ser removible podremos limpiar nuestra boca perfectamente.</span>
+                        <span>Al ser <strong>removible</strong> podremos limpiar nuestra boca perfectamente.</span>
                     </li>
 
                     <li>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <span>Resultados precisos gracias al escáner dental 3d de última generación.</span>
+                        <span><strong>Resultados precisos</strong> gracias al escáner dental 3d de última generación.</span>
                     </li>
 
                     <li>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <span>Conoce el antes y después de tus dientes con la máxima calidad 3d.</span>
+                        <span>Conoce el <strong>antes y después</strong> de tus dientes con la máxima calidad 3d.</span>
                     </li>
 
                     <li>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <span>Duración del tratamiento hasta la mitad de tiempo frente a los brackets.</span>
+                        <span>Duración del tratamiento hasta la <strong>mitad de tiempo</strong> frente a los brackets.</span>
                     </li>
                 </ul>
             </div>
@@ -102,19 +102,19 @@
         <div class="col">
             <h2>¿Son todas las ortodoncias invisibles iguales?</h2>
 
-            <p>En absoluto, las mejores y únicas marcas que te corrigen toda la mordida con la mínima invasión dental son Spark, Secretaligner e Insisalign. Huye de ofertas low-cost. Lo barato cuando se trata de salud puede llegar a salirte muy muy caro. Por favor, infórmate bien antes de tomar alguna decisión sin compromiso con nuestro equipo humano de expertos.</p>
+            <p>En absoluto, las mejores y únicas marcas que te corrigen toda la mordida con la mínima invasión dental son <strong>Spark, Secretaligner e Insisalign.</strong> Huye de ofertas low-cost. Lo barato cuando se trata de salud puede llegar a salirte muy muy caro. Por favor, infórmate bien antes de tomar alguna decisión sin compromiso con nuestro equipo humano de expertos.</p>
         </div>
 
         <div class="col">
             <h2>¿Qué hago con las férulas que ya he usado?</h2>
 
-            <p>Guarda en todo momento las férulas de ortodoncia invisible, aunque ya las hayas usado. Imagínate que has acabado con la férula 7 y la 8 no la encuentras. Comunicaras de inmediato a la clínica informándonos de tu situación y mientras tendrás que llevar esa férula hasta que te fabriquen nuevamente la férula perdida Otro caso voy por la férula 5 y la pierdo; en ese caso tendrás que informar inmediatamente a la clínica y ponerte la férula 4. Por eso es Importantísimo guardarte las férulas hasta acabar tu ortodoncia. ¡Además, tendrás un bonito recuerdo de la evolución de tus dientes!</p>
+            <p><strong>Guarda en todo momento las férulas de ortodoncia invisible,</strong> aunque ya las hayas usado. Imagínate que has acabado con la férula 7 y la 8 no la encuentras. Comunicaras de inmediato a la clínica informándonos de tu situación y mientras tendrás que llevar esa férula hasta que te fabriquen nuevamente la férula perdida Otro caso voy por la férula 5 y la pierdo; en ese caso tendrás que informar inmediatamente a la clínica y ponerte la férula 4. Por eso es Importantísimo guardarte las férulas hasta acabar tu ortodoncia. ¡Además, tendrás un bonito recuerdo de la evolución de tus dientes!</p>
         </div>
 
         <div class="col">
             <h2>¿Puedo a mi hijo menor de edad ponerle ortodoncia invisible?</h2>
 
-            <p>Por supuesto que sí, aunque queremos que sepas que la ortodoncia invisible requiere de una gran colaboración con el paciente, ya que tiene que llevar las férulas al menos 22 horas al día. Si crees que tus hijos van a ser cuidadosos y responsables con las pautas de la ortodoncia invisible, sería una gran opción a tener en cuenta. ¡Sin ir más lejos, Leo el hijo de 14 años de nuestra odontóloga Claudia Rada disfruta de los beneficios de esta ortodoncia y esta super contento!</p>
+            <p>Por supuesto que sí, aunque queremos que sepas que la ortodoncia invisible <strong>requiere de una gran colaboración con el paciente,</strong> ya que tiene que llevar las férulas al menos 22 horas al día. Si crees que tus hijos van a ser cuidadosos y responsables con las pautas de la ortodoncia invisible, sería una gran opción a tener en cuenta. ¡Sin ir más lejos, Leo el hijo de 14 años de nuestra odontóloga Claudia Rada disfruta de los beneficios de esta ortodoncia y esta super contento!</p>
         </div>
     </div>
 </section>

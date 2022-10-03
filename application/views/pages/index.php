@@ -3,7 +3,7 @@
         <div class="col-left">
             <p>Nuestro destino tu sonrisa</p>
             <h1>Dentiny, tu clínica dental en Castellón</h1>
-            <p>En Dentiny Clínica Dental en Castellón, encontraras a los <strong>mejores especialistas de la provincia</strong>, que trabajando conjuntamente y de la mano de las últimas tecnologías dentales ofrecen los mejores diagnósticos y tratamientos</p>
+            <p>En Dentiny Clínica Dental en Castellón, encontraras a los <strong>mejores especialistas de la provincia</strong>, que trabajando conjuntamente y de la mano de las últimas tecnologías dentales ofrecen los mejores diagnósticos y tratamientos.</p>
 
             <div class="row">
                 <a href="/contacto" class="btn primary-btn">Cita Online</a>
@@ -14,7 +14,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M15.71,12.71a1,1,0,0,0,.21-.33,1,1,0,0,0,0-.76,1,1,0,0,0-.21-.33l-3-3a1,1,0,0,0-1.42,1.42L12.59,11H9a1,1,0,0,0,0,2h3.59l-1.3,1.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0ZM22,12A10,10,0,1,0,12,22,10,10,0,0,0,22,12ZM4,12a8,8,0,1,1,8,8A8,8,0,0,1,4,12Z" />
                 </svg>
-                <span><strong>¿Ofreceís financiación?</strong> Si, pregúntanos sin compromiso</span>
+                <span><strong>¿Ofreceís financiación?</strong> Si, pregúntanos sin compromiso.</span>
             </a>
         </div>
 
@@ -37,6 +37,12 @@
                 <div class="text">
                     <h2 class="title">Implantes dentales</h2>
                     <p class="description">Utilizamos los mejores Implantes del mercado.</p>
+                    <p class="more">
+                        <span>Saber más</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </p>
                 </div>
             </a>
 
@@ -49,6 +55,12 @@
                 <div class="text">
                     <h2 class="title">Ortodoncia invisible</h2>
                     <p class="description">Pioneros en la mejor ortodoncia Invisible del mundo.</p>
+                    <p class="more">
+                        <span>Saber más</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </p>
                 </div>
             </a>
 
@@ -60,7 +72,13 @@
                 </div>
                 <div class="text">
                     <h2 class="title">Rehabilitación oral y prótesis dentales</h2>
-                    <p class="description">Éxito asegurado, confía en los mejores, Dentiny</p>
+                    <p class="description">Éxito asegurado, confía en los mejores, Dentiny.</p>
+                    <p class="more">
+                        <span>Saber más</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </p>
                 </div>
             </a>
         </div>
@@ -71,9 +89,9 @@
     <div class="container">
         <div class="col-left">
             <p>Nuestra misión</p>
-            <h2>Clinica dental en Castellón de la Plana</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel ornare diam. <strong>Aliquam erat volutpat.</strong> Pellentesque quis arcu nisi. Cras congue urna malesuada neque porttitor, vel sollicitudin tortor hendrerit.</p>
-            <p>Nunc volutpat pellentesque leo, at rutrum dui malesuada quis. Aenean quis orci imperdiet, dictum lacus non, dapibus lorem. Pellentesque vulputate pulvinar eros. Vivamus vel massa lorem. Vestibulum quis dignissim ligula.</p>
+            <h2>Dentistas para toda la familia</h2>
+            <p>Cuando nuestros pacientes vienen a DENTINY saben que se van a encontrar como en casa. Relajados, gracias a sus <strong>luminosas y amplias instalaciones,</strong> tranquilos gracias a un <strong>gran equipo humano</strong> que empatiza en cada momento con el paciente, seguros ya que contamos con las <strong>últimas tecnologías dentales</strong> que nos ayudan a diagnosticar de manera más precisa cada caso y cómodos.</p>
+            <p>Contamos con tres <strong>gabinetes dentales de última generación</strong> equipados con el mayor confort con asientos de viscoelástica extra cómodos para tratamientos largos de rehabilitación oral con implantes dentales.</p>
             <a href="/sobre-nosotros">
                 <span>Saber más</span>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -96,42 +114,42 @@
         </div>
 
         <div class="col-right">
-            <h2>Porque elegir dentiny.es</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h2>Descubre nuestra clínica</h2>
+            <p>Clínica dental a pie de Calle en el centro de Castellón.</p>
             <ul>
                 <li>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                    <span>Contamos con los mejores profesionales de la provincia.</span>
                 </li>
 
                 <li>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span>Aliquam vel ornare diam. Aliquam erat volutpat.</span>
+                    <span>Instalaciones amplias y luminosas.</span>
                 </li>
 
                 <li>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span>Cras congue urna malesuada neque porttitor, vel sollicitudin.</span>
+                    <span>Ultima tecnología en radiología dental: Tac Dental 3D.</span>
                 </li>
 
                 <li>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span>Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</span>
+                    <span>Escáner Intraoral 3D, digitalizamos tu sonrisa.</span>
                 </li>
 
                 <li>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span>Vivamus vel massa lorem. Vestibulum quis dignissim ligula.</span>
+                    <span>Clínica dental segura.</span>
                 </li>
             </ul>
             <a href="/contacto" class="btn primary-btn">Cita Online</a>
@@ -142,7 +160,7 @@
 <section class="section treatments">
     <div class="container">
         <h2>Nuestros tratamientos</h2>
-        <p>Lorem ipsum dolor sit amet, consect adipiscing elit. Nunc volutpat pellentesque leo.</p>
+        <p>Nuestros profesionales trabajan en sinergia para obtener los mejores resultados.</p>
 
         <div class="grid">
             <a href="/tratamientos/rehabilitacion-oral-protesis-dentales" class="card">
@@ -153,8 +171,7 @@
                 </div>
                 <div class="text">
                     <h3 class="title">Rehabilitación oral y prótesis dentales</h3>
-                    <p class="description">Lorem ipsum dolor sit amet, consect adipi elit nunc portum.</p>
-                    <p class="description">Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</p>
+                    <p class="description">El paciente acude por la mañana a la clinica, realizamos la intervención y por la tarde se va con sus dientes fijos. Resultados en menos de 12h.</p>
                     <p class="more">
                         <span>Saber más</span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -172,8 +189,7 @@
                 </div>
                 <div class="text">
                     <h3 class="title">Implantes dentales</h3>
-                    <p class="description">Lorem ipsum dolor sit amet, consect adipi elit nunc portum.</p>
-                    <p class="description">Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</p>
+                    <p class="description">No todos los implantes son iguales, nuestros cirujanos solo utilizan las mejores marcas del mercado.</p>
                     <p class="more">
                         <span>Saber más</span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -191,8 +207,7 @@
                 </div>
                 <div class="text">
                     <h3 class="title">Estética dental</h3>
-                    <p class="description">Lorem ipsum dolor sit amet, consect adipi elit nunc portum.</p>
-                    <p class="description">Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</p>
+                    <p class="description">Podrás ver tu sonrisa en 3d gracias a los últimos avances dentales confía en los mejores, Dentiny.</p>
                     <p class="more">
                         <span>Saber más</span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -210,8 +225,7 @@
                 </div>
                 <div class="text">
                     <h3 class="title">Ortodoncia invisible</h3>
-                    <p class="description">Lorem ipsum dolor sit amet, consect adipi elit nunc portum.</p>
-                    <p class="description">Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</p>
+                    <p class="description">La ortodoncia del futuro. Solo ofrecemos las mejores marcas siempre bajo la supervisión de nuestros doctores. Huye de las marcas low-cost.</p>
                     <p class="more">
                         <span>Saber más</span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -229,8 +243,7 @@
                 </div>
                 <div class="text">
                     <h3 class="title">Ortodoncia</h3>
-                    <p class="description">Lorem ipsum dolor sit amet, consect adipi elit nunc portum.</p>
-                    <p class="description">Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</p>
+                    <p class="description">La ortodoncia de siempre de la mano de los mejores profesionales. Éxito 100% garantizado.</p>
                     <p class="more">
                         <span>Saber más</span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -248,8 +261,7 @@
                 </div>
                 <div class="text">
                     <h3 class="title">Blanqueamiento dental</h3>
-                    <p class="description">Lorem ipsum dolor sit amet, consect adipi elit nunc portum.</p>
-                    <p class="description">Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</p>
+                    <p class="description">Ofrecemos el mejor blanqueamiento del mercado con Philips Zoom. Siempre a la vanguardia Dental.</p>
                     <p class="more">
                         <span>Saber más</span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -267,8 +279,7 @@
                 </div>
                 <div class="text">
                     <h3 class="title">Cirugía dental</h3>
-                    <p class="description">Lorem ipsum dolor sit amet, consect adipi elit nunc portum.</p>
-                    <p class="description">Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</p>
+                    <p class="description">Realiza una correcta higiene bucal en casa, lleva un estilo de vida saludable y acude al dentista con regularidad.</p>
                     <p class="more">
                         <span>Saber más</span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -286,8 +297,7 @@
                 </div>
                 <div class="text">
                     <h3 class="title">Periodoncia</h3>
-                    <p class="description">Lorem ipsum dolor sit amet, consect adipi elit nunc portum.</p>
-                    <p class="description">Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</p>
+                    <p class="description">La enfermedad periodontal es la principal causa de perdida dental en España.</p>
                     <p class="more">
                         <span>Saber más</span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -305,8 +315,7 @@
                 </div>
                 <div class="text">
                     <h3 class="title">Endodoncia</h3>
-                    <p class="description">Lorem ipsum dolor sit amet, consect adipi elit nunc portum.</p>
-                    <p class="description">Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</p>
+                    <p class="description">Cuando las caries son tan profundas que afectan al nervio, el tratamiento que hay que hacer es la endodoncia (matar el nervio).</p>
                     <p class="more">
                         <span>Saber más</span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">

@@ -10,7 +10,7 @@
         <div class="col">
             <h2>¿Qué es el ácido hialurónico?</h2>
 
-            <p>Es un <strong>compone que esta naturalmente presente en los tejidos del cuerpo</strong> y que se puede sintetizar de forma artificial. Con el ácido hialuronato se pueden hacer <strong>rellenos tanto labiales</strong>, como <strong>finas arrugas</strong> de la zona peribucal, así como rellenar papilas y conformar encía.</p>
+            <p>Es un <strong>componente que esta naturalmente presente en los tejidos del cuerpo</strong> y que se puede sintetizar de forma artificial. Con el ácido hialuronato se pueden hacer <strong>rellenos tanto labiales</strong>, como <strong>finas arrugas</strong> de la zona peribucal, así como rellenar papilas y conformar encía.</p>
 
             <p>Una de las grandes ventajas de la aplicación de ácido hialurónico en la estética peribucal, es que podemos hacerlo con el uso de anestesia local, siendo un <strong>tratamiento indoloro y muy tolerado por el paciente</strong>. En comparación de otros tratamientos estéticos donde no se coloca anestesia. Se realiza un perfilado completo de los labios, surcos naso genianos, códigos de barras y aumento de volumen.</p>
         </div>
