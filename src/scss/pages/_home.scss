@@ -855,6 +855,17 @@
                 flex-direction: column;
                 gap: 20px;
 
+                .stars {
+                    display: flex;
+                    gap: 4px;
+                    color: #ffd700;
+
+                    svg {
+                        min-width: 24px;
+                        min-height: 24px;
+                    }
+                }
+
                 .bubble {
                     display: flex;
                     flex-direction: column;
@@ -888,7 +899,7 @@
                         margin-left: -11px;
                     }
 
-                    svg {
+                    > svg {
                         position: absolute;
                         top: -16px;
                         left: 36px;
@@ -897,6 +908,10 @@
                     }
 
                     .title {
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        gap: 10px;
                         font-size: 1.8rem;
                         font-weight: 600;
                         letter-spacing: normal;
@@ -912,10 +927,19 @@
                 }
 
                 .author {
+                    display: flex;
+                    justify-content: space-between;
                     padding-left: 30px;
+
                     cite {
                         font-style: normal;
                     }
+
+                    // .stars {
+                    //     display: flex;
+                    //     gap: 4px;
+                    //     color: #FFD700;
+                    // }
                 }
             }
         }

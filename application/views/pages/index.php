@@ -151,6 +151,13 @@
                     </svg>
                     <span>Clínica dental segura.</span>
                 </li>
+
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Parking gratuito.</span>
+                </li>
             </ul>
             <a href="/contacto" class="btn primary-btn">Cita Online</a>
         </div>
@@ -420,11 +427,11 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="15" fill="currentColor" viewBox="0 0 21 15">
                         <path d="M9.597,10.412c0,1.306-0.473,2.399-1.418,3.277c-0.944,0.876-2.06,1.316-3.349,1.316c-1.287,0-2.414-0.44-3.382-1.316C0.482,12.811,0,11.758,0,10.535c0-1.226,0.58-2.716,1.739-4.473L5.603,0H9.34L6.956,6.37C8.716,7.145,9.597,8.493,9.597,10.412z M20.987,10.412c0,1.306-0.473,2.399-1.418,3.277c-0.944,0.876-2.06,1.316-3.35,1.316c-1.288,0-2.415-0.44-3.381-1.316c-0.966-0.879-1.45-1.931-1.45-3.154c0-1.226,0.582-2.716,1.74-4.473L16.994,0h3.734l-2.382,6.37C20.106,7.145,20.987,8.493,20.987,10.412z" />
                     </svg>
-                    <h3 class="title">La mejor clínica dental de Castellón</h3>
-                    <p class="opinion"><q>La mejor clínica dental de Castellón. El trato es exquisito y son muy profesionales. Están a la última en tecnología y cuidan al máximo el detalle. Muy contento con el resultado de mi tratamiento. Muchas gracias por todo.</q></p>
+                    <h3 class="title">Trato excelente de todo el personal</h3>
+                    <p class="opinion"><q>Un trato excelente de todo el personal, tanto médico como administrativo y un resultado mejor de lo esperado. La relación calidad/precio es muy buena. Tienen lo último en tecnología y sumado a la experiencia de todo el equipo, consiguen que te sientas tranquilo en todo momento. Sin duda la mejor clínica de la zona.</q></p>
                 </div>
                 <div class="author">
-                    <cite>Juanmi Gozalbo</cite>
+                    <cite>Dani Iglesias</cite>
                 </div>
             </blockquote>
 
@@ -433,11 +440,28 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="15" fill="currentColor" viewBox="0 0 21 15">
                         <path d="M9.597,10.412c0,1.306-0.473,2.399-1.418,3.277c-0.944,0.876-2.06,1.316-3.349,1.316c-1.287,0-2.414-0.44-3.382-1.316C0.482,12.811,0,11.758,0,10.535c0-1.226,0.58-2.716,1.739-4.473L5.603,0H9.34L6.956,6.37C8.716,7.145,9.597,8.493,9.597,10.412z M20.987,10.412c0,1.306-0.473,2.399-1.418,3.277c-0.944,0.876-2.06,1.316-3.35,1.316c-1.288,0-2.415-0.44-3.381-1.316c-0.966-0.879-1.45-1.931-1.45-3.154c0-1.226,0.582-2.716,1.74-4.473L16.994,0h3.734l-2.382,6.37C20.106,7.145,20.987,8.493,20.987,10.412z" />
                     </svg>
-                    <h3 class="title">Trato exquisito y profesionalidad</h3>
-                    <p class="opinion"><q>La mejor clínica dental de Castellón. El trato es exquisito y son muy profesionales. Están a la última en tecnología y cuidan al máximo el detalle. Muy contento con el resultado de mi tratamiento. Muchas gracias por todo.</q></p>
+                    <div class="stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                    </div>
+                    <h3 class="title">Encantada con haberles elegido</h3>
+                    <p class="opinion"><q>Encantada con haberles elegido como mis dentistas tanto para mí, como para mis padres. Un trato excepcional por parte de todos. Sin duda alguna recomendado 100% y de confianza.</q></p>
                 </div>
                 <div class="author">
-                    <cite>Paco Hernandez</cite>
+                    <cite>Raquel García</cite>
                 </div>
             </blockquote>
 
@@ -446,11 +470,28 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="15" fill="currentColor" viewBox="0 0 21 15">
                         <path d="M9.597,10.412c0,1.306-0.473,2.399-1.418,3.277c-0.944,0.876-2.06,1.316-3.349,1.316c-1.287,0-2.414-0.44-3.382-1.316C0.482,12.811,0,11.758,0,10.535c0-1.226,0.58-2.716,1.739-4.473L5.603,0H9.34L6.956,6.37C8.716,7.145,9.597,8.493,9.597,10.412z M20.987,10.412c0,1.306-0.473,2.399-1.418,3.277c-0.944,0.876-2.06,1.316-3.35,1.316c-1.288,0-2.415-0.44-3.381-1.316c-0.966-0.879-1.45-1.931-1.45-3.154c0-1.226,0.582-2.716,1.74-4.473L16.994,0h3.734l-2.382,6.37C20.106,7.145,20.987,8.493,20.987,10.412z" />
                     </svg>
-                    <h3 class="title">Grandes profesionales</h3>
-                    <p class="opinion"><q>El resultado increible, no creo q haya otra clinica como esta en toda la comunidad, no solo por ser punteros en ultimas tecnologias, que desde luego es muy importante, pero para mi lo verdaderamente importante ha sido el trato, la tranquilidad, la confianza y la seguridad.</q></p>
+                    <h3 class="title">Excelente trato personal y profesional</h3>
+                    <div class="stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                    </div>
+                    <p class="opinion"><q>Excelente trato personal y profesional. Cuentan con la última tecnología, lo que facilita muchísimo el proceso. Además, su personal está muy cualificado. Genial.</q></p>
                 </div>
                 <div class="author">
-                    <cite>Carmen Vargas</cite>
+                    <cite>Sara Ortega</cite>
                 </div>
             </blockquote>
 
@@ -459,11 +500,28 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="15" fill="currentColor" viewBox="0 0 21 15">
                         <path d="M9.597,10.412c0,1.306-0.473,2.399-1.418,3.277c-0.944,0.876-2.06,1.316-3.349,1.316c-1.287,0-2.414-0.44-3.382-1.316C0.482,12.811,0,11.758,0,10.535c0-1.226,0.58-2.716,1.739-4.473L5.603,0H9.34L6.956,6.37C8.716,7.145,9.597,8.493,9.597,10.412z M20.987,10.412c0,1.306-0.473,2.399-1.418,3.277c-0.944,0.876-2.06,1.316-3.35,1.316c-1.288,0-2.415-0.44-3.381-1.316c-0.966-0.879-1.45-1.931-1.45-3.154c0-1.226,0.582-2.716,1.74-4.473L16.994,0h3.734l-2.382,6.37C20.106,7.145,20.987,8.493,20.987,10.412z" />
                     </svg>
-                    <h3 class="title">Mi enhorabuena a todo el equipo</h3>
-                    <p class="opinion"><q>Especialmente mi agradecimiento a las Doctoras Claudia por su profesionalidad y eficacia en sus tratamientos. En mi caso han conseguido que no solo mi boca se vea mejor si no que tras el tratamiento hayan desaparecido las migrañas y cefaleas, increíble.</q></p>
+                    <h3 class="title">¡Totalmente recomendable!</h3>
+                    <p class="opinion"><q>El trato es excelente, un servicio muy correcto y sobre todo muy profesional. Da gusto ver a gente apasionada por su trabajo, con clínicas como la vuestra ir es un gran placer.</q></p>
                 </div>
                 <div class="author">
-                    <cite>Estefania Trilles</cite>
+                    <cite>Eva Espel</cite>
+                    <div class="stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                    </div>
                 </div>
             </blockquote>
         </div>
@@ -475,24 +533,9 @@
 <section class="section faq">
     <div class="container">
         <h2>Preguntas frecuentes sobre clínica Dentiny</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend rhoncus dolor, et tincidunt purus maximus ut.</p>
+        <p>En este apartado podrás encontrar algunas de las preguntas que nos hacen nuestros pacientes.</p>
 
         <div id="accordion" class="accordion">
-            <div class="item">
-                <h3 class="header">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                    </svg>
-                    <span>¿Porque no trabajáis con mutuas o asociados?</span>
-                </h3>
-                <div class="body">
-                    <div class="content">
-                        <p>En Clínica Dentiny queremos darte el mejor el tratamiento y el mejor servicio que lo rodea. Las Mutuas y los diferentes seguros obligan al dentista a trabajar por un precio inferior a lo habitual en el mercado. El paciente paga su prima a la mutua y recibe un tratamiento más barato en el dentista. Esto obliga a las clínicas a incrementar su velocidad de trabajo y aumentar el volumen de pacientes para aumentar la facturación mensual.</p>
-                        <p>Otra manera de poder trabajar barato es usar materiales de baja calidad y por lo tanto más baratos. Nosotros creemos que es imposible ofrecer un tratamiento excelente a bajo coste, si trabajas rápido tendrás que bajar la calidad. Por otro lado no colocaríamos en tu boca algo que no colocaríamos en la boca de nuestras madres o padres, por esta razón nunca escatimamos en los costes de materiales. En Clínica Dentiny usamos los mejores materiales que existen en cada momento en el mercado.</p>
-                    </div>
-                </div>
-            </div>
-
             <div class="item">
                 <h3 class="header">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -502,7 +545,7 @@
                 </h3>
                 <div class="body">
                     <div class="content">
-                        <p>Todos nuestros pacientes son acompañados durante el inicio de su tratamiento en nuestra clínica. Siempre ofrecemos opciones para afrontar la parte económica del tratamiento. En la actualidad podemos financiar tu tratamiento en diferentes plazos y podemos decirte que hasta 24 meses es sin interés.</p>
+                        <p>Nuestros pacientes son tratados de manera exclusiva, tenemos la filosofía de personas tratando a personas, por tanto, después de explicarte tu caso y con todas las dudas aclaradas nuestro equipo te explicara las diferentes formas de abonar el tratamiento.</p>
                     </div>
                 </div>
             </div>
@@ -512,11 +555,26 @@
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                     </svg>
-                    <span>¿Sólo realizáis tratamientos de ortodoncia?</span>
+                    <span>¿Las primeras visitas son gratuitas?</span>
                 </h3>
                 <div class="body">
                     <div class="content">
-                        <p>Para nada! Clínica Dentiny está formada por un equipo de 10 especialistas, cada uno excepcional en lo que hace. Hacemos cualquier tratamiento necesario para la salud de tu boca con una visión más completa e interdisciplinar. Para eso, tenemos todos los especialistas de cada área que podrán orientarte en tu tratamiento.</p>
+                        <p>La primera visita no tiene coste en nuestra clínica, si fuera necesaria una prueba radiológica para un diagnostico mas certero, entonces se le comunicaría el coste de este examen al paciente y se abonaría pon posterioridad. Nuestra clínica cuenta con toda la aparatología radiológica 3D para que el paciente no se tenga que desplazar a otros centros radiológicos obteniendo así un diagnóstico inmediato.</p>
+                        <p>Para agendar una cita contacta con nuestro equipo al 964099721 o al WhatsApp 622348982.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <h3 class="header">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                    <span>¿Puedo continuar un tratamiento que ya empecé en otra clínica?</span>
+                </h3>
+                <div class="body">
+                    <div class="content">
+                        <p>En primer lugar, en necesario saber con exactitud de que tratamiento bucodental estamos hablando, para ello pide una cita sin coste y nuestros dentistas de manera conjunta buscaran una solución.</p>
                     </div>
                 </div>
             </div>
@@ -540,11 +598,59 @@
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                     </svg>
-                    <span>¿Todas las primeras visitas son gratuitas?</span>
+                    <span>¿Por qué elegir la clínica dental Dentiny?</span>
                 </h3>
                 <div class="body">
                     <div class="content">
-                        <p>En clínica Dentiny las primeras visitas de ortodoncia son gratuitas, pues son visitas informativas donde no te hacemos ninguna radiografía, solo invertimos tiempo para escucharte y darte nuestra opinión con lo que vemos a simple vista. Si el paciente lleva ortodoncia de otra consulta (visita para pedir una segunda opinión) la visita tiene coste.</p>
+                        <p>Clínica Dentiny cuenta con especialistas lideres en el sector bucodental que demuestran día a día su exclusiva dedicación por los mejores tratamientos dentales, cada profesional se dedica a un campo de la odontología distinto. En Nuestro centro de salud encontraras la tecnología dental más puntera para que tanto el diagnostico inicial, el proceso de tratamiento y las futuras revisiones sean lo más exitosas posibles, ya no tienes que acudir a otros centros radiológicos. El paciente encuentra en nuestro centro el lugar ideal para hacerse su tratamiento de calidad, con un éxito garantizado y de la mano de los mejores profesionales. Nuestro destino es tu sonrisa.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <h3 class="header">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                    <span>Tengo una urgencia ¿Puedo contar con vosotros?</span>
+                </h3>
+                <div class="body">
+                    <div class="content">
+                        <p>Por supuesto que sí, aunque no seas paciente nuestro, nuestro equipo de recepción se encargara de darte una cita lo antes posible porque sabemos que cada minuto suma.</p>
+                        <p>En nuestro centro disponemos de toda la tecnología dental para actuar lo antes posible sin derivarte a otros centros de radiología.</p>
+                        <p>Es muy importante acudir de manera periódica a tu dentista para evitar estas posibles molestias. Confía en los mejores.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <h3 class="header">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                    <span>Creo que mi tratamiento es complejo y requiere de varios especialistas ¿Cómo podéis ayudarme?</span>
+                </h3>
+                <div class="body">
+                    <div class="content">
+                        <p>A veces acudís a la clínica con un diagnóstico previo de otra clínica en el cual os ha generado dudas o no acabáis de estar convencidos con el diagnostico, suele pasar.</p>
+                        <p>En primer lugar, es importante que sepáis que contamos con los mejores profesionales de la provincia que trabajan de manera conjunta que de la mano de los últimos avances dentales en diagnóstico y con un equipo humano que empatiza y resuelve todas las dudas del paciente.</p>
+                        <p>Por tanto, encontraras transparencia en tu diagnostico y la seguridad de que estas en el sitio adecuado para ti y tu familia.</p>
+                        <p>Gracias por elegirnos, no te defraudaremos. Dentiny.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <h3 class="header">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                    <span>Tengo arcadas cuando me toman medidas dentales ¿Existe alguna tecnología que no me haga pasar por ese mal rato?</span>
+                </h3>
+                <div class="body">
+                    <div class="content">
+                        <p>¡Si! Y contamos con ello. Disponemos del ultimo escáner intraoral 3D donde podrás mediante la última tecnología ver el resultado de tu tratamiento antes de empezarlo y sin que te hayan introducido esos molestos moldes en la boca.</p>
+                        <p>Bienvenidos al Futuro, bienvenidos a Dentiny. </p>
                     </div>
                 </div>
             </div>

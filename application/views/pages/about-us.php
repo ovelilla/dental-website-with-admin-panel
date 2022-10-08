@@ -12,6 +12,7 @@
                 <p>Nuestra misión</p>
                 <h2>Quienes somos</h2>
                 <p>En Dentiny somos personas tratando a personas, donde nuestros dentistas trabajando de manera coordinada entregamos <strong>resultados excepcionales</strong> a nuestros pacientes</p>
+                <p>Cuando entres a nuestro centro de salud bucodental encontraras a un equipo multidisciplinar que desde el primer momento te hará sentir como en casa.</p>
             </div>
 
             <div class="col">
@@ -41,6 +42,27 @@
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
+                        <span>Posibilidad de financiar tus tratamientos.</span>
+                    </li>
+
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>Estudio y diagnóstico dental sin coste.</span>
+                    </li>
+
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>Instalaciones Excepcionales.</span>
+                    </li>
+
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
                         <span>No somos franquicia.</span>
                     </li>
                 </ul>
@@ -51,7 +73,9 @@
             <div class="col">
                 <p>Nuestros valores</p>
                 <h2>Que hacemos</h2>
+                <p>En Dentiny hacemos las cosas bien, utilizamos los mejores materiales dentales del mercado que unido a un gran equipo de odontólogos de la provincia de Castellón nos garantizan el éxito en nuestros tratamientos. </p>
                 <p>Nuestro equipo de profesionales <strong>crea las mejores sonrisas</strong> ayudados de los últimos avances dentales, trabajando con una odontología estudiada y planificada desde el principio.</p>
+                <p>Apuesta por la mejor calidad tu y toda tu familia, quédate con nosotros.</p>
             </div>
 
             <div class="col">
