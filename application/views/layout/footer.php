@@ -7,7 +7,7 @@
                 </div>
 
                 <div class="about-us">
-                    <h2>About us</h2>
+                    <h2>Sobre nosotros</h2>
                     <nav>
                         <a href="/equipo">Equipo</a>
                         <a href="/instalaciones">Instalaciones</a>
@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="treatments">
-                    <h2>Treatments</h2>
+                    <h2>Tratamientos</h2>
                     <nav>
                         <a href="/tratamientos/implantes-dentales">Implantes</a>
                         <a href="/tratamientos/blanqueamiento-dental">Blanqueamiento</a>
@@ -54,9 +54,9 @@
 
         <div class="row-bottom">
             <div class="grid">
-                <a href="#">Termns and Conditions</a>
+                <a href="#">Terminos y Condiciones</a>
                 <p>Dentiny® 2022 Todos los derechos reservados.</p>
-                <a href="#">Privacy Policy</a>
+                <a href="#">Política de privacidad</a>
             </div>
         </div>
     </div>
