@@ -1,10 +1,8 @@
 @use "../abstract/variables" as v;
 @use "../abstract/mixins" as m;
 
-.whatsapp {
+.quick-access-btn {
     position: fixed;
-    bottom: 15px;
-    right: 10px;
     z-index: 1000;
     display: flex;
     justify-content: center;
@@ -14,6 +12,16 @@
     border-radius: 50%;
     background-color: v.$blue-900;
     box-shadow: v.$shadow-md;
+
+    &.mail {
+        bottom: 15px;
+        right: 10px;
+    }
+
+    &.whatsapp {
+        bottom: 90px;
+        right: 10px;
+    }
 
     &:hover {
         background-color: v.$blue-800;

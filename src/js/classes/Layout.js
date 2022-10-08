@@ -3,7 +3,7 @@ import Collapse from "./Collapse.js";
 import Input from "./mio/Input.js";
 import Textarea from "./mio/Textarea.js";
 import Checkbox from "./mio/Checkbox.js";
-import {icon} from "../modules/Icon.js";
+import { icon } from "../modules/Icon.js";
 
 class Layout {
     constructor() {
@@ -371,7 +371,8 @@ class Layout {
         await popup.open({
             type: "success",
             title: "¡Mensaje enviado!",
-            message: "Gracias por contactar con nosotros. Nos pondremos en contacto contigo lo antes posible.",
+            message:
+                "Gracias por contactar con nosotros. Nos pondremos en contacto contigo lo antes posible.",
             timer: 3000,
         });
 
@@ -383,21 +384,26 @@ class Layout {
             accept: false,
         };
         this.errors = null;
-        this.contactForm.remove();  
+        this.contactForm.remove();
         this.createContactForm();
     }
 
     createWhatsappButton() {
-        if (window.innerWidth < 768) {
-            const whatsapp = document.createElement("a");
-            whatsapp.classList.add("whatsapp");
-            whatsapp.href = "https://wa.me/34622348982";
-            whatsapp.target = "_blank";
-            whatsapp.rel = "noopener noreferrer";
-            document.body.appendChild(whatsapp);
+        const whatsapp = document.createElement("a");
+        whatsapp.classList.add("quick-access-btn", "whatsapp");
+        whatsapp.href = "https://wa.me/34622348982";
+        whatsapp.target = "_blank";
+        whatsapp.rel = "noopener noreferrer";
+        document.body.appendChild(whatsapp);
 
-            whatsapp.appendChild(icon.get("whatsapp"));
-        }
+        whatsapp.appendChild(icon.get("whatsapp"));
+
+        const mail = document.createElement("a");
+        mail.classList.add("quick-access-btn", "mail");
+        mail.href = "/contacto";
+        document.body.appendChild(mail);
+
+        mail.appendChild(icon.get("envelope"));
     }
 }
 
