@@ -31,6 +31,7 @@
                 <a href="/tratamientos/blanqueamiento-dental">Blanqueamiento dental</a>
                 <a href="/tratamientos/periodoncia">Priodoncia</a>
                 <a href="/tratamientos/endodoncia">Endodoncia</a>
+                <a href="/tratamientos">Ver todos</a>
             </div>
  
             <a href="/casos">Casos</a>
