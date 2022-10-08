@@ -419,7 +419,7 @@
 <section class="section opinions">
     <div class="container">
         <h2>Que dicen nuestros clientes</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend rhoncus dolor, et tincidunt purus maximus ut.</p>
+        <p>Nuestros pacientes valoran los excelentes resultados obtenidos.</p>
 
         <div class="grid">
             <blockquote>
