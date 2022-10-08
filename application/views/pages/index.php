@@ -427,6 +427,23 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="15" fill="currentColor" viewBox="0 0 21 15">
                         <path d="M9.597,10.412c0,1.306-0.473,2.399-1.418,3.277c-0.944,0.876-2.06,1.316-3.349,1.316c-1.287,0-2.414-0.44-3.382-1.316C0.482,12.811,0,11.758,0,10.535c0-1.226,0.58-2.716,1.739-4.473L5.603,0H9.34L6.956,6.37C8.716,7.145,9.597,8.493,9.597,10.412z M20.987,10.412c0,1.306-0.473,2.399-1.418,3.277c-0.944,0.876-2.06,1.316-3.35,1.316c-1.288,0-2.415-0.44-3.381-1.316c-0.966-0.879-1.45-1.931-1.45-3.154c0-1.226,0.582-2.716,1.74-4.473L16.994,0h3.734l-2.382,6.37C20.106,7.145,20.987,8.493,20.987,10.412z" />
                     </svg>
+                    <div class="stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                    </div>
                     <h3 class="title">Trato excelente de todo el personal</h3>
                     <p class="opinion"><q>Un trato excelente de todo el personal, tanto médico como administrativo y un resultado mejor de lo esperado. La relación calidad/precio es muy buena. Tienen lo último en tecnología y sumado a la experiencia de todo el equipo, consiguen que te sientas tranquilo en todo momento. Sin duda la mejor clínica de la zona.</q></p>
                 </div>
@@ -470,7 +487,6 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="15" fill="currentColor" viewBox="0 0 21 15">
                         <path d="M9.597,10.412c0,1.306-0.473,2.399-1.418,3.277c-0.944,0.876-2.06,1.316-3.349,1.316c-1.287,0-2.414-0.44-3.382-1.316C0.482,12.811,0,11.758,0,10.535c0-1.226,0.58-2.716,1.739-4.473L5.603,0H9.34L6.956,6.37C8.716,7.145,9.597,8.493,9.597,10.412z M20.987,10.412c0,1.306-0.473,2.399-1.418,3.277c-0.944,0.876-2.06,1.316-3.35,1.316c-1.288,0-2.415-0.44-3.381-1.316c-0.966-0.879-1.45-1.931-1.45-3.154c0-1.226,0.582-2.716,1.74-4.473L16.994,0h3.734l-2.382,6.37C20.106,7.145,20.987,8.493,20.987,10.412z" />
                     </svg>
-                    <h3 class="title">Excelente trato personal y profesional</h3>
                     <div class="stars">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                             <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
@@ -488,6 +504,7 @@
                             <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                         </svg>
                     </div>
+                    <h3 class="title">Excelente trato personal y profesional</h3>
                     <p class="opinion"><q>Excelente trato personal y profesional. Cuentan con la última tecnología, lo que facilita muchísimo el proceso. Además, su personal está muy cualificado. Genial.</q></p>
                 </div>
                 <div class="author">
@@ -500,11 +517,6 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="15" fill="currentColor" viewBox="0 0 21 15">
                         <path d="M9.597,10.412c0,1.306-0.473,2.399-1.418,3.277c-0.944,0.876-2.06,1.316-3.349,1.316c-1.287,0-2.414-0.44-3.382-1.316C0.482,12.811,0,11.758,0,10.535c0-1.226,0.58-2.716,1.739-4.473L5.603,0H9.34L6.956,6.37C8.716,7.145,9.597,8.493,9.597,10.412z M20.987,10.412c0,1.306-0.473,2.399-1.418,3.277c-0.944,0.876-2.06,1.316-3.35,1.316c-1.288,0-2.415-0.44-3.381-1.316c-0.966-0.879-1.45-1.931-1.45-3.154c0-1.226,0.582-2.716,1.74-4.473L16.994,0h3.734l-2.382,6.37C20.106,7.145,20.987,8.493,20.987,10.412z" />
                     </svg>
-                    <h3 class="title">¡Totalmente recomendable!</h3>
-                    <p class="opinion"><q>El trato es excelente, un servicio muy correcto y sobre todo muy profesional. Da gusto ver a gente apasionada por su trabajo, con clínicas como la vuestra ir es un gran placer.</q></p>
-                </div>
-                <div class="author">
-                    <cite>Eva Espel</cite>
                     <div class="stars">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                             <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
@@ -522,9 +534,15 @@
                             <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                         </svg>
                     </div>
+                    <h3 class="title">¡Totalmente recomendable!</h3>
+                    <p class="opinion"><q>El trato es excelente, un servicio muy correcto y sobre todo muy profesional. Da gusto ver a gente apasionada por su trabajo, con clínicas como la vuestra ir es un gran placer.</q></p>
                 </div>
-            </blockquote>
+                <div class="author">
+                    <cite>Eva Espel</cite>
+                </div>
         </div>
+        </blockquote>
+    </div>
 
 
     </div>
@@ -575,20 +593,6 @@
                 <div class="body">
                     <div class="content">
                         <p>En primer lugar, en necesario saber con exactitud de que tratamiento bucodental estamos hablando, para ello pide una cita sin coste y nuestros dentistas de manera conjunta buscaran una solución.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <h3 class="header">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                    </svg>
-                    <span>¿Podéis continuar con un tratamiento ya empezado?</span>
-                </h3>
-                <div class="body">
-                    <div class="content">
-                        <p>Primero es necesario hacer una valoración del estado del tratamiento para poder tomar la mejor decisión. A veces, como en los casos de ortodoncia, es necesario volver a empezar ya que la aparatología o el método de trabajo es totalmente distinto al de otros centros. Intentar arreglar cosas muchas veces es más difícil que empezar de nuevo con una boca limpia y sana.</p>
                     </div>
                 </div>
             </div>
