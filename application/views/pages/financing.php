@@ -1,7 +1,7 @@
 <section class="section page-header">
     <div class="container">
         <h1>Financiación a tu medida</h1>
-        <p>Lorem ipsum dolor sit amet, consect adipiscing elit. Nunc volutpat pellentesque leo.</p>
+        <p>En Dentiny nuestros pacientes no son números son personas.</p>
     </div>
 </section>
 
