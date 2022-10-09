@@ -11,7 +11,7 @@
             <div class="col">
                 <h2>¿Qué entendemos por cirugía oral?</h2>
 
-                <p>La cirugía oral son el conjunto de procedimientos mínimamente invasivos para mejorar la calidad de vida de nuestros pacientes.</p>
+                <p>La cirugía oral son el <strong>conjunto de procedimientos mínimamente invasivos para mejorar la calidad de vida de nuestros pacientes.</strong></p>
 
                 <p>Hablamos de cirugía oral cuando se realiza una extracción sencilla o quirúrgica como puede ser una muela del juicio incluida; cuando hacemos una fenestración para liberar un diente que no ha erupcionado en un tratamiento de ortodoncia; o cuando hay una retracción de encías y realizamos un injerto de encía para mejorar la salud gingival y por ende la estética dental.</p>
             </div>
@@ -22,7 +22,7 @@
         </div>
 
         <blockquote>
-            <p><em>En Dentiny contamos con los mejores profesionales con una gran experiencia en este campo, que junto con las últimas tecnologías y una buena técnica, proporcionamos a nuestros pacientes el mejor tratamiento.</em></p>
+            <p><em>En Dentiny contamos con los <strong>mejores profesionales</strong> con una gran experiencia en este campo, que junto con las últimas tecnologías y una buena técnica, proporcionamos a nuestros pacientes el mejor tratamiento.</em></p>
         </blockquote>
 
         <div class="col">
@@ -30,7 +30,7 @@
 
             <p>Los senos maxilares son unas cavidades huecas rellenas de aire que se encuentran en el interior de la cara, justo en la zona de los pómulos. Cuando hay ausencia de dientes, el hueso se reabsorbe y el seno tiende a expandirse. Si el seno esta tan expandido que no se dispone de altura de hueso suficiente no será posible la colocación de implantes en esa zona.</p>
 
-            <p>La cirugía de elevación de seno nos permite elevar la membrana del seno y rellenar con material de injerto óseo, que puede ser artificial, de origen animal o hueso autólogo (hueso propio), y devolver en altura el hueso que hemos perdido para poder colocar implantes.</p>
+            <p>La cirugía de elevación de seno nos permite <strong>elevar la membrana del seno y rellenar con material de injerto óseo</strong>, que puede ser artificial, de origen animal o hueso autólogo (hueso propio), y <strong>devolver en altura el hueso que hemos perdido para poder colocar implantes.</strong></p>
 
             <p>En Dentiny contamos con una técnica innovadora en la cual utilizamos un piezoeléctrico, que mediante unas micro-vibraciones ultrasónicas corta el hueso sin dañar los tejidos blandos, haciendo que sea una cirugía poco traumática y con una mejor recuperación.</p>
         </div>
@@ -38,7 +38,7 @@
         <div class="col">
             <h2>Regeneración ósea</h2>
 
-            <p>Es un procedimiento que buscar restaurar o reconstruir el tejido óseo perdido debido a un accidente, una enfermedad o por extracciones dentales. Cuando ocurren estas situaciones se producen defectos óseos que no dejan la suficiente estructura ósea para la futura colocación de los implantes. Para la regeneración se utilizan injertos óseos sintéticos, de origen animal o del propio paciente, y así mismo, este procedimiento va complementado del uso de membranas que ayudan al proceso de cicatrización de la regeneración ósea y lo protegen.</p>
+            <p>Es un procedimiento que buscar <strong>restaurar o reconstruir el tejido óseo perdido</strong> debido a un accidente, una enfermedad o por extracciones dentales. Cuando ocurren estas situaciones se producen defectos óseos que no dejan la suficiente estructura ósea para la futura colocación de los implantes. Para la regeneración se utilizan injertos óseos sintéticos, de origen animal o del propio paciente, y así mismo, este procedimiento va complementado del uso de membranas que ayudan al proceso de cicatrización de la regeneración ósea y lo protegen.</p>
         </div>
 
         <div class="col">
