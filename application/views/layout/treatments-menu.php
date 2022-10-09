@@ -7,7 +7,7 @@
                 </div>
 
                 <div class="text">
-                    <p class="title">Ortodoncia</p>
+                    <p class="title">Rehabilitación oral y prótesis dentales</p>
                     <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
             </a>

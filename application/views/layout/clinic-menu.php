@@ -10,7 +10,7 @@
 
                 <div class="text">
                     <p class="title">Sobre nosotros</p>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="description">Aspiramos a la excelencia e innovación con cada caso.</p>
                 </div>
             </a>
 
@@ -23,7 +23,7 @@
 
                 <div class="text">
                     <p class="title">Equipo</p>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="description">Estamos orgullosos de contar con los mejores especialistas de la provincia.</p>
                 </div>
             </a>
 
@@ -36,7 +36,7 @@
 
                 <div class="text">
                     <p class="title">Instalaciones</p>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="description">Conoce las mejores instalaciones dentales con la última tecnología de venguardia.</p>
                 </div>
             </a>
 
@@ -49,7 +49,7 @@
 
                 <div class="text">
                     <p class="title">Financiación</p>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="description">En Dentiny somos personas tratando personas.</p>
                 </div>
             </a>
 
