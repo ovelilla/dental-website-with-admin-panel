@@ -95,7 +95,7 @@
         </div>
 
         <blockquote>
-            <p><em>En Dentiny contamos con los <strong>mejores profesionales</strong> con una gran experiencia en este campo, que junto con las últimas tecnologías y una buena técnica, proporcionamos a nuestros pacientes el mejor tratamiento.</em></p>
+            <p><em><strong>Apuesta siempre por tratamientos de calidad</strong> y evita franquicias y tratamientos "low-cost", ya que estos tienen resultados que pueden perjudicar tu salud dental y en muchos casos estos tramientos pueden perjudicar gravemente tu salud.</em></p>
         </blockquote>
 
     </div>
