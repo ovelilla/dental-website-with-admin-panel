@@ -1,7 +1,6 @@
 <section class="section page-header">
     <div class="container">
         <h1>Contacto</h1>
-        <p>Lorem ipsum dolor sit amet, consect adipiscing elit. Nunc volutpat pellentesque leo.</p>
     </div>
 </section>
 
@@ -63,8 +62,8 @@
         <div class="col-left">
             <div class="header">
                 <h3>Tu primera visita</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel ornare diam. Aliquam erat volutpat.</p>
-                <p>Nunc volutpat pellentesque leo, at rutrum dui malesuada quis. Aenean quis orci imperdiet, dictum lacus non, dapibus lorem.</p>
+                <p>¿Necesitas la mejor clínica dental en Castellón?</p>
+                <p>Rellena el formulario y nuestro equipo te facilitará una cita lo antes posible. Si lo prefieres llámanos o envíanos un WhatsApp.</p>
             </div>
             <div class="social">
                 <a href="#">
@@ -92,24 +91,9 @@
 <section class="section faq">
     <div class="container">
         <h2>Preguntas frecuentes sobre clínica Dentiny</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend rhoncus dolor, et tincidunt purus maximus ut.</p>
+        <p>En este apartado podrás encontrar algunas de las preguntas que nos hacen nuestros pacientes.</p>
 
         <div id="accordion" class="accordion">
-            <div class="item">
-                <h3 class="header">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                    </svg>
-                    <span>¿Porque no trabajáis con mutuas o asociados?</span>
-                </h3>
-                <div class="body">
-                    <div class="content">
-                        <p>En Clínica Dentiny queremos darte el mejor el tratamiento y el mejor servicio que lo rodea. Las Mutuas y los diferentes seguros obligan al dentista a trabajar por un precio inferior a lo habitual en el mercado. El paciente paga su prima a la mutua y recibe un tratamiento más barato en el dentista. Esto obliga a las clínicas a incrementar su velocidad de trabajo y aumentar el volumen de pacientes para aumentar la facturación mensual.</p>
-                        <p>Otra manera de poder trabajar barato es usar materiales de baja calidad y por lo tanto más baratos. Nosotros creemos que es imposible ofrecer un tratamiento excelente a bajo coste, si trabajas rápido tendrás que bajar la calidad. Por otro lado no colocaríamos en tu boca algo que no colocaríamos en la boca de nuestras madres o padres, por esta razón nunca escatimamos en los costes de materiales. En Clínica Dentiny usamos los mejores materiales que existen en cada momento en el mercado.</p>
-                    </div>
-                </div>
-            </div>
-
             <div class="item">
                 <h3 class="header">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -119,7 +103,7 @@
                 </h3>
                 <div class="body">
                     <div class="content">
-                        <p>Todos nuestros pacientes son acompañados durante el inicio de su tratamiento en nuestra clínica. Siempre ofrecemos opciones para afrontar la parte económica del tratamiento. En la actualidad podemos financiar tu tratamiento en diferentes plazos y podemos decirte que hasta 24 meses es sin interés.</p>
+                        <p>Nuestros pacientes son tratados de manera exclusiva, tenemos la filosofía de personas tratando a personas, por tanto, después de explicarte tu caso y con todas las dudas aclaradas nuestro equipo te explicara las diferentes formas de abonar el tratamiento.</p>
                     </div>
                 </div>
             </div>
@@ -129,11 +113,12 @@
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                     </svg>
-                    <span>¿Sólo realizáis tratamientos de ortodoncia?</span>
+                    <span>¿Las primeras visitas son gratuitas?</span>
                 </h3>
                 <div class="body">
                     <div class="content">
-                        <p>Para nada! Clínica Dentiny está formada por un equipo de 10 especialistas, cada uno excepcional en lo que hace. Hacemos cualquier tratamiento necesario para la salud de tu boca con una visión más completa e interdisciplinar. Para eso, tenemos todos los especialistas de cada área que podrán orientarte en tu tratamiento.</p>
+                        <p>La primera visita no tiene coste en nuestra clínica, si fuera necesaria una prueba radiológica para un diagnostico mas certero, entonces se le comunicaría el coste de este examen al paciente y se abonaría pon posterioridad. Nuestra clínica cuenta con toda la aparatología radiológica 3D para que el paciente no se tenga que desplazar a otros centros radiológicos obteniendo así un diagnóstico inmediato.</p>
+                        <p>Para agendar una cita contacta con nuestro equipo al 964099721 o al WhatsApp 622348982.</p>
                     </div>
                 </div>
             </div>
@@ -143,11 +128,11 @@
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                     </svg>
-                    <span>¿Podéis continuar con un tratamiento ya empezado?</span>
+                    <span>¿Puedo continuar un tratamiento que ya empecé en otra clínica?</span>
                 </h3>
                 <div class="body">
                     <div class="content">
-                        <p>Primero es necesario hacer una valoración del estado del tratamiento para poder tomar la mejor decisión. A veces, como en los casos de ortodoncia, es necesario volver a empezar ya que la aparatología o el método de trabajo es totalmente distinto al de otros centros. Intentar arreglar cosas muchas veces es más difícil que empezar de nuevo con una boca limpia y sana.</p>
+                        <p>En primer lugar, en necesario saber con exactitud de que tratamiento bucodental estamos hablando, para ello pide una cita sin coste y nuestros dentistas de manera conjunta buscaran una solución.</p>
                     </div>
                 </div>
             </div>
@@ -157,11 +142,59 @@
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                     </svg>
-                    <span>¿Todas las primeras visitas son gratuitas?</span>
+                    <span>¿Por qué elegir la clínica dental Dentiny?</span>
                 </h3>
                 <div class="body">
                     <div class="content">
-                        <p>En clínica Dentiny las primeras visitas de ortodoncia son gratuitas, pues son visitas informativas donde no te hacemos ninguna radiografía, solo invertimos tiempo para escucharte y darte nuestra opinión con lo que vemos a simple vista. Si el paciente lleva ortodoncia de otra consulta (visita para pedir una segunda opinión) la visita tiene coste.</p>
+                        <p>Clínica Dentiny cuenta con especialistas lideres en el sector bucodental que demuestran día a día su exclusiva dedicación por los mejores tratamientos dentales, cada profesional se dedica a un campo de la odontología distinto. En Nuestro centro de salud encontraras la tecnología dental más puntera para que tanto el diagnostico inicial, el proceso de tratamiento y las futuras revisiones sean lo más exitosas posibles, ya no tienes que acudir a otros centros radiológicos. El paciente encuentra en nuestro centro el lugar ideal para hacerse su tratamiento de calidad, con un éxito garantizado y de la mano de los mejores profesionales. Nuestro destino es tu sonrisa.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <h3 class="header">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                    <span>Tengo una urgencia ¿Puedo contar con vosotros?</span>
+                </h3>
+                <div class="body">
+                    <div class="content">
+                        <p>Por supuesto que sí, aunque no seas paciente nuestro, nuestro equipo de recepción se encargara de darte una cita lo antes posible porque sabemos que cada minuto suma.</p>
+                        <p>En nuestro centro disponemos de toda la tecnología dental para actuar lo antes posible sin derivarte a otros centros de radiología.</p>
+                        <p>Es muy importante acudir de manera periódica a tu dentista para evitar estas posibles molestias. Confía en los mejores.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <h3 class="header">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                    <span>Creo que mi tratamiento es complejo y requiere de varios especialistas ¿Cómo podéis ayudarme?</span>
+                </h3>
+                <div class="body">
+                    <div class="content">
+                        <p>A veces acudís a la clínica con un diagnóstico previo de otra clínica en el cual os ha generado dudas o no acabáis de estar convencidos con el diagnostico, suele pasar.</p>
+                        <p>En primer lugar, es importante que sepáis que contamos con los mejores profesionales de la provincia que trabajan de manera conjunta que de la mano de los últimos avances dentales en diagnóstico y con un equipo humano que empatiza y resuelve todas las dudas del paciente.</p>
+                        <p>Por tanto, encontraras transparencia en tu diagnostico y la seguridad de que estas en el sitio adecuado para ti y tu familia.</p>
+                        <p>Gracias por elegirnos, no te defraudaremos. Dentiny.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <h3 class="header">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                    <span>Tengo arcadas cuando me toman medidas dentales ¿Existe alguna tecnología que no me haga pasar por ese mal rato?</span>
+                </h3>
+                <div class="body">
+                    <div class="content">
+                        <p>¡Si! Y contamos con ello. Disponemos del ultimo escáner intraoral 3D donde podrás mediante la última tecnología ver el resultado de tu tratamiento antes de empezarlo y sin que te hayan introducido esos molestos moldes en la boca.</p>
+                        <p>Bienvenidos al Futuro, bienvenidos a Dentiny. </p>
                     </div>
                 </div>
             </div>
