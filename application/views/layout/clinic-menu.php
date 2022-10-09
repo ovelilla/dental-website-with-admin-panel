@@ -36,7 +36,7 @@
 
                 <div class="text">
                     <p class="title">Instalaciones</p>
-                    <p class="description">Conoce las mejores instalaciones dentales con la última tecnología de venguardia.</p>
+                    <p class="description">Conoce las mejores instalaciones dentales con la última tecnología de vanguardia.</p>
                 </div>
             </a>
 
@@ -62,7 +62,7 @@
                 </div>
 
                 <div class="text">
-                    <p class="title">Area privada</p>
+                    <p class="title">Área  privada</p>
                     <p class="description">Acceso privado para el personal de la clínica.</p>
                 </div>
             </a>

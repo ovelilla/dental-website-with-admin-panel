@@ -2,7 +2,7 @@
     <div class="container">
         <div class="logo">
             <a href="/">
-                <img loading="lazy" src="/build/img/varios/logo-blue.png" alt="Logo clinica dental Dentiny">
+                <img loading="lazy" src="/build/img/varios/logo-blue.png" alt="Logo clínica dental Dentiny">
             </a>
         </div>
 

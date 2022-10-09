@@ -14,7 +14,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M15.71,12.71a1,1,0,0,0,.21-.33,1,1,0,0,0,0-.76,1,1,0,0,0-.21-.33l-3-3a1,1,0,0,0-1.42,1.42L12.59,11H9a1,1,0,0,0,0,2h3.59l-1.3,1.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0ZM22,12A10,10,0,1,0,12,22,10,10,0,0,0,22,12ZM4,12a8,8,0,1,1,8,8A8,8,0,0,1,4,12Z" />
                 </svg>
-                <span><strong>¿Ofreceís financiación?</strong> Si, pregúntanos sin compromiso.</span>
+                <span><strong>Ofrecéis financiación?</strong> Si, pregúntanos sin compromiso.</span>
             </a>
         </div>
 
@@ -180,12 +180,12 @@
             <a href="/tratamientos/rehabilitacion-oral-protesis-dentales" class="card">
                 <div class="icon">
                     <div class="icon-container">
-                        <img loading="lazy" src="/build/img/iconos/23.png" alt="Icono rehabilitación oral y protesis dentales">
+                        <img loading="lazy" src="/build/img/iconos/23.png" alt="Icono rehabilitación oral y prótesis dentales">
                     </div>
                 </div>
                 <div class="text">
                     <h3 class="title">Rehabilitación oral y prótesis dentales</h3>
-                    <p class="description">El paciente acude por la mañana a la clinica, realizamos la intervención y por la tarde se va con sus dientes fijos. Resultados en menos de 12h.</p>
+                    <p class="description">El paciente acude por la mañana a la clínica, realizamos la intervención y por la tarde se va con sus dientes fijos. Resultados en menos de 12h.</p>
                     <p class="more">
                         <span>Saber más</span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -357,7 +357,7 @@
 
                 <div class="info">
                     <h3 class="name">Dra. Claudia Rada Benga</h3>
-                    <p class="specialty">Odontologa</p>
+                    <p class="specialty">Odontóloga</p>
                 </div>
             </a>
 
@@ -368,7 +368,7 @@
 
                 <div class="info">
                     <h3 class="name">Dr. Joan Llop Cabedo</h3>
-                    <p class="specialty">Odontologo</p>
+                    <p class="specialty">Odontólogo</p>
                 </div>
             </a>
 
@@ -482,7 +482,7 @@
                         </svg>
                     </div>
                     <h3 class="title">Encantada con haberles elegido</h3>
-                    <p class="opinion"><q>Encantada con haberles elegido como mis dentistas tanto para mí, como para mis padres. Un trato excepcional por parte de todos. Sin duda alguna recomendado 100% y de confianza.</q></p>
+                    <p class="opinion"><q>Encantada con haberles elegido como mis dentistas tanto para mí, como para mis padres. Un trato excepcional por parte de todos. Sin duda alguna, recomendado 100% y de confianza.</q></p>
                 </div>
                 <div class="author">
                     <cite>Raquel García</cite>

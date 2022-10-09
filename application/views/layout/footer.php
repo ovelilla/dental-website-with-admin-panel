@@ -3,7 +3,7 @@
         <div class="row-top">
             <div class="grid">
                 <div class="logo">
-                    <img loading="lazy" src="/build/img/varios/logo-blue.png" alt="Logo clinica dental Dentiny">
+                    <img loading="lazy" src="/build/img/varios/logo-blue.png" alt="Logo clínica dental Dentiny">
                 </div>
 
                 <div class="about-us">
@@ -54,7 +54,7 @@
 
         <div class="row-bottom">
             <div class="grid">
-                <a href="#">Terminos y Condiciones</a>
+                <a href="#">Términos y Condiciones</a>
                 <p>Dentiny® 2022 Todos los derechos reservados.</p>
                 <a href="#">Política de privacidad</a>
             </div>
