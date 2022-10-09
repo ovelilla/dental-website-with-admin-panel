@@ -64,7 +64,7 @@
             .mio-wrapper:hover .mio-input {
                 border-color: v.$red-600;
             }
-            
+
             .mio-label {
                 color: v.$red-600;
             }
@@ -136,6 +136,11 @@
             font-weight: 400;
             font-size: 1.4rem;
             cursor: text;
+
+            &:-webkit-autofill {
+                box-shadow: 0 0 0px 1000px v.$white inset;
+                -webkit-box-shadow: 0 0 0px 1000px v.$white inset;
+            }
 
             @include m.tablet {
                 font-size: 1.5rem;

@@ -8,7 +8,7 @@
 
                 <div class="text">
                     <p class="title">Rehabilitación oral y prótesis dentales</p>
-                    <p class="description">Obtenemos resultados profesionales en menos de 12 horas.</p>
+                    <p class="description">Prótesis dental fija sobre implantes en menos de 12 horas.</p>
                 </div>
             </a>
 

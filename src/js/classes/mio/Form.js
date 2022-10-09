@@ -3,6 +3,14 @@ class Form {
         if (this.constructor === Form) {
             throw new TypeError("Abstract class 'Form' cannot be instantiated directly.");
         }
+
+        window.addEventListener("load", () => {
+            const autofilledInput = this.field.querySelector("input:-webkit-autofill");
+
+            if (autofilledInput) {
+                this.field.classList.add("active");
+            }
+        });
     }
 
     getField() {
