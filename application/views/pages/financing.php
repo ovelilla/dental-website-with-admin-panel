@@ -94,5 +94,9 @@
             </div>
         </div>
 
+        <blockquote>
+            <p><em>En Dentiny contamos con los <strong>mejores profesionales</strong> con una gran experiencia en este campo, que junto con las últimas tecnologías y una buena técnica, proporcionamos a nuestros pacientes el mejor tratamiento.</em></p>
+        </blockquote>
+
     </div>
 </section>
