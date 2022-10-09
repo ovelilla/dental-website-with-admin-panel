@@ -11,7 +11,7 @@
             <div class="col">
                 <h2>¿Qué es la Ortodoncia?</h2>
 
-                <p>La ortodoncia deriva de los términos griegos “Ortos” Recto y “Odontos” Diente. Es decir que es la ciencia encargada de alinear los dientes o las irregularidades de las posiciones dentarias.</p>
+                <p>La ortodoncia deriva de los términos griegos “Ortos” Recto y “Odontos” Diente. Es decir que es la <strong>ciencia encargada de alinear los dientes o las irregularidades de las posiciones dentarias.</strong></p>
 
                 <p>Sabias que los primeros ortodoncistas comenzaron a llamarse así en 1841 en París, en donde se supone que parte del arte dentario que se ocupa de las deformidades congénitas o accidentes de la boca es trabajo del ortodoncista.</p>
 
@@ -43,7 +43,7 @@
 
             <h2>¿Qué es la oclusión?</h2>
 
-            <p>La oclusión es la relación normal de las muelas y los dientes cuando los maxilares están cerrados.</p>
+            <p>La oclusión es la <strong>relación normal de las muelas y los dientes cuando los maxilares están cerrados.</strong></p>
 
             <p>Una oclusión normal es una boca en la que todos los dientes están presentes y ocluyen de un modo saludable, estable y satisfactorio, aunque presenten pequeñas variaciones en su posición, “dentro de ciertos límites”.</p>
 
@@ -65,7 +65,7 @@
             <div class="col">
                 <h2>¿Cuál es la frecuencia de las mala oclusiones?</h2>
 
-                <p>Se ha estimado que aproximadamente el cincuenta por ciento de la población de niños y niñas de 12 a 14 años de edad necesitara de algún tipo de intervención ortodóncica. Además, casi la mitad de ellos necesitara de un tratamiento complejo pare resolver malas oclusiones importantes.</p>
+                <p>Se ha estimado que <strong>aproximadamente el cincuenta por ciento de la población de niños y niñas de 12 a 14 años de edad necesitara de algún tipo de intervención ortodóncica.</strong> Además, casi la mitad de ellos necesitara de un tratamiento complejo pare resolver malas oclusiones importantes.</p>
 
                 <p>En la actualidad habría que añadir a lo ya mencionado el notable incremento en la demanda de tratamiento ortodóncico por parte de adultos debido a que mayor número de ellos mantiene sus dientes durante más tiempo interesados en su estética y salud dentofacial.</p>
             </div>
@@ -79,7 +79,9 @@
 
             <p>Aunque a principios del siglo XX empezó a darse a la ortodoncia consideraciones especiales de que el tratamiento no solo era estético, sino que también al mejorar la posición dentaria la función se veía muy mejorada.</p>
 
-            <p>Sabias que cuando los dientes de delante en los niños están más hacia afuera tienen mayor riesgo de romperse y sufrir traumas cuando se caen. Por eso es muy importante antes de los 10 años valorar si es necesario hacer un tratamiento ortopédico para disminuir esos sobresaltes de los dientes superiores.</p>
+            <blockquote>
+                <p><em>Sabias que cuando los dientes de delante en los niños están más hacia afuera tienen mayor riesgo de romperse y sufrir traumas cuando se caen. Por eso es muy importante <strong>antes de los 10 años valorar si es necesario hacer un tratamiento ortopédico</strong> para disminuir esos sobresaltes de los dientes superiores.</em></p>
+            </blockquote>
 
             <p>Debemos tener en cuenta que hay unos rasgos importantes en nuestra mordida que van a afectar directamente a nuestra salud oral y nuestro aparato masticatorio.</p>
 
@@ -146,7 +148,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <span>Aparatos fijos, que se utilizan en pacientes donde ya no existe crecimiento y solamente podemos mover los dientes. Brackets de aleaciones metálicas o brackets estéticos de cerámica o cristal de zafiro. Ortodoncia Invisible.</span>
+                        <span>Aparatos fijos, que se utilizan en pacientes donde ya no existe crecimiento y solamente podemos mover los dientes. <strong>Brackets de aleaciones metálicas o brackets estéticos de cerámica o cristal de zafiro. Ortodoncia Invisible.</strong></span>
                     </li>
                 </ul>
             </div>
@@ -160,7 +162,7 @@
 
             <h2>Colaboración del paciente en el tratamiento de ortodoncia.</h2>
 
-            <p>La colaboración del paciente es un factor de gran peso en la ejecución del objetivo propuesto en un tratamiento de ortodoncia, la cual además es independiente de la voluntad, los conocimientos y las habilidades del profesional que lo lleva a cabo.</p>
+            <p>La colaboración del paciente es un <strong>factor de gran peso</strong> en la ejecución del objetivo propuesto en un tratamiento de ortodoncia, la cual además es independiente de la voluntad, los conocimientos y las habilidades del profesional que lo lleva a cabo.</p>
 
             <p>La falta de colaboración del paciente, por una falta de motivación o interés real por el tratamiento es mucho más frecuente en niños que en adultos. Esto condiciona de que se pueda conseguir un tratamiento ortodoncia con éxito.</p>
 
@@ -174,7 +176,7 @@
 
             <h2>¿Cuándo se empieza a notar los efectos de la ortodoncia?</h2>
 
-            <p>Los efectos de la ortodoncia se empiezan a notar a las pocas semanas, siempre dependiendo de cada caso, cuanto más complejo sea, antes se notaran esos cambios.</p>
+            <p>Los efectos de la ortodoncia <strong>se empiezan a notar a las pocas semanas</strong>, siempre dependiendo de cada caso, cuanto más complejo sea, antes se notaran esos cambios.</p>
 
         </div>
 
