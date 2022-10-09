@@ -8,7 +8,7 @@
 
                 <div class="text">
                     <p class="title">Rehabilitación oral y prótesis dentales</p>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="description">Obtenemos resultados profesionales en menos de 12 horas.</p>
                 </div>
             </a>
 
@@ -18,8 +18,8 @@
                 </div>
 
                 <div class="text">
-                    <p class="title">Ortodoncia invisible</p>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="title">Implantes dentales</p>
+                    <p class="description">Nuestros cirujanos solo utilizan las mejores marcas de implantes del mercado.</p>
                 </div>
             </a>
 
@@ -29,8 +29,8 @@
                 </div>
 
                 <div class="text">
-                    <p class="title">Implantes dentales</p>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="title">Estética dental</p>
+                    <p class="description">Podrás ver tu sonrisa en 3d gracias a los últimos avances dentales.</p>
                 </div>
             </a>
 
@@ -40,8 +40,8 @@
                 </div>
 
                 <div class="text">
-                    <p class="title">Blanqueamiento dental</p>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="title">Ortodoncia invisible</p>
+                    <p class="description">La ortodoncia del futuro. Las mejores marcas bajo la supervisión de nuestros doctores.</p>
                 </div>
             </a>
 
@@ -51,8 +51,8 @@
                 </div>
 
                 <div class="text">
-                    <p class="title">Priodoncia</p>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="title">Ortodoncia</p>
+                    <p class="description">La ortodoncia de siempre de la mano de los mejores profesionales. Éxito 100% garantizado.</p>
                 </div>
             </a>
 
@@ -62,8 +62,8 @@
                 </div>
 
                 <div class="text">
-                    <p class="title">Endodoncia</p>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="title">Blanqueamiento dental</p>
+                    <p class="description">El mejor blanqueamiento del mercado con Philips Zoom. Siempre a la vanguardia Dental.</p>
                 </div>
             </a>
         </div>

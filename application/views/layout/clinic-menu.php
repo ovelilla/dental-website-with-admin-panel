@@ -49,7 +49,7 @@
 
                 <div class="text">
                     <p class="title">Financiación</p>
-                    <p class="description">En Dentiny somos personas tratando personas.</p>
+                    <p class="description">En Dentiny somos personas tratando a personas.</p>
                 </div>
             </a>
 
@@ -63,7 +63,7 @@
 
                 <div class="text">
                     <p class="title">Area privada</p>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="description">Acceso privado para el personal de la clínica.</p>
                 </div>
             </a>
         </div>

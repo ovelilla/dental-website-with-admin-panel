@@ -425,7 +425,7 @@
 
 <section class="section opinions">
     <div class="container">
-        <h2>Que dicen nuestros clientes</h2>
+        <h2>Que dicen nuestros pacientes</h2>
         <p>Nuestros pacientes valoran los excelentes resultados obtenidos.</p>
 
         <div class="grid">
