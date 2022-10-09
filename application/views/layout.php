@@ -2,7 +2,7 @@
 <html lang="es-ES">
 
 <head>
-    <!-- <meta name="robots" content="noindex"> -->
+    <meta name="robots" content="noindex">
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,14 +25,14 @@
 
     <link rel="shortcut icon" href="/build/img/iconos/icono16-light.ico">
 
-    <link rel="icon" type="image/png" href="/build/img/iconos/icono16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="/build/img/iconos/icono32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/build/img/iconos/icono96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/build/img/iconos/icono16-light.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/build/img/iconos/icono32-light.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/build/img/iconos/icono96-light.png" sizes="96x96">
 
-    <link rel="apple-touch-icon" href="/build/img/iconos/icono120.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/build/img/iconos/icono152.png">
-    <link rel="apple-touch-icon" sizes="167x167" href="/build/img/iconos/icono167.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/build/img/iconos/icono180.png">
+    <link rel="apple-touch-icon" href="/build/img/iconos/icono120-light.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/build/img/iconos/icono152-light.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="/build/img/iconos/icono167-light.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/build/img/iconos/icono180-light.png">
 
     <link rel="preload" href="/build/css/app.css" as="style">
     <link rel="stylesheet" href="/build/css/app.css">
