@@ -50,6 +50,34 @@ class Layout {
         });
 
         this.createWhatsappButton();
+
+        const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+        mediaQuery.addEventListener("change", this.themeChange.bind(this));
+    }
+
+    themeChange() {
+        const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+        const faviconEl = document.querySelector('link[rel="shortcut icon"]');
+        const pngIcons = document.querySelectorAll('link[rel="icon"]');
+        const appleIcons = document.querySelectorAll('link[rel="apple-touch-icon"]');
+
+        if (mediaQuery.matches) {
+            faviconEl.setAttribute("href", "/build/img/iconos/icono16-light.ico");
+            pngIcons.forEach((icon) => {
+                icon.setAttribute("href", icon.getAttribute("href").replace("dark", "light"));
+            });
+            appleIcons.forEach((icon) => {
+                icon.setAttribute("href", icon.getAttribute("href").replace("dark", "light"));
+            });
+        } else {
+            faviconEl.setAttribute("href", "/build/img/iconos/icono16-dark.ico");
+            pngIcons.forEach((icon) => {
+                icon.setAttribute("href", icon.getAttribute("href").replace("light", "dark"));
+            });
+            appleIcons.forEach((icon) => {
+                icon.setAttribute("href", icon.getAttribute("href").replace("light", "dark"));
+            });
+        }
     }
 
     loadEvent() {
@@ -69,6 +97,8 @@ class Layout {
                 new Collapse(target, content, true);
             });
         }
+
+        this.themeChange();
     }
 
     scrollEvent() {

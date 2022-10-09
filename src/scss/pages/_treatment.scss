@@ -19,10 +19,19 @@
     @include m.desktopXL {
         padding: 60px 0;
     }
+    
     .container {
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 20px;
+
+        @include m.tablet {
+            gap: 30px;
+        }
+
+        @include m.desktop {
+            gap: 40px;
+        }
 
         .row {
             display: flex;

@@ -23,7 +23,7 @@
 
     <title>Clínica dental Castellón | Odontología | Dentiny | <?php echo $title ?></title>
 
-    <link rel="shortcut icon" href="/build/img/iconos/icono16.ico">
+    <link rel="shortcut icon" href="/build/img/iconos/icono16-light.ico">
 
     <link rel="icon" type="image/png" href="/build/img/iconos/icono16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="/build/img/iconos/icono32.png" sizes="32x32">
