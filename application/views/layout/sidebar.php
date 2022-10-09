@@ -25,12 +25,12 @@
             </button>
 
             <div class="collapse">
-                <a href="/tratamientos/ortodoncia">Ortodoncia</a>
-                <a href="/tratamientos/ortodoncia-invisible">Ortodoncia invisible</a>
+                <a href="/tratamientos/rehabilitacion-oral-protesis-dentales">Rehabilitación oral y prótesis dentales</a>
                 <a href="/tratamientos/implantes-dentales">Implantes dentales</a>
+                <a href="/tratamientos/estetica-dental">Estética dental</a>
+                <a href="/tratamientos/ortodoncia-invisible">Ortodoncia invisible</a>
+                <a href="/tratamientos/ortodoncia">Ortodoncia</a>
                 <a href="/tratamientos/blanqueamiento-dental">Blanqueamiento dental</a>
-                <a href="/tratamientos/periodoncia">Priodoncia</a>
-                <a href="/tratamientos/endodoncia">Endodoncia</a>
                 <a href="/tratamientos">Ver todos</a>
             </div>
  

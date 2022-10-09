@@ -63,10 +63,15 @@
                         display: flex;
                         justify-content: center;
                         align-items: flex-start;
-
+                        
                         img {
                             min-width: 42px;
                             min-height: 42px;
+                        }
+
+                        svg {
+                            min-width: 24px;
+                            min-height: 24px;
                         }
                     }
 

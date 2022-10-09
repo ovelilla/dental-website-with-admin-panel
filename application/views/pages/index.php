@@ -676,7 +676,7 @@
             <div class="header">
                 <h2>Contacto</h2>
                 <p>¿Necesitas la mejor clínica dental en Castellón?</p>
-                <p>Rellena el formulario y nuestro equipo le facilitara una cita lo antes posible. Si lo prefieres llámanos o envíanos un WhatsApp.</p>
+                <p>Rellena el formulario y nuestro equipo te facilitará una cita lo antes posible. Si lo prefieres llámanos o envíanos un WhatsApp.</p>
             </div>
 
             <div class="info">
