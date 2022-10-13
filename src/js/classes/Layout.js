@@ -431,7 +431,7 @@ class Layout {
 
         const mail = document.createElement("a");
         mail.classList.add("quick-access-btn", "mail");
-        mail.href = "/contacto";
+        mail.href = "/contacto#contact";
         mail.ariaLabel = "Abrir formulario de contacto";
         document.body.appendChild(mail);
 

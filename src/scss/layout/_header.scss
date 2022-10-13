@@ -3,7 +3,7 @@
 
 .main-header {
     z-index: 500;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
@@ -12,7 +12,7 @@
     box-shadow: v.$shadow-md;
 
     &.home {
-        background-color: transparent;
+        background-color: v.$blue-light-50;
         box-shadow: none;
     }
 

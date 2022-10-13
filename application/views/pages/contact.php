@@ -7,10 +7,10 @@
 <section class="section contact-info">
     <div class="container">
         <div class="grid">
-            <div href="#" class="card">
+            <div class="card">
                 <div class="icon">
                     <div class="icon-container">
-                        <img loading="lazy" src="/build/img/iconos/geo-alt.png" alt="Icono implantes dentales">
+                        <img loading="lazy" src="/build/img/iconos/geo-alt.png" alt="Icono dirección">
                     </div>
                 </div>
                 <div class="text">
@@ -22,10 +22,10 @@
                 </div>
             </div>
 
-            <div href="#" class="card">
+            <div class="card">
                 <div class="icon">
                     <div class="icon-container">
-                        <img loading="lazy" src="/build/img/iconos/envelope.png" alt="Icono implantes dentales">
+                        <img loading="lazy" src="/build/img/iconos/envelope.png" alt="Icono contacto">
                     </div>
                 </div>
                 <div class="text">
@@ -38,10 +38,10 @@
                 </div>
             </div>
 
-            <div href="#" class="card">
+            <div class="card">
                 <div class="icon">
                     <div class="icon-container">
-                        <img loading="lazy" src="/build/img/iconos/clock.png" alt="Icono implantes dentales">
+                        <img loading="lazy" src="/build/img/iconos/clock.png" alt="Icono horario">
                     </div>
                 </div>
                 <div class="text">
@@ -57,7 +57,7 @@
     </div>
 </section>
 
-<section class="section contact">
+<section class="section contact" id="formulario-contacto">
     <div class="container">
         <div class="col-left">
             <div class="header">

@@ -5,11 +5,11 @@
     padding: 0;
 
     .container {
-        padding: 60px 15px;
+        padding: 50px 15px;
         border-bottom: 1px solid v.$blue-light-400;
 
         @include m.mobile {
-            padding: 70px 20px;
+            padding: 60px 20px;
         }
 
         @include m.tablet {
@@ -25,7 +25,7 @@
         }
 
         .grid {
-            @include m.grid(1, 20px, 20px);
+            @include m.grid(1, 10px, 10px);
 
             @include m.tablet {
                 @include m.grid(2, 20px, 20px);
@@ -40,7 +40,6 @@
                 padding: 20px;
                 gap: 20px;
                 border-radius: 8px;
-
 
                 @include m.desktop {
                     gap: 10px;
@@ -58,10 +57,25 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        min-width: 60px;
-                        min-height: 60px;
+                        min-width: 42px;
+                        min-height: 42px;
                         background-color: v.$blue-light-400;
                         border-radius: 50%;
+
+                        @include m.desktop {
+                            min-width: 60px;
+                            min-height: 60px;
+                        }
+
+                        img {
+                            width: 24px;
+                            height: 24px;
+
+                            @include m.desktop {
+                                width: 32px;
+                                height: 32px;
+                            }
+                        }
                     }
                 }
 

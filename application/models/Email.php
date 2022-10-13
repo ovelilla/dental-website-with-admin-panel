@@ -28,12 +28,12 @@ class Email {
     public function sendContactMessage(): void {
         $mail = new PHPMailer();
         $mail->isSMTP();
+        $mail->SMTPAuth = 'ssl';
+        $mail->SMPTSecure = true;
         $mail->Host = $this->mail_host;
+        $mail->Port = $this->mail_port;
         $mail->Username = $this->mail_user;
         $mail->Password = $this->mail_pass;
-        $mail->Port = $this->mail_port;
-        $mail->SMTPAuth = true;
-        // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 
         $mail->setFrom('policlinica@dentiny.es', 'dentiny.es');
         $mail->addAddress('policlinica@dentiny.es', 'dentiny.es');
@@ -49,7 +49,7 @@ class Email {
         include __DIR__ . "/../views/templates/contact.php";
         $content = ob_get_contents();
         ob_end_clean();
-        
+
         $mail->Body = $content;
 
         $mail->send();

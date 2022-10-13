@@ -7,11 +7,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60px;
-    height: 60px;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
     background-color: v.$blue-900;
     box-shadow: v.$shadow-md;
+
+    @include m.desktop {
+        width: 60px;
+        height: 60px;
+    }
 
     &.mail {
         bottom: 15px;
@@ -19,8 +24,12 @@
     }
 
     &.whatsapp {
-        bottom: 90px;
+        bottom: 80px;
         right: 10px;
+
+        @include m.desktop {
+            bottom: 90px;
+        }
     }
 
     &:hover {
@@ -29,8 +38,11 @@
     }
 
     svg {
-        width: 30px;
-        height: 30px;
         color: v.$white;
+
+        @include m.desktop {
+            width: 30px;
+            height: 30px;
+        }
     }
 }

@@ -3,7 +3,6 @@
 namespace Controllers;
 
 use Models\Router;
-use Models\Session;
 use Models\DB;
 use Models\Contact;
 use Models\Email;

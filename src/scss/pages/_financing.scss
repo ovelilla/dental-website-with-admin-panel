@@ -6,7 +6,7 @@
         display: flex;
         flex-direction: column;
 
-        >.row {
+        .row {
             display: flex;
             flex-direction: column;
 
@@ -104,7 +104,7 @@
             }
         }
 
-        .row:last-child {
+        &:last-child {
             .col-left {
                 order: 1;
             }
@@ -112,6 +112,7 @@
             .col-right {
                 order: 0;
             }
+
             @include m.tablet {
                 .col-left {
                     order: 0;
@@ -129,6 +130,10 @@
             background-color: v.$blue-light-100;
             border-left: 4px solid v.$blue-900;
             font-weight: 300;
+            
+            em {
+                font-style: normal;
+            }
         }
     }
 }
