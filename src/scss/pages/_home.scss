@@ -42,12 +42,10 @@
             }
 
             @include m.desktop {
-                // padding-top: 180px;
                 padding-bottom: 40px;
             }
 
             @include m.desktopXL {
-                // padding-top: 200px;
                 padding-bottom: 50px;
             }
 
@@ -70,11 +68,6 @@
                 display: flex;
                 align-items: center;
                 gap: 5px;
-                font-size: 1.4rem;
-
-                @include m.desktop {
-                    font-size: 1.6rem;
-                }
             }
 
             > a:last-child {
@@ -253,7 +246,8 @@
                     }
 
                     .description {
-                        font-size: 1.4rem;
+                        font-size: 1.6rem;
+                        font-weight: 400;
                     }
 
                     .more {
@@ -600,7 +594,8 @@
 
                     .description {
                         color: v.$blue-600;
-                        font-size: 1.4rem;
+                        font-size: 1.6rem;
+                        font-weight: 400;
                     }
 
                     .more {
@@ -981,6 +976,10 @@
                 display: flex;
                 flex-direction: column;
                 border-bottom: 1px solid v.$blue-light-400;
+
+                &:last-child {
+                    border-bottom: none;
+                }
 
                 .header {
                     display: flex;

@@ -267,7 +267,7 @@
 <body>
 
     <?php
-    $image = __DIR__ . '/../../../public/build/img/varios/logo-black.png';
+    $image = $_SERVER['DOCUMENT_ROOT'] . '/build/img/varios/logo-black.png';
     $imageData = base64_encode(file_get_contents($image));
     $src = 'data:image/png;base64,' . $imageData;
 

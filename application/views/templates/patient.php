@@ -270,11 +270,11 @@
 <body>
 
     <?php
-    $logo = __DIR__ . '/../../../public/build/img/varios/logo-black.png';
+    $logo = $_SERVER['DOCUMENT_ROOT'] . '/build/img/varios/logo-black.png';
     $logo_data = base64_encode(file_get_contents($logo));
     $logo_src = 'data:image/png;base64,' . $logo_data;
 
-    $teeth = __DIR__ . '/../../../public/build/img/varios/teeth.png';
+    $teeth = $_SERVER['DOCUMENT_ROOT'] . '/build/img/varios/teeth.png';
     $teeth_data = base64_encode(file_get_contents($teeth));
     $teeth_src = 'data:image/png;base64,' . $teeth_data;
 

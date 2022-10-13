@@ -68,8 +68,7 @@ ol {
     li {
         display: flex;
         align-items: flex-start;
-        gap: 10px;
-        list-style-position: inside;
+        list-style-position: outside;
     }
 }
 

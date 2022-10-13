@@ -106,7 +106,7 @@
             padding: 0 8px;
             background-color: v.$white;
             color: v.$blue-gray-500;
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             font-weight: 400;
             white-space: nowrap;
             overflow: hidden;
@@ -115,14 +115,9 @@
             transform-origin: left top;
             transition: transform 0.2s cubic-bezier(0, 0, 0.2, 1);
 
-            @include m.tablet {
-                font-size: 1.5rem;
-            }
-
             @include m.desktop {
                 top: 16px;
                 left: 12px;
-                font-size: 1.6rem;
             }
         }
 
@@ -134,7 +129,7 @@
             border-radius: 6px;
             color: v.$blue-900;
             font-weight: 400;
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             cursor: text;
 
             &:-webkit-autofill {
@@ -142,13 +137,8 @@
                 -webkit-box-shadow: 0 0 0px 1000px v.$white inset;
             }
 
-            @include m.tablet {
-                font-size: 1.5rem;
-            }
-
             @include m.desktop {
                 padding: 16px 20px;
-                font-size: 1.6rem;
             }
         }
 
@@ -199,10 +189,6 @@
             padding-left: 10px;
             font-weight: 400;
             font-size: 1.4rem;
-
-            @include m.tablet {
-                font-size: 1.5rem;
-            }
 
             @include m.desktop {
                 font-size: 1.6rem;

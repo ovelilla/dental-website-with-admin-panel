@@ -91,11 +91,13 @@
 
         ul.standard-list,
         ol.standard-list {
+            padding-left: 20px;
             list-style: initial;
             font-weight: 400;
 
             li {
                 display: list-item;
+                line-height: 1.6;
             }
         }
 

@@ -3,10 +3,10 @@
         <div class="col-left">
             <p>Nuestro destino tu sonrisa</p>
             <h1>Dentiny, tu clínica dental en Castellón</h1>
-            <p>En Dentiny Clínica Dental en Castellón, encontraras a los <strong>mejores especialistas de la provincia</strong>, que trabajando conjuntamente y de la mano de las últimas tecnologías dentales ofrecen los mejores diagnósticos y tratamientos.</p>
+            <p>En Dentiny Clínica Dental en Castellón, encontraras a los <strong>mejores dentistas de la provincia</strong>, que trabajando conjuntamente y de la mano de las últimas tecnologías dentales ofrecen los mejores diagnósticos y tratamientos.</p>
 
             <div class="row">
-                <a href="/contacto" class="btn primary-btn">Cita Online</a>
+                <a href="/contacto#contact" class="btn primary-btn">Cita Online</a>
                 <a href="/contacto" class="btn secondary-btn shadow">Contacto</a>
             </div>
 
@@ -64,7 +64,7 @@
                 </div>
             </a>
 
-            <a href="/tratamientos/blanqueamiento-dental" class="card">
+            <a href="/tratamientos/rehabilitacion-oral-protesis-dentales" class="card">
                 <div class="icon">
                     <div class="icon-container">
                         <img loading="lazy" src="/build/img/iconos/23.png" alt="Icono rehabilitación oral y prótesis dentales">

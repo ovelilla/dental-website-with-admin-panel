@@ -2,6 +2,24 @@
 @use "../abstract/variables" as v;
 
 .financing {
+    padding: 20px 0;
+
+    @include m.mobile {
+        padding: 30px 0;
+    }
+
+    @include m.tablet {
+        padding: 40px 0;
+    }
+
+    @include m.desktop {
+        padding: 50px 0;
+    }
+
+    @include m.desktopXL {
+        padding: 60px 0;
+    }
+
     .container {
         display: flex;
         flex-direction: column;
@@ -130,7 +148,7 @@
             background-color: v.$blue-light-100;
             border-left: 4px solid v.$blue-900;
             font-weight: 300;
-            
+
             em {
                 font-style: normal;
             }

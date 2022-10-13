@@ -3,6 +3,7 @@ import Collapse from "./Collapse.js";
 import Input from "./mio/Input.js";
 import Textarea from "./mio/Textarea.js";
 import Checkbox from "./mio/Checkbox.js";
+import LoadingButton from "./LoadingButton.js";
 import { icon } from "../modules/Icon.js";
 
 class Layout {
@@ -379,17 +380,22 @@ class Layout {
         submitField.classList.add("mio-field");
         this.contactForm.appendChild(submitField);
 
-        const submit = document.createElement("button");
-        submit.classList.add("btn", "primary-btn");
-        submit.type = "submit";
-        submit.textContent = "Enviar";
-        submitField.appendChild(submit);
+        this.submitButton = new LoadingButton({
+            type: "submit",
+            text: "Enviar",
+            ariaLabel: "Enviar mensaje de contacto",
+            classes: ["btn", "primary-btn"],
+            onClick: this.actionCallback,
+        });
+        submitField.appendChild(this.submitButton.get());
     }
 
     async handleSubmit(e) {
         e.preventDefault();
 
         const response = await api.post("/api/contact", this.values);
+
+        this.submitButton.stop();
 
         if (response.status === "error") {
             this.errors = response.errors;

@@ -47,7 +47,7 @@
                 <div class="text">
                     <h2 class="title">Horario</h2>
                     <div class="info">
-                        <p>Lunes a viernes de 10 a 20 h.</p>
+                        <p>Lunes a viernes de 10 a 21 h.</p>
                         <p>Sabados cita previa</p>
                         <p>Domingos cerrado</p>
                     </div>

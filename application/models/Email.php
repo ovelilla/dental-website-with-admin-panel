@@ -28,8 +28,8 @@ class Email {
     public function sendContactMessage(): void {
         $mail = new PHPMailer();
         $mail->isSMTP();
-        $mail->SMTPAuth = 'ssl';
-        $mail->SMPTSecure = true;
+        $mail->SMTPSecure = 'ssl';
+        $mail->SMTPAuth = true;
         $mail->Host = $this->mail_host;
         $mail->Port = $this->mail_port;
         $mail->Username = $this->mail_user;
@@ -49,7 +49,7 @@ class Email {
         include __DIR__ . "/../views/templates/contact.php";
         $content = ob_get_contents();
         ob_end_clean();
-
+        
         $mail->Body = $content;
 
         $mail->send();

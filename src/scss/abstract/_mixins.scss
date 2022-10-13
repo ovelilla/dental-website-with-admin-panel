@@ -35,33 +35,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    height: 42px;
-    padding: 0 20px;
-    font-size: 1.4rem;
+    gap: 15px;
+    height: 48px;
+    padding: 0 25px;
+    font-size: 1.6rem;
     font-weight: $weight;
     letter-spacing: -1px;
     border-radius: 100px;
     transition: background-color, color, border, .3s ease;
     cursor: pointer;
 
-    @include mobile() {
-        height: 44px;
-        padding: 0 24px;
+    &.hidden {
+        display: none;
     }
 
-    @include tablet {
-        height: 46px;
-        padding: 0 28px;
-    }
-
-    @include desktop {
-        height: 48px;
+    @include mobile {
         padding: 0 30px;
-        font-size: 1.6rem;
-    }
-
-    @include desktopXL {
-        height: 50px;
     }
 }

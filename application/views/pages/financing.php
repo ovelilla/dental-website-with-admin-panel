@@ -24,7 +24,7 @@
 
                         <div class="right">
                             <h2 class="title">Opciones</h2>
-                            <p class="text">En Dentiny clínica dental Castellón sabemos que el coste de algunos tratamientos dentales pueden llegar a ser elevados, así que ofrecemos planes flexibles de financiación ya sea con nosotros o con financieras de confianza.</p>
+                            <p class="text">En Dentiny clínica dental Castellón sabemos que el coste de algunos tratamientos dentales puede llegar a ser elevado, así que ofrecemos planes flexibles de financiación ya sea con nosotros o con financieras de confianza.</p>
                         </div>
                     </div>
 
@@ -39,8 +39,8 @@
                         </div>
 
                         <div class="right">
-                            <h2 class="title">Diagnostico</h2>
-                            <p class="text">Estos tratamientos dentales, pueden requerir de varios odontólogos, que trabajando en sinergia cada uno en su especialidad, optimizaran tu plan de tratamiento y así su coste, haciendo un diagnostico honesto y trasparente.</p>
+                            <h2 class="title">Diagnóstico</h2>
+                            <p class="text">Estos tratamientos dentales, pueden requerir de varios odontólogos, que trabajando en sinergia cada uno en su especialidad, optimizaran tu plan de tratamiento y así su coste, haciendo un diagnóstico honesto y trasparente.</p>
                         </div>
                     </div>
                 </div>
@@ -95,7 +95,7 @@
         </div>
 
         <blockquote>
-            <p><em><strong>Apuesta siempre por tratamientos de calidad</strong> y evita franquicias y tratamientos "low-cost", ya que estos tienen resultados que pueden perjudicar tu salud dental y en muchos casos estos tramientos pueden perjudicar gravemente tu salud.</em></p>
+            <p><em><strong>Apuesta siempre por tratamientos de calidad</strong> y evita franquicias y tratamientos "low-cost", ya que estos tienen resultados que pueden perjudicar tu salud dental y en muchos casos estos tratamientos pueden perjudicar gravemente tu salud.</em></p>
         </blockquote>
 
     </div>

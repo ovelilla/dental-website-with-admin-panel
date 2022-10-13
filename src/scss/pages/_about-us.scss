@@ -2,6 +2,24 @@
 @use "../abstract/variables" as v;
 
 .about-us-page {
+    padding: 20px 0;
+
+    @include m.mobile {
+        padding: 30px 0;
+    }
+
+    @include m.tablet {
+        padding: 40px 0;
+    }
+
+    @include m.desktop {
+        padding: 50px 0;
+    }
+
+    @include m.desktopXL {
+        padding: 60px 0;
+    }
+    
     .container {
         display: flex;
         flex-direction: column;
