@@ -16,7 +16,7 @@
                 <div class="text">
                     <h2 class="title">Dirección</h2>
                     <div class="info">
-                        <p>C/ Marqués de la Ensenada 42 B</p>
+                        <p>Calle Marqués de la Ensenada número 42 B</p>
                         <p>12003 Castellón de la Plana</p>
                     </div>
                 </div>
