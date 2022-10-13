@@ -1017,9 +1017,7 @@ class Patients {
         });
 
         await this.createConsentModal.close();
-        await this.readAllPatients();
-        await this.readAllConsents();
-        this.table.repaint(this.patients);
+        this.table.updateRow(response.patient);
     }
 
     createConsentForm() {

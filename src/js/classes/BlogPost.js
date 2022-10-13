@@ -1,11 +1,11 @@
 import { popup, api } from "../app.js";
-import { icon } from "../modules/Icon.js"
+import { icon } from "../modules/Icon.js";
 import Confirm from "./Confirm.js";
 
 class BlogPost {
     constructor(post) {
         this.post = post || null;
-        this.auth= false;
+        this.auth = false;
 
         this.init();
     }
@@ -31,7 +31,7 @@ class BlogPost {
         const post = window.location.pathname.split("/").pop();
 
         const response = await api.get(`/api/blog/post/${post}`);
-        console.log(response);
+        
         if (response.status === "error") {
             return;
         }
@@ -55,8 +55,7 @@ class BlogPost {
         const h1 = document.createElement("h1");
         h1.textContent = this.post.title;
         header.appendChild(h1);
-
-        console.log(this.auth);
+  
         if (this.auth) {
             const actions = document.createElement("div");
             actions.classList.add("actions");

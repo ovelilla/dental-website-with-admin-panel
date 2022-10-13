@@ -3,7 +3,6 @@
 namespace Controllers;
 
 use Models\Router;
-use Models\Session;
 use Models\DB;
 use Models\BlogPost;
 use Models\Image;
@@ -192,7 +191,7 @@ class BlogController {
 
         $post = new BlogPost($data);
         $image = new Image($data, 'alt');
-        $file = new File($files['image'], 'image', '/build/img/blog/');
+        $file = new File($files['image'], 'image', '/build/img/blog/' . date('Y-m-d') . '/');
 
         $post_errors = $post->validate();
         $image_errors = $image->validate();
@@ -211,7 +210,7 @@ class BlogController {
         }
 
         $post->setAlias($post->getSlugTitle());
-        $image->setSrc($file->getSlugName());
+        $image->setSrc('/build/img/blog/' . date('Y-m-d') . '/' . $file->getSlugName());
 
         $exists_post = DB::table('blog_posts')
             ->select()
@@ -310,7 +309,7 @@ class BlogController {
 
         $post = new BlogPost($data);
         $image = new Image($data, 'alt');
-        $file = new File($files['image'], 'image', '/build/img/blog/');
+        $file = new File($files['image'], 'image', '/build/img/blog/' . date('Y-m-d') . '/');
 
         $post_errors = $post->validate();
         $image_errors = $image->validate();
@@ -367,7 +366,7 @@ class BlogController {
             $post->setUpdatedAt(date('Y-m-d H:i:s'));
 
             if ($file->getError() === UPLOAD_ERR_OK) {
-                $image->setSrc($file->getSlugName());
+                $image->setSrc('/build/img/blog/' . date('Y-m-d') . '/' . $file->getSlugName());
 
                 $success = $file->move();
 

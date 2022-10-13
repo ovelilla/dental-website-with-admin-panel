@@ -10,7 +10,7 @@
         <div class="grid mt-0">
             <a href="/equipo/dra-claudia" class="card">
                 <div class="image">
-                    <img loading="lazy" src="/build/img/equipo/thumbs/doctora-claudia.png" alt="Doctora Claudia brazos cruzados">
+                    <img loading="lazy" src="/build/img/equipo/thumbs/doctora-claudia.png" alt="Doctora Claudia Rada brazos cruzados">
                 </div>
 
                 <div class="info">
@@ -21,7 +21,7 @@
 
             <a href="/equipo/dr-joan" class="card">
                 <div class="image">
-                    <img loading="lazy" src="/build/img/equipo/thumbs/doctor-joan.png" alt="Doctor Joan sonriendo">
+                    <img loading="lazy" src="/build/img/equipo/thumbs/doctor-joan.png" alt="Doctor Joan Llop sonriendo">
                 </div>
 
                 <div class="info">
@@ -32,7 +32,7 @@
 
             <div class="card">
                 <div class="image">
-                    <img loading="lazy" src="/build/img/equipo/thumbs/higienista-abril.png" alt="Higienista dental Abril">
+                    <img loading="lazy" src="/build/img/equipo/thumbs/higienista-abril.png" alt="Higienista dental Abril Segarra">
                 </div>
 
                 <div class="info">
@@ -43,7 +43,7 @@
 
             <div class="card">
                 <div class="image">
-                    <img loading="lazy" src="/build/img/equipo/thumbs/gerente-antonio.png" alt="Gerente Antonio brazos cruzados">
+                    <img loading="lazy" src="/build/img/equipo/thumbs/gerente-antonio.png" alt="Gerente Antonio Colomina brazos cruzados">
                 </div>
 
                 <div class="info">

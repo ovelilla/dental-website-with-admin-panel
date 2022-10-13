@@ -1,4 +1,5 @@
 import { icon } from "../modules/Icon.js";
+import LoadingButton from "./LoadingButton.js";
 
 class Modal {
     constructor({
@@ -47,6 +48,7 @@ class Modal {
     }
 
     async close() {
+        this.actionButton.stop();
         this.modal.classList.add("fade-out");
         this.modal.firstChild.classList.add("slide-out-top");
         await this.animationend(this.modal);
@@ -191,12 +193,14 @@ class Modal {
         });
         footer.appendChild(closeButton);
 
-        const action = document.createElement("button");
-        action.classList.add("btn", "primary-btn");
-        action.setAttribute("aria-label", "Acción modal");
-        action.textContent = this.action;
-        action.addEventListener("click", this.actionCallback);
-        footer.appendChild(action);
+        this.actionButton = new LoadingButton({
+            type: "button",
+            text: this.action,
+            ariaLabel: "Acción modal",
+            classes: ["btn", "primary-btn"],
+            onClick: this.actionCallback,
+        });
+        footer.appendChild(this.actionButton.get());
 
         return modal;
     }

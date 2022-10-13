@@ -470,14 +470,14 @@ class CasesEditor {
             this.previewBAF = true;
 
             if (targetInput.name === "before") {
-                const afterSrc = `/build/img/casos/${this.post.images.after.src}`;
+                const afterSrc = this.post.images.after.src;
                 const beforFiles = beforeInput.files[0];
                 const beforeSrc = URL.createObjectURL(beforFiles);
                 this.prevewBeforeAndAfter(beforeSrc, afterSrc);
             }
 
             if (targetInput.name === "after") {
-                const beforeSrc = `/build/img/casos/${this.post.images.before.src}`;
+                const beforeSrc = this.post.images.before.src;
                 const afterFiles = afterInput.files[0];
                 const afterSrc = URL.createObjectURL(afterFiles);
                 this.prevewBeforeAndAfter(beforeSrc, afterSrc);
@@ -523,14 +523,14 @@ class CasesEditor {
 
         const beforeInput = document.querySelector("#before");
         const beforeLabel = document.querySelector("label[for='before']");
-        const beforeSrc = `/build/img/casos/${this.post.images.before.src}`;
+        const beforeSrc = this.post.images.before.src;
         this.before = true;
 
         this.previewImage(beforeInput, beforeLabel, beforeSrc);
 
         const afterInput = document.querySelector("#after");
         const afterLabel = document.querySelector("label[for='after']");
-        const afterSrc = `/build/img/casos/${this.post.images.after.src}`;
+        const afterSrc = this.post.images.after.src;
         this.after = true;
 
         this.previewImage(afterInput, afterLabel, afterSrc);

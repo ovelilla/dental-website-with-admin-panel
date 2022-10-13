@@ -16,13 +16,13 @@
                 <p>Hay casos donde la halitosis nos puede indicar algunas enfermedades de base, en donde el dentista preparado puede determinar que ese tipo de halitosis, el origen no es bucal y remitir al paciente al médico para solucionarlo. Diferentes enfermedades estomacales pueden producir halitosis, diabetes, etc.</p>
             </div>
             <div class="col">
-                <img src="/build/img/tratamientos/mujer-con-halitosis.jpg" alt="Mujer poniéndose ortodoncia invisible">
+                <img src="/build/img/tratamientos/mujer-con-halitosis.jpg" alt="Mujer con halitosis">
             </div>
         </div>
 
         <div class="row">
             <div class="col">
-                <img src="/build/img/tratamientos/hombre-cepillandose-los-dientes.jpg" alt="Mujer poniéndose ortodoncia invisible">
+                <img src="/build/img/tratamientos/hombre-cepillandose-los-dientes.jpg" alt="Hombre cepillandose los dientes">
             </div>
 
             <div class="col">

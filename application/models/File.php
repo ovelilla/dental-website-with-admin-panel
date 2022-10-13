@@ -49,6 +49,14 @@ class File {
         return $this->type;
     }
 
+    public function getKey(): string {
+        return $this->key;
+    }
+
+    public function getDestination(): string {
+        return $this->destination;
+    }
+
     public function isImage(): bool {
         return in_array($this->type, ['image/jpeg', 'image/png', 'image/gif']);
     }
@@ -58,6 +66,9 @@ class File {
     }
 
     public function move(): bool {
+        if (!is_dir($this->destination)) {
+            mkdir($this->destination, 0777, true);
+        }
         return move_uploaded_file($this->tmp_name, $this->destination . $this->getSlugName());
     }
 

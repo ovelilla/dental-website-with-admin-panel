@@ -49,7 +49,7 @@
 
                 <div class="text">
                     <p class="title">Financiación</p>
-                    <p class="description">En Dentiny somos personas tratando a personas.</p>
+                    <p class="description">En Dentiny nuestros pacientes no son números son personas</p>
                 </div>
             </a>
 

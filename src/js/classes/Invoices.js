@@ -33,6 +33,7 @@ class Invoices {
 
     async readAllInvoices() {
         const response = await api.get("/api/admin/invoices");
+        console.log(response);
         if (response.status === "error") {
             return;
         }

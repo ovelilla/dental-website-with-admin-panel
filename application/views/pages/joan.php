@@ -8,7 +8,7 @@
 <section class="section member">
     <div class="container">
         <div class="col-left">
-            <img loading="lazy" src="/build/img/equipo/doctor-joan.png" alt="Doctor Joan sonriendo">
+            <img loading="lazy" src="/build/img/equipo/doctor-joan.png" alt="Doctor Joan Llop sonriendo">
         </div>
 
         <div class="col-right">

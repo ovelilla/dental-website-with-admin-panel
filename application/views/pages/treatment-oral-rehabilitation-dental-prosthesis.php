@@ -1,137 +1,82 @@
 <section class="section page-header">
     <div class="container">
         <h1>Rehabilitación oral y prótesis dentales</h1>
-        <p>Lorem ipsum dolor sit amet, consect adipiscing elit. Nunc volutpat pellentesque leo.</p>
+        <p>Una boca funcional nos aporta salud y confort.</p>
     </div>
 </section>
 
 <section class="section treatment">
     <div class="container">
-        <img src="/build/img/tratamientos/tratamiento1.jpg" alt="Imagen 1">
-
-        <p>Ut ac ultrices augue. Donec in arcu ac neque feugiat tempus. Curabitur magna urna, scelerisque id purus eget, mollis varius lacus. <strong>Donec congue, tellus sit amet posuere mattis, lacus magna scelerisque elit, quis gravida lectus leo at sem. Sed bibendum quam sit amet tempor consequat.</strong> In id luctus lacus. In vehicula sollicitudin justo non dictum. Praesent sed justo vel nisl porttitor accumsan non non elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque in tortor id urna molestie feugiat. Donec fermentum dolor a bibendum egestas. Cras nec scelerisque nisl.</p>
-
         <div class="row">
             <div class="col">
-                <h2>Sed felis velit, volutpat nec ultricies eget</h2>
+                <h2>¿Qué entendemos por rehabilitación oral?</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Ut sit amet elementum orci.</strong> Nulla tristique magna nibh, at tincidunt nunc lacinia in. Duis tincidunt tellus et ipsum ultricies, quis auctor ex dapibus. Mauris eu metus suscipit, ullamcorper mi eu, porta odio. Ut volutpat, nibh non sagittis fringilla, lectus sapien tempor nisl, quis laoreet justo tellus posuere felis.</p>
-                <p>Sed felis velit, volutpat nec ultricies eget, consequat id justo. <strong>Maecenas hendrerit, nulla a vulputate sagittis, dui mauris porttitor tortor, non sollicitudin neque augue ut odio.</strong> Integer nibh elit, convallis eu facilisis vel, accumsan et ex. Quisque a elit non lorem elementum placerat at sed nulla. In molestie vehicula finibus.</p>
+                <p><strong>Una buena rehabilitación oral empieza con un buen diagnostico</strong> y va seguido de un buen plan de tratamiento en el que la mayoría de veces requiere de la colaboración de varios especialistas. Gracias a la tecnología de vanguardia que disponemos en nuestro centro el paciente podrá ver de forma digital 3D los resultados esperados antes de empezar el tratamiento.</p>
+
+                <p>Existen diferentes tratamientos para devolver la función masticatoria a tu boca. <strong>La pérdida de piezas o el desgaste influyen en nuestra salud bucal provocando una peor calidad de vida.</strong></p>
             </div>
+
             <div class="col">
-                <img src="/build/img/blog/blog16.jpg" alt="Imagen 1">
+                <img src="/build/img/tratamientos/doctor-explicando-protesis-dental-a-paciente.jpg" alt="Doctor explicando protesis dental a paciente">
             </div>
+        </div>
+
+        <div class="col">
+            <blockquote>
+                <p><em>Recupera la estructura y función de las piezas dentales. Nuestros especialistas hacen un diagnóstico de cada caso y posteriormente lo diseñan en 3d.</em></p>
+            </blockquote>
         </div>
 
         <div class="row">
             <div class="col">
-                <img src="/build/img/blog/blog19.jpg" alt="Imagen 2">
+                <img src="/build/img/tratamientos/protesis-fija-atornillada-sobre-implantes.jpg" alt="Protesis fija atornillada sobre implantes">
             </div>
+
             <div class="col">
-                <h2>Mauris eu metus suscipit, ullamcorper mi</h2>
-                <p>Nulla tristique magna nibh, at tincidunt nunc lacinia in. Duis tincidunt tellus et ipsum ultricies, quis auctor ex dapibus. Mauris eu metus suscipit, ullamcorper mi eu, porta odio.</p>
+                <h2>Prótesis fijas sobre implantes</h2>
 
-                <ul class="custom-list">
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                    </li>
+                <p>El paciente acude por la mañana a la clínica y por la tarde, <strong>en menos de 12h, se va a casa con dientes fijos</strong> atornillados sobre los implantes. La manera más fácil y cómoda de recuperar tu sonrisa.</p>
 
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span>Aliquam vel ornare diam. Aliquam erat volutpat.</span>
-                    </li>
+                <p>Estas prótesis son de arcada completa y se fijan de manera atornillada o cementada sobre los implantes de tu boca.</p>
 
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span>Cras congue urna malesuada neque porttitor, vel sollicitudin.</span>
-                    </li>
+                <h2>Prótesis fijas sobre dientes naturales</h2>
 
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span>Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</span>
-                    </li>
-
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span>Vivamus vel massa lorem. Vestibulum quis dignissim ligula.</span>
-                    </li>
-                </ul>
+                <p>Coronas o puentes: Una solución eficaz y segura para obtener estética y funcionalidad en tus dientes.</p>
             </div>
         </div>
 
-        <blockquote>
-            <p><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet elementum orci. Nulla tristique magna nibh, at tincidunt nunc lacinia in. Duis tincidunt tellus et ipsum ultricies, quis auctor ex dapibus. Mauris eu metus suscipit</em></p>
-        </blockquote>
+        <div class="col">
+            <h2>¿Cuánto me puede durar una corona o un puente dental?</h2>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet elementum orci. Nulla tristique magna nibh, at tincidunt nunc lacinia in. Duis tincidunt tellus et ipsum ultricies, quis auctor ex dapibus. Mauris eu metus suscipit, ullamcorper mi eu, porta odio. Ut volutpat, nibh non sagittis fringilla, lectus sapien tempor nisl, quis laoreet justo tellus posuere felis. In ornare diam et nibh congue tempor. Mauris ullamcorper tincidunt condimentum. Nulla vitae tristique ante. Sed vitae leo in nunc congue porta. Integer a lorem id sapien sollicitudin mollis pretium vitae enim.</p>
+            <p>Si una vez acabado el tratamiento el paciente tiene una correcta salud bucodental y este acude a las revisiones periódicas con su dentista, <strong>el tratamiento puede llegar durar toda la vida.</strong></p>
+
+            <h2>¿Qué diferencia hay entra una corona o puente de metal cerámica a un puente o corona de zirconio?</h2>
+
+            <p>El puente de metal cerámica presenta una interfase: el metal se fabrica por una parte y cuando ya esta esa pieza fabricada, en la parte superior de este, de forma aditiva se coloca la cerámica en forma de polvo liquido y luego se lleva a un horno, lo que puede llegar a pasar mediante la masticación y con los años se rompa esa interfase y salte la cerámica quedándose expuesto el metal.</p>
+
+            <p><strong>El zirconio monolítico,</strong> es una pieza que esta fresado con una fresadora 3d por lo que no hay interfase, siento un metal más duro y nos evitamos el problema de que en el futuro se desprenda esa interfase quedando expuesto el metal. Siendo un <strong>material mucho más estético y más resistente.</strong></p>
+        </div>
 
         <div class="row">
             <div class="col">
-                <h2>Sed felis velit, volutpat nec ultricies eget</h2>
+                <h2>Rehabilitación con composites</h2>
 
-                <p>Nulla tristique magna nibh, at tincidunt nunc lacinia in. Duis tincidunt tellus et ipsum ultricies, quis auctor ex dapibus. Mauris eu metus suscipit, ullamcorper mi eu, porta odio.</p>
+                <p>Los materiales utilizados para devolver la funcionalidad estética y masticatoria se realizan especialmente utilizando diferentes composites de nanopartículas elaborados con nanotecnología que permiten un mejor acabado, mayor brillo, estética, duración. <a href="/casos">Visita nuestra sección de casos dentales</a> y veras los espectaculares resultados obtenidos.</p>
 
-                <ul class="standard-list">
-                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                    <li>Aliquam vel ornare diam. Aliquam erat volutpat.</li>
-                    <li>Cras congue urna malesuada neque porttitor, vel sollicitudin.</li>
-                    <li>Nunc volutpat pellentesque leo, at rutrum dui malesuada quis.</li>
-                    <li>Vivamus vel massa lorem. Vestibulum quis dignissim ligula.</li>
-                </ul>
+                <h2>Prótesis removibles acrílicas </h2>
+
+                <p>Este tipo de prótesis tienen la característica que <strong>el paciente se la puede quitar y poner,</strong> fabricada en acrílico, está compuesta por una base de resina, dientes acrílicos y puede contener retenedores. Todo el cuerpo de la prótesis es acrílico.</p>
             </div>
+
             <div class="col">
-                <img src="/build/img/blog/blog15.jpg" alt="Imagen 1">
+                <img src="/build/img/tratamientos/protesis-dental-removible.jpg" alt="Protesis dental removible">
             </div>
         </div>
 
+        <div class="col">
+            <h2>Prótesis removibles esqueléticas</h2>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis turpis id augue suscipit, in gravida augue laoreet. Aliquam tincidunt, turpis quis consequat posuere, odio erat sagittis arcu, in tempor purus diam eget nisl. Curabitur sit amet eros nec nisi pharetra vulputate. Sed fringilla purus eu leo rhoncus, ut ornare ex aliquam. Donec ut bibendum est. Nam mauris felis, pharetra at feugiat non, consequat vitae ligula. Quisque nisl diam, euismod vel sem pulvinar, venenatis congue magna. Nam maximus massa sit amet varius ultrices. Nulla sed feugiat felis. Vestibulum tempor porta arcu, sed accumsan quam condimentum at. Suspendisse vel porta odio, in mattis ante. Aliquam rutrum lacus non nulla placerat.</p>
-
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Columna</th>
-                    <th>Columna</th>
-                    <th>Columna</th>
-                    <th>Columna</th>
-                    <th>Columna</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                </tr>
-                <tr>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                </tr>
-                <tr>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                    <td>Contneido</td>
-                </tr>
-            </tbody>
-        </table>
+            <p>Estas prótesis esqueléticas removibles tienen un cuerpo metálico donde se adhieren dientes acrílicos artificiales y encía acrílica. Son prótesis mas resistentes, duraderas que las acrílicas y muy discretas.</p>
+        </div>
     </div>
 </section>

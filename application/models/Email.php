@@ -35,8 +35,8 @@ class Email {
         $mail->SMTPAuth = true;
         // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 
-        $mail->setFrom('admin@dentiny.es', 'dentiny.es');
-        $mail->addAddress('admin@dentiny.es', 'dentiny.es');
+        $mail->setFrom('policlinica@dentiny.es', 'dentiny.es');
+        $mail->addAddress('policlinica@dentiny.es', 'dentiny.es');
         $mail->addReplyTo($this->data->getEmail(), $this->data->getName());
         $mail->Subject = 'Mensaje de contacto desde la web';
 

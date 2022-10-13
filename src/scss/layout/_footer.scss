@@ -61,8 +61,7 @@ footer {
                 }
 
                 .about-us,
-                .treatments,
-                .social {
+                .treatments {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -83,21 +82,18 @@ footer {
                         display: flex;
                         flex-direction: column;
                         align-items: center;
-                        gap: 4px;
-
-                        @include m.mobile {
-                            gap: 6px;
-                        }
 
                         @include m.tablet {
                             align-items: initial;
-                            gap: 8px;
                         }
 
                         a {
+                            display: flex;
+                            align-items: center;
                             color: v.$blue-600;
                             font-size: 1.4rem;
                             font-weight: 400;
+                            height: 40px;
 
                             @include m.tablet {
                                 font-size: 1.5rem;
@@ -108,11 +104,27 @@ footer {
                             }
                         }
                     }
+                }
+
+                .social {
+                    h2 {
+                        font-size: 1.8rem;
+                        font-weight: 600;
+                        letter-spacing: normal;
+                    }
 
                     .row {
                         display: flex;
                         gap: 30px;
                         margin-top: 20px;
+                    }
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 40px;
+                        height: 40px;
                     }
                 }
             }

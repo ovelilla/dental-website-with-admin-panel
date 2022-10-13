@@ -3,7 +3,6 @@
 namespace Controllers;
 
 use Models\Router;
-use Models\Session;
 use Models\DB;
 use Models\CasesPost;
 use Models\Image;
@@ -237,7 +236,7 @@ class CasesController {
                 'status' => 'success',
                 'message' => 'Posts obtenidos correctamente',
                 'post' => $post,
-                'login' => $router->session()->get('login')
+                'auth' => $router->session()->get('auth')
             ];
         } catch (Exception | Error $e) {
             $response = [
@@ -256,8 +255,8 @@ class CasesController {
         $post = new CasesPost($data);
         $image_before = new Image($data, 'before-alt');
         $image_after = new Image($data, 'after-alt');
-        $file_before = new File($files['before'], 'before', '/build/img/casos/');
-        $file_after = new File($files['after'], 'after', '/build/img/casos/');
+        $file_before = new File($files['before'], 'before', '/build/img/casos/' . date('Y-m-d') . '/');
+        $file_after = new File($files['after'], 'after', '/build/img/casos/' . date('Y-m-d') . '/');
 
         $post_errors = $post->validate();
         $image_before_errors = $image_before->validate();
@@ -278,8 +277,8 @@ class CasesController {
         }
 
         $post->setAlias($post->getSlugTitle());
-        $image_before->setSrc($file_before->getSlugName());
-        $image_after->setSrc($file_after->getSlugName());
+        $image_before->setSrc('/build/img/casos/' . date('Y-m-d') . '/' . $file_before->getSlugName());
+        $image_after->setSrc('/build/img/casos/' . date('Y-m-d') . '/' . $file_after->getSlugName());
 
         $exists_post = DB::table('cases_posts')
             ->select()
@@ -402,8 +401,8 @@ class CasesController {
         $post = new CasesPost($data);
         $image_before = new Image($data, 'before-alt');
         $image_after = new Image($data, 'after-alt');
-        $file_before = new File($files['before'], 'before', '/build/img/casos/');
-        $file_after = new File($files['after'], 'after', '/build/img/casos/');
+        $file_before = new File($files['before'], 'before', '/build/img/casos/' . date('Y-m-d') . '/');
+        $file_after = new File($files['after'], 'after', '/build/img/casos/' . date('Y-m-d') . '/');
 
         $post_errors = $post->validate();
         $image_before_errors = $image_before->validate();
@@ -465,7 +464,7 @@ class CasesController {
         $post->setUpdatedAt(date('Y-m-d H:i:s'));
 
         if ($file_before->getError() === UPLOAD_ERR_OK) {
-            $image_before->setSrc($file_before->getSlugName());
+            $image_before->setSrc('/build/img/casos/' . date('Y-m-d') . '/' . $file_before->getSlugName());
 
             $success = $file_before->move();
 
@@ -480,7 +479,7 @@ class CasesController {
         }
 
         if ($file_after->getError() === UPLOAD_ERR_OK) {
-            $image_after->setSrc($file_after->getSlugName());
+            $image_after->setSrc('/build/img/casos/' . date('Y-m-d') . '/' . $file_after->getSlugName());
 
             $success = $file_after->move();
 

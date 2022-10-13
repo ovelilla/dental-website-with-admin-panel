@@ -599,8 +599,9 @@ class Table {
         this.createTable();
     }
 
-    repaint(patients) {
-        this.rows = patients;
+    repaint(rows) {
+        this.rows = rows;
+        this.copyRows = rows;
         this.destroy();
         this.createTable();
     }

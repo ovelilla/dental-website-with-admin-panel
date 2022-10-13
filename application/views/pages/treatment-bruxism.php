@@ -22,7 +22,7 @@
             </div>
 
             <div class="col">
-                <img src="/build/img/tratamientos/chico-joven-con-problemas-de-bruxismo.jpg" alt="Dentista y paciente en una clinica dental">
+                <img src="/build/img/tratamientos/chico-joven-con-problemas-de-bruxismo.jpg" alt="Chico joven con problemas de bruxismo">
             </div>
         </div>
 
@@ -42,7 +42,7 @@
 
         <div class="row">
             <div class="col">
-                <img src="/build/img/tratamientos/mujer-con-ferula-de-descarga.jpg" alt="Dentista y paciente en una clinica dental">
+                <img src="/build/img/tratamientos/ferula-descarga-michigan-personalizada.jpg" alt="Ferula descarga michigan personalizada">
             </div>
 
             <div class="col">

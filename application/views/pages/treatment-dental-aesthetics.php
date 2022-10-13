@@ -44,7 +44,7 @@
             </div>
 
             <div class="col">
-                <img src="/build/img/tratamientos/hombre-cepillandose-los-dientes.jpg" alt="Mujer poniéndose ortodoncia invisible">
+                <img src="/build/img/tratamientos/hombre-cepillandose-los-dientes.jpg" alt="Hombre cepillandose los dientes">
             </div>
         </div>
 

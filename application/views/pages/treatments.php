@@ -173,7 +173,7 @@
             <a href="/tratamientos/odontopediatria" class="card">
                 <div class="icon">
                     <div class="icon-container">
-                        <img loading="lazy" src="/build/img/iconos/03.png" alt="Icono estética dental">
+                        <img loading="lazy" src="/build/img/iconos/03.png" alt="Icono odontopediatría">
                     </div>
                 </div>
                 <div class="text">
@@ -191,7 +191,7 @@
             <a href="/tratamientos/odontologia-conservadora" class="card">
                 <div class="icon">
                     <div class="icon-container">
-                        <img loading="lazy" src="/build/img/iconos/08.png" alt="Icono rehabilitación oral y protesis dentales">
+                        <img loading="lazy" src="/build/img/iconos/08.png" alt="Icono odontología conservadora">
                     </div>
                 </div>
                 <div class="text">
@@ -209,7 +209,7 @@
             <a href="/tratamientos/bruxismo" class="card">
                 <div class="icon">
                     <div class="icon-container">
-                        <img loading="lazy" src="/build/img/iconos/19.png" alt="Icono cirugía dental">
+                        <img loading="lazy" src="/build/img/iconos/19.png" alt="Icono bruxismo">
                     </div>
                 </div>
                 <div class="text">
@@ -227,7 +227,7 @@
             <a href="/tratamientos/apnea-sueno-roncopatia" class="card">
                 <div class="icon">
                     <div class="icon-container">
-                        <img loading="lazy" src="/build/img/iconos/24.png" alt="Icono estética dental">
+                        <img loading="lazy" src="/build/img/iconos/24.png" alt="Icono apnea del sueño y roncopatía">
                     </div>
                 </div>
                 <div class="text">
@@ -245,7 +245,7 @@
             <a href="/tratamientos/acido-hialuronico" class="card">
                 <div class="icon">
                     <div class="icon-container">
-                        <img loading="lazy" src="/build/img/iconos/10.png" alt="Icono rehabilitación oral y protesis dentales">
+                        <img loading="lazy" src="/build/img/iconos/10.png" alt="Icono ácido hialurónico">
                     </div>
                 </div>
                 <div class="text">
@@ -263,7 +263,7 @@
             <a href="/tratamientos/halitosis" class="card">
                 <div class="icon">
                     <div class="icon-container">
-                        <img loading="lazy" src="/build/img/iconos/01.png" alt="Icono cirugía dental">
+                        <img loading="lazy" src="/build/img/iconos/01.png" alt="Icono halitosis">
                     </div>
                 </div>
                 <div class="text">

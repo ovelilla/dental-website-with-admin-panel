@@ -24,7 +24,7 @@
             </div>
 
             <div class="col">
-                <img src="/build/img/tratamientos/dentista-y-paciente-en-una-clinica-dental.jpg" alt="Dentista y paciente en una clinica dental">
+                <img src="/build/img/tratamientos/endodoncia-uniradicular-esquema-3d.jpg" alt="Endodoncia uniradicular esquema 3d">
             </div>
         </div>
 

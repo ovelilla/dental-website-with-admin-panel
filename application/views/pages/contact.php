@@ -33,7 +33,7 @@
                     <div class="info">
                         <a href="tel:+34622348982">622 348 982</a>
                         <a href="tel:+34964099721">964 099 721</a>
-                        <a href="mailto:policlinica@dentiny.es">contacto@dentiny.es</a>
+                        <a href="mailto:policlinica@dentiny.es">policlinica@dentiny.es</a>
                     </div>
                 </div>
             </div>

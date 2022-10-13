@@ -424,6 +424,7 @@ class Layout {
         whatsapp.href = "https://wa.me/34622348982";
         whatsapp.target = "_blank";
         whatsapp.rel = "noopener noreferrer";
+        whatsapp.ariaLabel = "Abrir WhatsApp";
         document.body.appendChild(whatsapp);
 
         whatsapp.appendChild(icon.get("whatsapp"));
@@ -431,6 +432,7 @@ class Layout {
         const mail = document.createElement("a");
         mail.classList.add("quick-access-btn", "mail");
         mail.href = "/contacto";
+        mail.ariaLabel = "Abrir formulario de contacto";
         document.body.appendChild(mail);
 
         mail.appendChild(icon.get("envelope"));

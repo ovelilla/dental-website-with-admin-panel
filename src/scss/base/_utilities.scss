@@ -1,4 +1,5 @@
-@use "../abstract/variables"as v;
+@use "../abstract/mixins" as m;
+@use "../abstract/variables" as v;
 
 .mt-0 {
     margin-top: 0;
@@ -30,4 +31,24 @@
 
 .rotate-90 {
     transform: rotate(90deg);
+}
+
+.header-margin {
+    margin-top: 60px;
+
+    @include m.mobile {
+        margin-top: 70px;
+    }
+
+    @include m.tablet {
+        margin-top: 80px;
+    }
+
+    @include m.desktop {
+        margin-top: 100px;
+    }
+
+    @include m.desktopXL {
+        margin-top: 110px;
+    }
 }

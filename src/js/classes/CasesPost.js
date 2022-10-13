@@ -1,12 +1,12 @@
 import { popup, api } from "../app.js";
 import Confirm from "./Confirm.js";
 import BeforeAndAfter from "./BeforeAndAfter.js";
-import { icon } from "../modules/Icon.js"
+import { icon } from "../modules/Icon.js";
 
 class CasesPost {
     constructor(post) {
         this.post = post || null;
-        this.auth= false;
+        this.auth = false;
 
         this.init();
     }
@@ -84,11 +84,11 @@ class CasesPost {
         article.appendChild(bafContainer);
 
         const beforeImg = document.createElement("img");
-        beforeImg.src = `/build/img/casos/${this.post.images.before.src}`;
+        beforeImg.src = this.post.images.before.src;
         beforeImg.alt = this.post.images.before.alt;
 
         const afterImg = document.createElement("img");
-        afterImg.src = `/build/img/casos/${this.post.images.after.src}`;
+        afterImg.src = this.post.images.after.src;
         afterImg.alt = this.post.images.after.alt;
 
         this.beforeAndAfter = new BeforeAndAfter(bafContainer, beforeImg, afterImg);
@@ -121,7 +121,7 @@ class CasesPost {
             after_id: post.after_id,
         };
 
-        const response = await api.delete("/api/blog", data);
+        const response = await api.delete("/api/cases", data);
 
         if (response.status === "error") {
             return;
@@ -130,11 +130,11 @@ class CasesPost {
         await popup.open({
             type: "success",
             title: "¡Post eliminado correctamente!",
-            message: "Serás redirigido al blog",
+            message: "Serás redirigido a los casos",
             timer: 3000,
         });
 
-        window.location.href = "/blog";
+        window.location.href = "/casos";
     }
 }
 

@@ -14,9 +14,9 @@
     <div class="author">
         <h3>Dentiny</h3>
         <div class="image">
-            <img src="/build/img/equipo/doctora-claudia-sonrisa.png" alt="Doctora Claudia sonriendo">
+            <img src="/build/img/equipo/doctora-claudia-sonrisa.png" alt="Doctora Claudia Rada sonriendo">
         </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend rhoncus dolor, et tincidunt purus maximus ut. Donec dignissim erat lobortis facilisis porta. Duis ultricies nibh urna, eu feugiat libero tristique a. Suspendisse dictum dapibus dignissim.</p>
+        <p>En Dentiny queremos mantenerte informado con las últimas novedades sobre nuestra clinica y la odontología. ¡No dudes en leernos!</p>
     </div>
 
     <div class="categories">

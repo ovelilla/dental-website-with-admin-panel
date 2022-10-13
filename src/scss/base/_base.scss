@@ -1,7 +1,15 @@
 @use "../abstract/mixins" as m;
 @use "../abstract/variables" as v;
 
+html {
+    display: flex;
+    flex-direction: column;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     font-family: v.$font;
     font-size: 1.6rem;
     font-weight: 500;
@@ -13,6 +21,7 @@ body {
         overflow: hidden;
         overflow-y: scroll;
         position: fixed;
+        top: 0px;
         right: 0px;
         bottom: 0px;
         left: 0px;
@@ -76,4 +85,8 @@ select,
 label,
 a {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+main {
+    flex-grow: 1;
 }

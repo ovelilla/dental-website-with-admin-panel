@@ -17,7 +17,7 @@
             </div>
 
             <div class="col">
-                <img src="/build/img/tratamientos/intervencion-cirugia-dental.jpg" alt="Intervencion cirugia dental">
+                <img src="/build/img/tratamientos/intervencion-quirurgica-dental.jpg" alt="Intervencion quirurgica dental">
             </div>
         </div>
 

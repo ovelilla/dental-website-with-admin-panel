@@ -258,8 +258,7 @@ class BlogEditor {
         }
         
         if (this.post) {
-            console.log(this.post);
-            const src = `/build/img/blog/${this.post.src}`;
+            const src = this.post.src;
             this.previewImage(src);
         }
 

@@ -239,11 +239,11 @@ class CasesPosts {
         article.appendChild(image);
 
         const beforeImg = document.createElement("img");
-        beforeImg.src = `/build/img/casos/${post.images.before.src}`;
+        beforeImg.src = post.images.before.src;
         beforeImg.alt = post.images.before.alt;
 
         const afterImg = document.createElement("img");
-        afterImg.src = `/build/img/casos/${post.images.after.src}`;
+        afterImg.src = post.images.after.src;
         afterImg.alt = post.images.after.alt;
 
         this.beforeAndAfter = new BeforeAndAfter(image, beforeImg, afterImg);

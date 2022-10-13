@@ -167,6 +167,81 @@ class ConsentsController {
         $router->response($response);
     }
 
+    public static function readPatient($id) {
+        try {
+            $patient = DB::table('patients')
+                ->select()
+                ->where('id', '=', $id)
+                ->limit(1)
+                ->getOne();
+
+            $consents = DB::table('consents_accepted')
+                ->select()
+                ->where('patient_id', '=', $id)
+                ->get();
+
+            $signatures = DB::table('signatures')
+                ->select()
+                ->where('patient_id', '=', $id)
+                ->get();
+
+            $histories = DB::table('histories')
+                ->select()
+                ->get();
+
+            $reports = DB::table('reports')
+                ->select()
+                ->get();
+
+            $patient['age'] = calculateAge($patient['birth_date']);
+            $patient['gender'] = $patient['gender'];
+            $patient['meet'] = $patient['meet'];
+
+            $tmp_consents = [];
+            $tmp_history = [];
+            $tmp_reports = [];
+
+            foreach ($consents as $consent) {
+                if ($consent['patient_id'] === $patient['id']) {
+                    foreach ($signatures as $signature) {
+                        if ($signature['consent_id'] === $consent['id']) {
+                            $consent['signature'] = $signature;
+                        }
+                    }
+                    $tmp_consents[] = $consent;
+                }
+            }
+
+            foreach ($histories as $history) {
+                if ($history['patient_id'] === $patient['id']) {
+                    foreach ($reports as $report) {
+                        if ($report['history_id'] === $history['id']) {
+                            $tmp_reports[] = $report;
+                        }
+                    }
+                    $tmp_history = $history;
+                }
+            }
+
+            $patient['consents'] = $tmp_consents;
+            $patient['history'] = $tmp_history;
+            $patient['history']['reports'] = $tmp_reports;
+
+            $response = [
+                'status' => 'success',
+                'message' => 'Pacientes obtenidos correctamente',
+                'patient' => $patient
+            ];
+        } catch (Exception | Error $e) {
+            $response = [
+                'status' => 'error',
+                'message' => $e->getMessage()
+            ];
+        }
+
+        return $response;
+    }
+
     public static function createConsentAccepted(Router $router) {
         $data = $router->getData();
         
@@ -203,7 +278,7 @@ class ConsentsController {
             $response = [
                 'status' => 'success',
                 'message' => 'Consentimiento creado correctamente',
-                'consent' => $consent_data
+                'patient' => self::readPatient($data['patient']['id'])['patient']
             ];
         } catch (Exception | Error $e) {
             $response = [
@@ -243,8 +318,6 @@ class ConsentsController {
             'fileName' => $name
         ];
 
-
         $router->response($response);
-        // $router->response($data);
     }
 }

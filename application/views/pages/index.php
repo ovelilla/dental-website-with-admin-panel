@@ -20,7 +20,7 @@
 
         <div class="col-right">
             <div class="circle"></div>
-            <img loading="lazy" src="/build/img/equipo/doctora-claudia-sonrisa.png" alt="Doctora Claudia sonriendo">
+            <img src="/build/img/equipo/doctora-claudia-sonrisa.png" alt="Doctora Claudia Rada sonriendo">
         </div>
     </div>
 </section>
@@ -67,7 +67,7 @@
             <a href="/tratamientos/blanqueamiento-dental" class="card">
                 <div class="icon">
                     <div class="icon-container">
-                        <img loading="lazy" src="/build/img/iconos/23.png" alt="Icono blanqueamiento dental">
+                        <img loading="lazy" src="/build/img/iconos/23.png" alt="Icono rehabilitación oral y prótesis dentales">
                     </div>
                 </div>
                 <div class="text">
@@ -110,7 +110,7 @@
 <section class="section why-choose-us">
     <div class="container">
         <div class="col-left">
-            <img loading="lazy" src="/build/img/equipo/doctora-claudia-brazos-cruzados.png" alt="Doctora Claudia brazos cruzados">
+            <img loading="lazy" src="/build/img/equipo/doctora-claudia-brazos-cruzados.png" alt="Doctora Claudia Rada brazos cruzados">
         </div>
 
         <div class="col-right">
@@ -352,7 +352,7 @@
         <div class="grid">
             <a href="/equipo/dra-claudia" class="card">
                 <div class="image">
-                    <img loading="lazy" src="/build/img/equipo/thumbs/doctora-claudia.png" alt="Doctora Claudia brazos cruzados">
+                    <img loading="lazy" src="/build/img/equipo/thumbs/doctora-claudia.png" alt="Doctora Claudia Raa brazos cruzados">
                 </div>
 
                 <div class="info">
@@ -363,7 +363,7 @@
 
             <a href="/equipo/dr-joan" class="card">
                 <div class="image">
-                    <img loading="lazy" src="/build/img/equipo/thumbs/doctor-joan.png" alt="Doctor Joan sonriendo">
+                    <img loading="lazy" src="/build/img/equipo/thumbs/doctor-joan.png" alt="Doctor Joan LLop sonriendo">
                 </div>
 
                 <div class="info">
@@ -374,7 +374,7 @@
 
             <div class="card">
                 <div class="image">
-                    <img loading="lazy" src="/build/img/equipo/thumbs/higienista-abril.png" alt="Higienista dental Abril">
+                    <img loading="lazy" src="/build/img/equipo/thumbs/higienista-abril.png" alt="Higienista dental Abril Segarra">
                 </div>
 
                 <div class="info">
@@ -385,7 +385,7 @@
 
             <div class="card">
                 <div class="image">
-                    <img loading="lazy" src="/build/img/equipo/thumbs/gerente-antonio.png" alt="Gerente Antonio brazos cruzados">
+                    <img loading="lazy" src="/build/img/equipo/thumbs/gerente-antonio.png" alt="Gerente Antonio Colomina brazos cruzados">
                 </div>
 
                 <div class="info">
@@ -686,11 +686,11 @@
                     </svg>
                     <span>622 34 89 82</span>
                 </a>
-                <a href="mailto:dentiny@correo.es">
+                <a href="mailto:policlinica@dentiny.es">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                         <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
                     </svg>
-                    <span>dentiny@correo.com</span>
+                    <span>policlinica@dentiny.es</span>
                 </a>
                 <a target="_blank" href="https://www.google.es/maps/place/DENTINY+Cl%C3%ADnica+Dental+%E2%AD%90%EF%B8%8F%E2%AD%90%EF%B8%8F%E2%AD%90%EF%B8%8F%E2%AD%90%EF%B8%8F%E2%AD%90%EF%B8%8F-+Odontolog%C3%ADa+Est%C3%A9tica+y+Restauradora+%5B%C3%9Altima+Tecnolog%C3%ADa+en+Diagn%C3%B3stico+Dental%5D/@39.9812959,-0.0347863,20.17z/data=!4m5!3m4!1s0xd60014f1db81e03:0x21697c3bfa87e5bc!8m2!3d39.981289!4d-0.0346134">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
@@ -701,17 +701,17 @@
             </div>
 
             <div class="social">
-                <a target="_blank" href="https://es-es.facebook.com/dentiny.es/">
+                <a target="_blank" href="https://es-es.facebook.com/dentiny.es/" aria-label="Facebook">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M15.12,5.32H17V2.14A26.11,26.11,0,0,0,14.26,2C11.54,2,9.68,3.66,9.68,6.7V9.32H6.61v3.56H9.68V22h3.68V12.88h3.06l.46-3.56H13.36V7.05C13.36,6,13.64,5.32,15.12,5.32Z" />
                     </svg>
                 </a>
-                <a target="_blank" href="https://www.instagram.com/dentiny.es/">
+                <a target="_blank" href="https://www.instagram.com/dentiny.es/" aria-label="Instagram">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M17.34,5.46h0a1.2,1.2,0,1,0,1.2,1.2A1.2,1.2,0,0,0,17.34,5.46Zm4.6,2.42a7.59,7.59,0,0,0-.46-2.43,4.94,4.94,0,0,0-1.16-1.77,4.7,4.7,0,0,0-1.77-1.15,7.3,7.3,0,0,0-2.43-.47C15.06,2,14.72,2,12,2s-3.06,0-4.12.06a7.3,7.3,0,0,0-2.43.47A4.78,4.78,0,0,0,3.68,3.68,4.7,4.7,0,0,0,2.53,5.45a7.3,7.3,0,0,0-.47,2.43C2,8.94,2,9.28,2,12s0,3.06.06,4.12a7.3,7.3,0,0,0,.47,2.43,4.7,4.7,0,0,0,1.15,1.77,4.78,4.78,0,0,0,1.77,1.15,7.3,7.3,0,0,0,2.43.47C8.94,22,9.28,22,12,22s3.06,0,4.12-.06a7.3,7.3,0,0,0,2.43-.47,4.7,4.7,0,0,0,1.77-1.15,4.85,4.85,0,0,0,1.16-1.77,7.59,7.59,0,0,0,.46-2.43c0-1.06.06-1.4.06-4.12S22,8.94,21.94,7.88ZM20.14,16a5.61,5.61,0,0,1-.34,1.86,3.06,3.06,0,0,1-.75,1.15,3.19,3.19,0,0,1-1.15.75,5.61,5.61,0,0,1-1.86.34c-1,.05-1.37.06-4,.06s-3,0-4-.06A5.73,5.73,0,0,1,6.1,19.8,3.27,3.27,0,0,1,5,19.05a3,3,0,0,1-.74-1.15A5.54,5.54,0,0,1,3.86,16c0-1-.06-1.37-.06-4s0-3,.06-4A5.54,5.54,0,0,1,4.21,6.1,3,3,0,0,1,5,5,3.14,3.14,0,0,1,6.1,4.2,5.73,5.73,0,0,1,8,3.86c1,0,1.37-.06,4-.06s3,0,4,.06a5.61,5.61,0,0,1,1.86.34A3.06,3.06,0,0,1,19.05,5,3.06,3.06,0,0,1,19.8,6.1,5.61,5.61,0,0,1,20.14,8c.05,1,.06,1.37.06,4S20.19,15,20.14,16ZM12,6.87A5.13,5.13,0,1,0,17.14,12,5.12,5.12,0,0,0,12,6.87Zm0,8.46A3.33,3.33,0,1,1,15.33,12,3.33,3.33,0,0,1,12,15.33Z" />
                     </svg>
                 </a>
-                <a target="_blank" href="https://twitter.com/_dentiny">
+                <a target="_blank" href="https://twitter.com/_dentiny" aria-label="Twitter">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M22.99121,3.9502a.99942.99942,0,0,0-1.51074-.85938,7.47956,7.47956,0,0,1-1.873.793,5.15234,5.15234,0,0,0-3.374-1.24219,5.23238,5.23238,0,0,0-5.22363,5.06348A11.03194,11.03194,0,0,1,4.19629,3.78125,1.01154,1.01154,0,0,0,3.33887,3.416a.99852.99852,0,0,0-.78516.5,5.2755,5.2755,0,0,0-.24219,4.76855l-.00195.00195a1.0411,1.0411,0,0,0-.49512.88868,3.04174,3.04174,0,0,0,.02637.43945,5.1854,5.1854,0,0,0,1.56836,3.3125.99813.99813,0,0,0-.06641.76953,5.20436,5.20436,0,0,0,2.36231,2.92187,7.46464,7.46464,0,0,1-3.58985.44825.99975.99975,0,0,0-.665,1.833A12.94248,12.94248,0,0,0,8.46,21.36133,12.7878,12.7878,0,0,0,20.9248,11.998,12.82166,12.82166,0,0,0,21.46,8.35156c0-.06543,0-.13281-.001-.20019A5.76963,5.76963,0,0,0,22.99121,3.9502ZM19.68457,7.16211a.995.995,0,0,0-.2334.70215c.00977.165.00879.331.00879.4873a10.82371,10.82371,0,0,1-.4541,3.08106A10.68457,10.68457,0,0,1,8.46,19.36133a10.93791,10.93791,0,0,1-2.55078-.30078,9.47951,9.47951,0,0,0,2.94238-1.56348A1.00033,1.00033,0,0,0,8.25,15.71094a3.208,3.208,0,0,1-2.21387-.93457q.22413-.04248.44532-.10547a1.00026,1.00026,0,0,0-.08008-1.94336,3.19824,3.19824,0,0,1-2.25-1.72559,5.29929,5.29929,0,0,0,.54492.0459,1.02093,1.02093,0,0,0,.9834-.69629A.9998.9998,0,0,0,5.2793,9.21484,3.19559,3.19559,0,0,1,3.85547,6.542c0-.0664.00195-.13281.00586-.19824a13.01365,13.01365,0,0,0,8.209,3.47949,1.02046,1.02046,0,0,0,.81739-.3584,1.00037,1.00037,0,0,0,.206-.86816,3.15653,3.15653,0,0,1-.08691-.72852A3.23,3.23,0,0,1,16.2334,4.6416a3.18428,3.18428,0,0,1,2.34472,1.02051A.993.993,0,0,0,19.499,5.96a9.27073,9.27073,0,0,0,1.21192-.32226A6.68126,6.68126,0,0,1,19.68457,7.16211Z" />
                     </svg>

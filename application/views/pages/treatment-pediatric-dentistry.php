@@ -23,7 +23,7 @@
 
         <div class="row">
             <div class="col">
-                <img src="/build/img/tratamientos/dentista-interviniendo-a-una-nina.jpg" alt="Dentista interviniendo a una nina">
+                <img src="/build/img/tratamientos/chica-feliz-sonriendo-mostrando-dientes-en-el-dentista.jpg" alt="Chica feliz sonriendo mostrando dientes en el dentista">
             </div>
 
             <div class="col">

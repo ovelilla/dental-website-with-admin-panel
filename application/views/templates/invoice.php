@@ -263,8 +263,7 @@
     $imageData = base64_encode(file_get_contents($image));
     $src = 'data:image/png;base64,' . $imageData;
 
-    $date = DateTime::createFromFormat('d/m/Y', $data['created_at']);
-    $format = new IntlDateFormatter('es_ES', IntlDateFormatter::FULL, IntlDateFormatter::FULL, 'Europe/Madrid', IntlDateFormatter::GREGORIAN, "d 'de' LLLL 'de' yyyy");
+    $formatDate = new DateTime($data['created_at']);
 
     $discount = false;
     $subtotal = 0;
@@ -307,7 +306,7 @@
 
     <div class="row">
         <div class="col-12 leading-snug">
-            <p class="uppercase text-right">Fecha: <?php echo $data['created_at'] ?></p>
+            <p class="uppercase text-right">Fecha: <?php echo $formatDate->format('d/m/Y'), PHP_EOL ?></p>
         </div>
     </div>
 

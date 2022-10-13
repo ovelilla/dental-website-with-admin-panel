@@ -262,7 +262,7 @@ class BlogPosts {
         article.appendChild(image);
 
         const img = document.createElement("img");
-        img.src = `/build/img/blog/${post.src}`;
+        img.src = post.src;
         img.alt = post.alt;
         image.appendChild(img);
 

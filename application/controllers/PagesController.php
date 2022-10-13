@@ -499,6 +499,7 @@ class PagesController {
 
         $router->render('pages/error', [
             'title' => 'Página no encontrada',
+            'page' => 'error'
         ]);
     }
 }

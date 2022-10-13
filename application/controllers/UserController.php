@@ -124,7 +124,7 @@ class UserController {
         $values = [
             'name' => 'Dentiny',
             'email' => 'admin@dentiny.es',
-            'password' => 123456,
+            'password' => "V1x!mA93*s%RQ3z#",
         ];
 
         $user = new User($values);

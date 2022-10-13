@@ -10,15 +10,17 @@
         <img src="/build/img/tratamientos/banner-ortodoncia-invisible.jpg" alt="Banner ortodoncia invisible">
 
         <div class="col">
+            <h2>¿Que es la ortodoncia invisible?</h2>
+
             <p>La ortodoncia Invisible es la <strong>última técnica utilizada por los mejores ortodoncistas</strong> mediante la cual, utilizando férulas transparentes de movimiento, conseguimos unos resultados más rápidos, mayor comodidad que la ortodoncia convencional y mucho más precisa, ya que la precisión con este tipo de ortodoncia es milimétrica.</p>
 
             <p>Para llevar a cabo el tratamiento es necesario realizar un <strong>estudio Digital 3D</strong>, la boca del paciente se escanea con un escáner intraoral de última tecnología, una vez realzado este, nuestros ortodoncistas planifican cada caso y nos muestran la evolución por fases y el resultado final del tratamiento. Podrás ver tu boca antes y después, viendo los resultados antes de aceptar el caso.</p>
+            
 
             <p>Existen numerosas marcas low cost de ortodoncia Invisible. Nosotros en Dentiny <strong>apostamos por la mejor calidad y trabajamos de la mano de las dos mejores y pioneras marcas en el mundo</strong>: Spark, Secretaligner e Invisalign teniendo la certeza de que nuestros pacientes siempre tendrán en sus tratamientos dentales la <strong>máxima calidad y los últimos avances mundiales</strong> y con férulas de movimiento ilimitadas sin afectar a su presupuesto. Garantizamos la sonrisa de tus sueños.</p>
 
             <p>Como tenemos un gran volumen de pacientes de ortodoncia Invisible podemos conseguir los mejores precios del mercado sin renunciar a la mejor calidad. Beneficiándose de la mejor ortodoncia Invisible del mundo con el mejor precio garantizado. <a href="/contacto">Pregunta a nuestro equipo expertos</a> cualquier duda sobre el tratamiento o los métodos de pago. Nunca ha sido tan fácil tener la mejor sonrisa. Apuesta por la mejor calidad y la última tecnología con el mejor precio en Dentiny.</p>
         </div>
-
 
         <div class="row">
             <div class="col">
@@ -43,7 +45,7 @@
 
         <div class="row">
             <div class="col">
-                <img src="/build/img/tratamientos/ortodoncia-invisible-detalle.jpg" alt="Imagen 2">
+                <img src="/build/img/tratamientos/ortodoncia-invisible-detalle.jpg" alt="Ortodoncia invisible detalle">
             </div>
             <div class="col">
                 <h2>¿Que ventajas tiene la ortodoncia invisible frente a las otras ortodoncias?</h2>

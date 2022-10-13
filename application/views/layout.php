@@ -2,24 +2,23 @@
 <html lang="es-ES">
 
 <head>
-    <meta name="robots" content="noindex">
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Odontología Estética y Restauradora. Tac dental 3D. Implantologia avanzada. Ortodoncia invisible. Periodoncia. Protesis. Blanqueamiento.">
+    <meta name="keywords" content="clinica dental castellon, dentista castellon, ">
 
     <meta property="og:title" content="Clínica dental Castellón | Odontología | Dentiny">
     <meta property="og:description" content="Odontología Estética y Restauradora. Tac dental 3D. Implantologia avanzada. Ortodoncia invisible. Periodoncia. Protesis. Blanqueamiento.">
-    <meta property="og:type" content="">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.dentiny.es/">
+    <meta property="og:image" content="/build/img/varios/og.jpg">
 
-    <meta property="twitter:card" content="">
-    <meta property="twitter:url" content="">
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="https://www.dentiny.es/">
     <meta property="twitter:title" content="Clínica dental Castellón | Odontología | Dentiny">
     <meta property="twitter:description" content="Odontología Estética y Restauradora. Tac dental 3D. Implantologia avanzada. Ortodoncia invisible. Periodoncia. Protesis. Blanqueamiento.">
-    <meta property="twitter:image" content="">
+    <meta property="twitter:image" content="/build/img/varios/og.jpg">
 
     <title>Clínica dental Castellón | Odontología | Dentiny | <?php echo $title ?></title>
 
