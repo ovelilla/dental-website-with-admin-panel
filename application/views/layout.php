@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Odontología Estética y Restauradora. Tac dental 3D. Implantologia avanzada. Ortodoncia invisible. Periodoncia. Protesis. Blanqueamiento.">
-    <meta name="keywords" content="clinica dental castellon, dentista castellon, ">
+    <meta name="keywords" content="clinica dental castellon, dentista castellon, dentista urgencias, carillas dentales, centro quirúrgico dental, periodoncista, implantes dentales, ortodoncia, ortodoncia invisible">
 
     <meta property="og:title" content="Clínica dental Castellón | Odontología | Dentiny">
     <meta property="og:description" content="Odontología Estética y Restauradora. Tac dental 3D. Implantologia avanzada. Ortodoncia invisible. Periodoncia. Protesis. Blanqueamiento.">
