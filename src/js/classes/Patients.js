@@ -91,7 +91,6 @@ class Patients {
 
     async readAllPatients() {
         const response = await api.get("/api/admin/patients");
-        console.log(response);
         if (response.status === "error") {
             return;
         }

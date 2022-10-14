@@ -13,12 +13,16 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.dentiny.es/">
     <meta property="og:image" content="/build/img/varios/og.jpg">
+    <meta property="og:locale:alternate" content="es_ES" />
 
     <meta property="twitter:card" content="summary">
     <meta property="twitter:url" content="https://www.dentiny.es/">
     <meta property="twitter:title" content="Clínica dental Castellón | Odontología | Dentiny">
     <meta property="twitter:description" content="Odontología Estética y Restauradora. Tac dental 3D. Implantologia avanzada. Ortodoncia invisible. Periodoncia. Protesis. Blanqueamiento.">
     <meta property="twitter:image" content="/build/img/varios/og.jpg">
+
+    <meta name="author" content="Oscar Velilla Abril" />
+    <meta name="copyright" content="Oscar Velilla Abril" />
 
     <title>Clínica dental Castellón | Odontología | Dentiny | <?php echo $title ?></title>
 

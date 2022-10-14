@@ -52,6 +52,9 @@ class Input extends Form {
         if (this.input.autocomplete) {
             input.autocomplete = this.input.autocomplete;
         }
+        if (this.input.maxlength) {
+            input.maxLength = this.input.maxlength;
+        }
 
         input.addEventListener("focus", this.handleFocus.bind(this));
         input.addEventListener("blur", this.handleBlur.bind(this));

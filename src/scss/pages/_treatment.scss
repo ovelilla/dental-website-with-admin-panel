@@ -19,7 +19,7 @@
     @include m.desktopXL {
         padding: 60px 0;
     }
-    
+
     .container {
         display: flex;
         flex-direction: column;
@@ -79,6 +79,14 @@
             li {
                 gap: 10px;
                 text-align: justify;
+                
+                @include m.desktop {
+                    font-size: 1.7rem;
+                }
+
+                @include m.desktopXL {
+                    font-size: 1.8rem;
+                }
 
                 svg {
                     align-self: flex-start;
@@ -98,6 +106,14 @@
             li {
                 display: list-item;
                 line-height: 1.6;
+
+                @include m.desktop {
+                    font-size: 1.7rem;
+                }
+
+                @include m.desktopXL {
+                    font-size: 1.8rem;
+                }
             }
         }
 

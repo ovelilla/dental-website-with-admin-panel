@@ -13,9 +13,8 @@ class File {
     private string $key;
     private string $destination;
 
-    public function __construct($args = [], $key, $destination) {
+    public function __construct($args = [], $key = '', $destination = '') {
         $this->error = $args['error'];
-        $this->full_path = $args['full_path'];
         $this->name = $args['name'];
         $this->size = $args['size'];
         $this->tmp_name = $args['tmp_name'];
@@ -27,10 +26,6 @@ class File {
 
     public function getError(): int {
         return $this->error;
-    }
-
-    public function getFullPath(): string {
-        return $this->full_path;
     }
 
     public function getName(): string {

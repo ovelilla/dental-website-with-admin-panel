@@ -14,7 +14,7 @@ class Image {
 
     private array $errors = [];
 
-    public function __construct($args = [], $key) {
+    public function __construct($args = [], $key = '') {
         $this->id = $args['id'] ?? null;
         $this->src = $args['src'] ?? '';
         $this->alt = $args[$key] ?? '';

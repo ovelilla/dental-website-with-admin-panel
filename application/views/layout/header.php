@@ -15,7 +15,7 @@
                 </svg>
                 <span>622 348 982</span>
             </a>
-            <a href="/contacto" class="btn secondary-btn shadow">Cita Online</a>
+            <a href="/contacto#contact" class="btn secondary-btn shadow">Cita Online</a>
         </div>
 
         <button id="hamburguer" class="hamburguer" aria-label="Menú hamburguesa">
