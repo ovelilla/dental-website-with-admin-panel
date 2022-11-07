@@ -75,8 +75,6 @@ $router->get('/editor/casos', [PagesController::class, 'casesEditor'], true);
 $router->get('/editor/casos/{case}', [PagesController::class, 'casesEditor'], true);
 
 $router->get('/login', [PagesController::class, 'login'], false);
-$router->get('/registro', [PagesController::class, 'register'], false);
-$router->get('/restaurar', [PagesController::class, 'restore'], false);
 $router->get('/logout', [PagesController::class, 'logout'], false);
 
 $router->get('/admin', [PagesController::class, 'admin'], false);
@@ -92,8 +90,6 @@ $router->get('/admin/doctores', [PagesController::class, 'doctors'], true);
 $router->post('/api/contact', [PagesController::class, 'sendMessage']);
 
 $router->post('/api/user/login', [UserController::class, 'login'], false);
-$router->get('/api/user/register', [UserController::class, 'register'], false);
-$router->post('/api/user/restore', [UserController::class, 'restore'], false);
 
 $router->post('/api/blog', [BlogController::class, 'readPosts'], false);
 $router->get('/api/blog/latest', [BlogController::class, 'readLatestPosts'], false);
@@ -153,6 +149,7 @@ $router->put('/api/admin/budgets', [BudgetsController::class, 'updateBudget'], t
 $router->delete('/api/admin/budgets', [BudgetsController::class, 'deleteBudget'], true);
 $router->delete('/api/admin/budgets/multiple', [BudgetsController::class, 'deleteBudgets'], true);
 $router->post('/api/admin/budgets/pdf', [BudgetsController::class, 'generatePDF'], true);
+$router->post('/api/admin/budgets/sign', [BudgetsController::class, 'signBudget'], true);
 
 $router->get('/api/admin/pieces', [BudgetsController::class, 'readAllPieces'], true);
 $router->get('/api/admin/groups', [BudgetsController::class, 'readAllGroups'], true);

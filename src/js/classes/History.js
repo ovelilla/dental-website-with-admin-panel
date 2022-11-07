@@ -58,8 +58,6 @@ class History {
         form.noValidate = true;
         this.historyEl.appendChild(form);
 
-        console.log(this.history.errors);
-
         const examination = new Textarea({
             label: {
                 text: "Exploración y plan de tratamiento",

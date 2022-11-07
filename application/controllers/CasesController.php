@@ -573,8 +573,12 @@ class CasesController {
         $files = $router->getFiles();
 
         $tmp_name = $files['image']['tmp_name'];
-        $destination = $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . '/build/img/casos/' . DIRECTORY_SEPARATOR;
+        $destination = $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . '/build/img/casos/' . DIRECTORY_SEPARATOR . date('Y-m-d') . DIRECTORY_SEPARATOR;
         $name = $files['image']['name'];
+
+        if (!is_dir($destination)) {
+            mkdir($destination, 0777, true);
+        }
 
         $success = move_uploaded_file($tmp_name, $destination . $name);
 
@@ -590,7 +594,7 @@ class CasesController {
         $response = [
             'status' => 'success',
             'message' => 'Imagen subida correctamente',
-            'url' => '/build/img/casos/' . $name
+            'url' => '/build/img/casos/' . date('Y-m-d') . '/' . $name
         ];
 
         $router->response($response);

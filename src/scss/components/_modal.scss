@@ -66,26 +66,27 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            min-height: 55px;
-            max-height: 55px;
+            min-height: 60px;
+            max-height: 60px;
             padding: 0 14px;
             border-bottom: 1px solid v.$gray-200;
+            cursor: move;
 
             @include m.mobile {
-                min-height: 60px;
-                max-height: 60px;
+                min-height: 65px;
+                max-height: 65px;
                 padding: 0 16px;
             }
 
             @include m.tablet {
-                min-height: 65px;
-                max-height: 65px;
+                min-height: 70px;
+                max-height: 70px;
                 padding: 0 18px;
             }
 
             @include m.desktop {
-                min-height: 70px;
-                max-height: 70px;
+                min-height: 75px;
+                max-height: 75px;
                 padding: 0 22px;
             }
 

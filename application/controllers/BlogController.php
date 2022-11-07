@@ -191,7 +191,7 @@ class BlogController {
 
         $post = new BlogPost($data);
         $image = new Image($data, 'alt');
-        $file = new File($files['image'], 'image', '/build/img/blog/' . date('Y-m-d') . '/');
+        $file = new File($files['image'], 'image', '/build/img/blog/' . date('Y-m-d') . '/' . '/');
 
         $post_errors = $post->validate();
         $image_errors = $image->validate();
@@ -453,8 +453,12 @@ class BlogController {
         $files = $router->getFiles();
 
         $tmp_name = $files['image']['tmp_name'];
-        $destination = $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . '/build/img/blog/' . DIRECTORY_SEPARATOR;
+        $destination = $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . '/build/img/blog/' . DIRECTORY_SEPARATOR . date('Y-m-d') . DIRECTORY_SEPARATOR;
         $name = $files['image']['name'];
+
+        if (!is_dir($destination)) {
+            mkdir($destination, 0777, true);
+        }
 
         $success = move_uploaded_file($tmp_name, $destination . $name);
 
@@ -470,7 +474,7 @@ class BlogController {
         $response = [
             'status' => 'success',
             'message' => 'Imagen subida correctamente',
-            'url' => '/build/img/blog/' . $name
+            'url' => '/build/img/blog/' . date('Y-m-d') . '/' . $name
         ];
 
         $router->response($response);

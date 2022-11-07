@@ -51,9 +51,6 @@ class Layout {
         });
 
         this.createWhatsappButton();
-
-        const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-        mediaQuery.addEventListener("change", this.themeChange.bind(this));
     }
 
     themeChange() {
@@ -98,8 +95,6 @@ class Layout {
                 new Collapse(target, content, true);
             });
         }
-
-        this.themeChange();
     }
 
     scrollEvent() {

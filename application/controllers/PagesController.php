@@ -22,7 +22,7 @@ class PagesController {
             ->get();
 
         $router->render('pages/index', [
-            'title' => 'Página principal',
+            'title' => '',
             'page' => 'index',
             'posts' => $posts
         ]);

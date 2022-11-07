@@ -86,7 +86,7 @@ class File {
             $errors[$this->key] = 'La extensión del archivo no es válida';
         } else if (!$this->isImage()) {
             $errors[$this->key] = 'El archivo no es una imagen';
-        } else if ($this->size > 1000000) {
+        } else if ($this->size > 10000000) {
             $errors[$this->key] = 'El archivo es demasiado grande';
         }
 

@@ -8,7 +8,7 @@
 <section class="section member">
     <div class="container">
         <div class="col-left">
-            <img loading="lazy" src="/build/img/equipo/doctora-claudia-brazos-cruzados.png" alt="Doctora Claudia Rada brazos cruzados">
+            <img loading="lazy" src="/build/img/equipo/doctora-claudia-brazos-cruzados-v2.png" alt="Doctora Claudia Rada brazos cruzados">
         </div>
 
         <div class="col-right">

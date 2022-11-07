@@ -17,9 +17,10 @@
     }
 
     .mio-double {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        justify-content: space-between;
         gap: 18px;
+        width: 100%;
 
         @include m.tablet {
             gap: 20px;
@@ -27,6 +28,11 @@
 
         @include m.desktop {
             gap: 22px;
+        }
+
+        .mio-field {
+            flex: 50%;
+            flex-grow: 1;
         }
     }
 
@@ -128,6 +134,7 @@
             border: 1px solid v.$blue-50;
             border-radius: 6px;
             color: v.$blue-900;
+            background-color: v.$white;
             font-weight: 400;
             font-size: 1.6rem;
             cursor: text;

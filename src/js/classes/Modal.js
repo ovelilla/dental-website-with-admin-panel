@@ -1,5 +1,6 @@
 import { icon } from "../modules/Icon.js";
 import LoadingButton from "./LoadingButton.js";
+import Confirm from "./Confirm.js";
 
 class Modal {
     constructor({
@@ -27,6 +28,7 @@ class Modal {
 
         this.isClose = false;
         this.isFullscreen = false;
+        this.isMove = false;
 
         this.init();
     }
@@ -74,8 +76,21 @@ class Modal {
         }
         modal.addEventListener("mousedown", this.handleClose.bind(this));
         modal.addEventListener("touchstart", this.handleClose.bind(this), { passive: true });
-        modal.addEventListener("click", () => {
+        modal.addEventListener("click", async () => {
             if (this.isClose) {
+                const confirm = new Confirm({
+                    title: "¿Cerrar ventana?",
+                    description:
+                        "¿Estás seguro de que deseas cerrar? Los datos que no hayan sido guardados se perderán.",
+                    accept: "Cerrar",
+                    cancel: "Cancelar",
+                });
+                const confirmResponse = await confirm.question();
+
+                if (!confirmResponse) {
+                    return;
+                }
+
                 this.close();
             }
         });
@@ -85,11 +100,19 @@ class Modal {
         if (!this.isFullscreen) {
             content.style.maxWidth = this.maxWidth ? this.maxWidth : "";
         }
+        if (this.left && this.top) {
+            content.style.position = "absolute";
+            content.style.left = this.left + "px";
+            content.style.top = this.top + "px";
+        }
         content.addEventListener("click", (e) => e.stopPropagation());
         modal.appendChild(content);
 
         const header = document.createElement("div");
         header.classList.add("header");
+        this.start = this.handleStart.bind(this);
+        header.addEventListener("mousedown", this.start);
+        header.addEventListener("touchstart", this.start, { passive: true });
         content.appendChild(header);
 
         if (this.customTitle) {
@@ -133,6 +156,7 @@ class Modal {
 
                 this.fullscreenCallback && this.fullscreenCallback();
             });
+            fullscreenBtn.addEventListener("mousedown", (e) => e.stopPropagation());
             actions.appendChild(fullscreenBtn);
 
             const fullscreenIcon = icon.get("arrowsFullscreen");
@@ -142,10 +166,23 @@ class Modal {
         const closeBtn = document.createElement("button");
         closeBtn.classList.add("close");
         closeBtn.setAttribute("aria-label", "Cerrar modal");
-        closeBtn.addEventListener("click", () => {
+        closeBtn.addEventListener("click", async () => {
+            const confirm = new Confirm({
+                title: "¿Cerrar ventana?",
+                description: "¿Estás seguro de que deseas cerrar? Los datos que no hayan sido guardados se perderán.",
+                accept: "Cerrar",
+                cancel: "Cancelar",
+            });
+            const confirmResponse = await confirm.question();
+
+            if (!confirmResponse) {
+                return;
+            }
+
             this.isClose = true;
             this.close();
         });
+        closeBtn.addEventListener("mousedown", (e) => e.stopPropagation());
         actions.appendChild(closeBtn);
 
         const closeIcon = icon.get("xLg");
@@ -187,7 +224,19 @@ class Modal {
         closeButton.classList.add("btn", "tertiary-btn");
         closeButton.setAttribute("aria-label", "Cerrar modal");
         closeButton.textContent = "Cerrar";
-        closeButton.addEventListener("click", () => {
+        closeButton.addEventListener("click", async () => {
+            const confirm = new Confirm({
+                title: "¿Cerrar ventana?",
+                description: "¿Estás seguro de que deseas cerrar? Los datos que no hayan sido guardados se perderán.",
+                accept: "Cerrar",
+                cancel: "Cancelar",
+            });
+            const confirmResponse = await confirm.question();
+
+            if (!confirmResponse) {
+                return;
+            }
+
             this.isClose = true;
             this.close();
         });
@@ -203,6 +252,60 @@ class Modal {
         footer.appendChild(this.actionButton.get());
 
         return modal;
+    }
+
+    handleStart(e) {
+        this.isMove = true;
+
+        this.move = this.handleMove.bind(this);
+        this.end = this.handleEnd.bind(this);
+
+        document.addEventListener("mousemove", this.move);
+        document.addEventListener("touchmove", this.move, { passive: true });
+        document.addEventListener("mouseup", this.end);
+        document.addEventListener("touchend", this.end, { passive: true });
+
+        const x = e.clientX ?? e.touches[0].clientX;
+        const y = e.clientY ?? e.touches[0].clientY;
+
+        this.startX = x;
+        this.startY = y;
+    }
+
+    handleMove(e) {
+        if (!this.isMove) {
+            return;
+        }
+
+        const x = e.clientX ?? e.touches[0].clientX;
+        const y = e.clientY ?? e.touches[0].clientY;
+
+        const moveX = x - this.startX;
+        const moveY = y - this.startY;
+
+        this.startX = x;
+        this.startY = y;
+
+        const rect = this.modal.firstChild.getBoundingClientRect();
+
+        this.left = rect.left + moveX;
+        this.top = rect.top + moveY;
+
+        this.modal.firstChild.style.position = "absolute";
+        this.modal.firstChild.style.left = this.left + "px";
+        this.modal.firstChild.style.top = this.top + "px";
+    }
+
+    handleEnd() {
+        if (!this.isMove) {
+            return;
+        }
+        this.isMove = false;
+
+        document.removeEventListener("mousemove", this.move);
+        document.removeEventListener("touchmove", this.move);
+        document.removeEventListener("mouseup", this.end);
+        document.removeEventListener("touchend", this.end);
     }
 
     repaint(content) {

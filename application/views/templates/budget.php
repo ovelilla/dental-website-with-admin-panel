@@ -235,6 +235,10 @@
             white-space: nowrap;
         }
 
+        table.items tbody tr td:nth-child(2) {
+            white-space: normal;
+        }
+
         table.items tfoot tr td {
             padding: 8px 6px;
             border-right: 1px solid #f0f0f0;
@@ -243,11 +247,22 @@
         }
 
         table.items tfoot tr td:first-child {
+            border-right: none;
             border-bottom: none;
+            border-left: none;
+        }
+
+        table.items tfoot tr td:nth-child(2) {
+            border-bottom: none;
+            border-left: none;
         }
 
         table.items tfoot tr td:nth-child(3) {
             background-color: #f0f0f0;
+        }
+
+        table.items tfoot tr td:nth-child(4) {
+            border-bottom: none;
         }
 
         table.items tfoot tr td:nth-child(5) {
@@ -274,8 +289,8 @@
         if (!$discount && $budgeted['discount'] > 0) {
             $discount = true;
         }
-        $subtotal += $budgeted['unit_price'];
-        $total += $budgeted['unit_price'] - $budgeted['unit_price'] * $budgeted['discount'] / 100;
+        $subtotal += $budgeted['discount'] !== 100 ? $budgeted['total_price'] / (1 - $budgeted['discount']/100) : 0;
+        $total += $budgeted['total_price'];
     }
     ?>
 
@@ -297,7 +312,7 @@
             <thead>
                 <tr>
                     <th class="text-left">Tratamiento</th>
-                    <th class="text-center">Pieza</th>
+                    <th class="text-right">Pieza</th>
                     <?php if ($discount) : ?>
                         <th class="text-right">Precio u.</th>
                         <th class="text-center">Descuento</th>
@@ -311,14 +326,14 @@
             <tbody>
                 <?php foreach ($data['budgeteds'] as $budgeted) : ?>
                     <tr>
-                        <td class="w-100 text-left"><?php echo $budgeted['treatment']['name'] ?></td>
+                        <td class="text-left"><?php echo $budgeted['treatment']['name'] ?></td>
                         <?php if ($discount) : ?>
-                            <td class="text-right"><?php echo $budgeted['piece'] ?></td>
+                            <td class="w-100 text-right"><?php echo $budgeted['piece'] ?></td>
                             <td class="text-right"><?php echo number_format($budgeted['unit_price'], 2, ',', '') ?> €</td>
-                            <td class="text-center"><?php echo number_format($budgeted['discount'], 2, ',', '') ?> %</td>
+                            <td class="text-center"><?php echo $budgeted['discount'] ? number_format($budgeted['discount'], 2, ',', '') . ' %' : '' ?></td>
                             <td class="text-right"><?php echo number_format($budgeted['total_price'], 2, ',', '') ?> €</td>
                         <?php else : ?>
-                            <td class="min-w-100 text-right"><?php echo $budgeted['piece'] ?></td>
+                            <td class="w-100 text-right"><?php echo $budgeted['piece'] ?></td>
                             <td class="min-w-100 text-right"><?php echo number_format($budgeted['total_price'], 2, ',', '') ?> €</td>
                         <?php endif; ?>
                     </tr>
@@ -331,7 +346,7 @@
                         <td></td>
                         <td class="text-right font-bold">Total</td>
                         <td class="text-right font-bold"><?php echo number_format($subtotal, 2, ',', '') ?> €</td>
-                        <td class="text-right font-bold">Total con dto.</td>
+                        <td class="text-right font-bold">Total dto.</td>
                         <td class="text-right font-bold"><?php echo number_format($total, 2, ',', '') ?> €</td>
                     <?php else : ?>
                         <td></td>
@@ -349,6 +364,11 @@
         </div>
     </div>
 
+    <div class="row mt-20 text-right">
+        <?php if (isset($data['signature']['signature'])) : ?>
+            <img src="<?php echo $data['signature']['signature'] ?>" width="400px" alt="Firma">
+        <?php endif; ?>
+    </div>
 </body>
 
 </html>

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="col-left">
             <p>Nuestro destino tu sonrisa</p>
-            <h1>Dentiny, tu clínica dental en Castellón</h1>
+            <h1>Clínica dental en Castellón, Dentiny.</h1>
             <p>En Dentiny Clínica Dental en Castellón, encontraras a los <strong>mejores dentistas de la provincia</strong>, que trabajando conjuntamente y de la mano de las últimas tecnologías dentales ofrecen los mejores diagnósticos y tratamientos.</p>
 
             <div class="row">
@@ -89,7 +89,7 @@
     <div class="container">
         <div class="col-left">
             <p>Nuestra misión</p>
-            <h2>Dentistas para toda la familia</h2>
+            <h2>Dentistas en Castellón para toda la familia</h2>
             <p>Cuando nuestros pacientes vienen a DENTINY saben que se van a encontrar como en casa. Relajados, gracias a sus <strong>luminosas y amplias instalaciones,</strong> tranquilos gracias a un <strong>gran equipo humano</strong> que empatiza en cada momento con el paciente, seguros ya que contamos con las <strong>últimas tecnologías dentales</strong> que nos ayudan a diagnosticar de manera más precisa cada caso y cómodos.</p>
             <p>Contamos con tres <strong>gabinetes dentales de última generación</strong> equipados con el mayor confort con asientos de viscoelástica extra cómodos para tratamientos largos de rehabilitación oral con implantes dentales.</p>
             <a href="/sobre-nosotros">
@@ -102,7 +102,7 @@
 
         <div class="col-right">
             <div class="circle"></div>
-            <img loading="lazy" src="/build/img/clinica/herramientas-dentales.jpg" alt="Herramientas clínica dental">
+            <img loading="lazy" src="/build/img/clinica/recepcion-tarjeta-de-visita.jpg" alt="Herramientas clínica dental">
         </div>
     </div>
 </section>
@@ -110,7 +110,7 @@
 <section class="section why-choose-us">
     <div class="container">
         <div class="col-left">
-            <img loading="lazy" src="/build/img/equipo/doctora-claudia-brazos-cruzados.png" alt="Doctora Claudia Rada brazos cruzados">
+            <img loading="lazy" src="/build/img/equipo/doctora-claudia-brazos-cruzados-v2.png" alt="Doctora Claudia Rada brazos cruzados">
         </div>
 
         <div class="col-right">
@@ -352,7 +352,7 @@
         <div class="grid">
             <a href="/equipo/dra-claudia" class="card">
                 <div class="image">
-                    <img loading="lazy" src="/build/img/equipo/thumbs/doctora-claudia.png" alt="Doctora Claudia Raa brazos cruzados">
+                    <img loading="lazy" src="/build/img/equipo/thumbs/doctora-claudia-v2.png" alt="Doctora Claudia Raa brazos cruzados">
                 </div>
 
                 <div class="info">
@@ -371,6 +371,17 @@
                     <p class="specialty">Odontólogo</p>
                 </div>
             </a>
+
+            <div class="card">
+                <div class="image">
+                    <img loading="lazy" src="/build/img/equipo/thumbs/higienista-eva.png" alt="Higienista dental Eva Vives">
+                </div>
+
+                <div class="info">
+                    <h3 class="name">Eva Vives Roig</h3>
+                    <p class="specialty">Higienista dental</p>
+                </div>
+            </div>
 
             <div class="card">
                 <div class="image">
@@ -408,7 +419,7 @@
             <?php foreach ($posts as $post) : ?>
                 <a href="/blog/<?php echo $post['category_alias'] . '/' . $post['alias'] ?>" class="article">
                     <div class="image">
-                        <img loading="lazy" src="/build/img/blog/<?php echo $post['src'] ?>" alt="<?php echo $post['alt'] ?>">
+                        <img loading="lazy" src="<?php echo $post['src'] ?>" alt="<?php echo $post['alt'] ?>">
                     </div>
                     <div class="text">
                         <h3 class="title"><?php echo $post['title'] ?></h3>

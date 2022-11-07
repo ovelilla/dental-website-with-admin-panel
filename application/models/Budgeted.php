@@ -10,9 +10,9 @@ class Budgeted {
     private string $budget_id;
     private string $treatment_id;
     private string $piece;
-    private string $unit_price;
-    private string $discount;
-    private string $total_price;
+    private float $unit_price;
+    private int $discount;
+    private float $total_price;
 
     private array $selected_pieces;
     private array $selected_group;
@@ -24,9 +24,9 @@ class Budgeted {
         $this->budget_id = $args['budget_id'] ?? '';
         $this->treatment_id = $args['treatment_id'] ?? '';
         $this->piece = $args['piece'] ?? '';
-        $this->unit_price = $args['unit_price'] ?? '';
-        $this->discount = $args['discount'] ?? '';
-        $this->total_price = $args['total_price'] ?? '';
+        $this->unit_price = $args['unit_price'] ?? 0;
+        $this->discount = $args['discount'] ?? 0;
+        $this->total_price = $args['total_price'] ?? 0;
 
         $this->selectedPieces = $args['selected_pieces'] ?? [];
         $this->selectedGroup = $args['selected_group'] ?? [];
@@ -63,28 +63,28 @@ class Budgeted {
     public function setPiece(string $piece): void {
         $this->piece = $piece;
     }
-
-    public function getUnitPrice(): string {
+    
+    public function getUnitPrice(): float {
         return $this->unit_price;
     }
 
-    public function setUnitPrice(string $unit_price): void {
+    public function setUnitPrice(float $unit_price): void {
         $this->unit_price = $unit_price;
     }
 
-    public function getDiscount(): string {
+    public function getDiscount(): int {
         return $this->discount;
     }
 
-    public function setDiscount(string $discount): void {
+    public function setDiscount(int $discount): void {
         $this->discount = $discount;
     }
 
-    public function getTotalPrice(): string {
+    public function getTotalPrice(): float {
         return $this->total_price;
     }
 
-    public function setTotalPrice(string $total_price): void {
+    public function setTotalPrice(float $total_price): void {
         $this->total_price = $total_price;
     }
 
@@ -144,6 +144,6 @@ class Budgeted {
     }
 
     public function calculateTotalPrice(): string {
-        return floatval($this->unit_price) - floatval($this->unit_price) * floatval($this->discount) / 100 ?? 0;
+        return $this->unit_price - $this->unit_price * $this->discount / 100 ?? 0;
     }
 }

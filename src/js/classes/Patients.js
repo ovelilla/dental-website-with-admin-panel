@@ -11,6 +11,7 @@ import Switch from "./mio/Switch.js";
 import Autocomplete from "./Autocomplete.js";
 import History from "./History.js";
 import { dateFormat } from "../helpers.js";
+import { budgets } from "../app.js";
 
 class Patients {
     constructor() {
@@ -73,11 +74,7 @@ class Patients {
         const patientsSearch = document.querySelector("#patients-search");
 
         if (patientsTable) {
-            await Promise.all([
-                this.readAllPatients(),
-                this.readAllConsents(),
-                this.readAllDoctors(),
-            ]);
+            await Promise.all([this.readAllPatients(), this.readAllConsents(), this.readAllDoctors()]);
             this.showPatientsTable();
 
             const createPatients = document.querySelector("#patient-create");
@@ -123,7 +120,11 @@ class Patients {
 
     resetValues() {
         for (const key of Object.keys(this.values)) {
-            this.values[key] = "";
+            if (key === "active") {
+                this.values[key] = true;
+            } else {
+                this.values[key] = "";
+            }
         }
     }
 
@@ -173,7 +174,7 @@ class Patients {
 
         await this.modal.close();
 
-        this.table.addRow(response.patient);
+        this.table.addRowAtStart(response.patient);
 
         this.resetValues();
         this.errors = null;
@@ -256,8 +257,7 @@ class Patients {
     async deletePatient(patient) {
         const confirm = new Confirm({
             title: "¿Eliminar paciente?",
-            description:
-                "¿Estás seguro de eliminar esta paciente? Los datos no podrán ser recuperados.",
+            description: "¿Estás seguro de eliminar esta paciente? Los datos no podrán ser recuperados.",
             accept: "Eliminar",
             cancel: "Cancelar",
         });
@@ -310,13 +310,9 @@ class Patients {
 
         await popup.open({
             type: "success",
-            title: `¡${
-                selectedPatients.length > 1 ? "Pacientes eliminados" : "Paciente eliminado"
-            }!`,
+            title: `¡${selectedPatients.length > 1 ? "Pacientes eliminados" : "Paciente eliminado"}!`,
             message: `${
-                selectedPatients.length > 1
-                    ? "Los pacientes han sido eliminados"
-                    : "El paciente ha sido eliminado"
+                selectedPatients.length > 1 ? "Los pacientes han sido eliminados" : "El paciente ha sido eliminado"
             } correctamente!`,
             timer: 3000,
         });
@@ -827,7 +823,7 @@ class Patients {
                 },
             ],
             rows: this.patients,
-            findFields: ["name", "surname", "phone", "email"],
+            findFields: ["id", "name", "surname", "phone", "email"],
             container: patientsContainer,
             visibleRows: 15,
             rowsPerPage: 20,
@@ -836,6 +832,11 @@ class Patients {
             deleteSelected: this.deletePatients.bind(this),
             showActionsMenu: true,
             extraActions: [
+                {
+                    name: "Crear presupuesto",
+                    icon: icon.get("fileCheck"),
+                    callback: this.handleCreateBudget.bind(this),
+                },
                 {
                     name: "Consentimientos firmados",
                     icon: icon.get("fileCheck"),
@@ -918,9 +919,7 @@ class Patients {
         consents.classList.add("consents");
 
         this.patient.consents.forEach((patientConsent) => {
-            const consent = this.consents.find(
-                (consent) => consent.id === patientConsent.consent_id
-            );
+            const consent = this.consents.find((consent) => consent.id === patientConsent.consent_id);
 
             const consentButton = document.createElement("button");
             consentButton.classList.add("consent-preview");
@@ -932,9 +931,7 @@ class Patients {
 
                 newConsent.consent = consent;
                 newConsent.patient = patient;
-                newConsent.doctor = this.doctors.find(
-                    (doctor) => doctor.id === newConsent.doctor_id
-                );
+                newConsent.doctor = this.doctors.find((doctor) => doctor.id === newConsent.doctor_id);
                 newConsent.created_at = dateFormat(newConsent.created_at);
 
                 this.generateConsentPDF(newConsent);
@@ -1038,13 +1035,10 @@ class Patients {
                 name: "doctor",
                 id: "doctor",
                 type: "text",
-                value: this.consent.doctor
-                    ? this.consent.doctor.name + " " + this.consent.doctor.surname
-                    : "",
+                value: this.consent.doctor ? this.consent.doctor.name + " " + this.consent.doctor.surname : "",
             },
             error: this.consentErrors && this.consentErrors.doctor,
-            message:
-                this.consentErrors && this.consentErrors.doctor ? this.consentErrors.doctor : "",
+            message: this.consentErrors && this.consentErrors.doctor ? this.consentErrors.doctor : "",
             callback: () => {
                 this.consentErrors = null;
             },
@@ -1073,13 +1067,10 @@ class Patients {
                 name: "patient",
                 id: "patient",
                 type: "text",
-                value: this.consent.patient
-                    ? this.consent.patient.name + " " + this.consent.patient.surname
-                    : "",
+                value: this.consent.patient ? this.consent.patient.name + " " + this.consent.patient.surname : "",
             },
             error: this.consentErrors && this.consentErrors.patient,
-            message:
-                this.consentErrors && this.consentErrors.patient ? this.consentErrors.patient : "",
+            message: this.consentErrors && this.consentErrors.patient ? this.consentErrors.patient : "",
             callback: () => {
                 this.consentErrors = null;
             },
@@ -1181,8 +1172,7 @@ class Patients {
             options: this.consents.filter((consent) => consent.id !== 1),
             selected: this.consent.consent ? { id: this.consent.consent.id } : null,
             error: this.consentErrors && this.consentErrors.consent,
-            message:
-                this.consentErrors && this.consentErrors.consent ? this.consentErrors.consent : "",
+            message: this.consentErrors && this.consentErrors.consent ? this.consentErrors.consent : "",
             onSelect: (option) => {
                 this.consent.consent = option;
                 this.consentErrors = null;
@@ -1272,15 +1262,8 @@ class Patients {
     }
 
     createConsentSignForm() {
-        const {
-            patient,
-            doctor,
-            consent,
-            representative,
-            representative_name,
-            representative_nif,
-            signature,
-        } = this.consent;
+        const { patient, doctor, consent, representative, representative_name, representative_nif, signature } =
+            this.consent;
 
         const consentEl = document.createElement("div");
         consentEl.classList.add("consent");
@@ -1388,7 +1371,7 @@ class Patients {
 
     async generatePatientPDF(patient) {
         this.patient = structuredClone(patient);
-        
+
         const response = await api.post("/api/admin/patients/pdf", this.patient);
 
         const linkSource = `data:application/pdf;base64,${response.base64}`;
@@ -1412,6 +1395,11 @@ class Patients {
             actionCallback: () => {},
             closeCallback: () => {},
         });
+    }
+
+    handleCreateBudget(selected) {
+        budgets.budget.patient = selected;
+        budgets.handleCreateBudget();
     }
 }
 

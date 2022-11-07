@@ -110,14 +110,18 @@
         }
 
         .image {
+            display: flex;
+            min-height: 180px;
+
             img {
                 width: 100%;
-                height: auto;
+                height: 100%;
                 object-fit: cover;
             }
         }
 
         .title {
+            flex-grow: 1;
             font-size: 1.8rem;
             font-weight: 500;
 
@@ -134,7 +138,6 @@
             display: -webkit-box;
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
-            flex-grow: 1;
             overflow: hidden;
             color: v.$blue-gray-600;
             font-size: 1.4rem;
@@ -248,6 +251,7 @@
             .row {
                 order: 1;
                 -webkit-line-clamp: 4;
+                max-height: 500px;
             }
         }
     }

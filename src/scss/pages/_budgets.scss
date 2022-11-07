@@ -1,6 +1,92 @@
 @use "../abstract/mixins" as m;
 @use "../abstract/variables" as v;
 
+.budget-sign {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .name,
+    .date {
+        span {
+            font-weight: 400;
+        }
+    }
+
+    table {
+        width: 100%;
+        text-align: left;
+        border-collapse: collapse;
+        overflow-y: auto;
+        display: block;
+    }
+
+    table tr {
+        border: 1px solid v.$slate-100;
+    }
+
+    table td,
+    table th {
+        padding: 12px 16px;
+        white-space: nowrap;
+    }
+
+    table thead th {
+        font-weight: 600;
+        background-color: v.$slate-50;
+    }
+
+    table tbody td {
+        font-weight: 400;
+    }
+
+    table tfoot tr {
+        border: none;
+    }
+
+    table tfoot tr td {
+        border: 1px solid v.$slate-100;
+        font-weight: 600;
+    }
+
+    table tfoot tr td:first-child {
+        border-right: none;
+        border-bottom: none;
+        border-left: none;
+    }
+
+    table tfoot tr td:nth-child(3) {
+        background-color: v.$slate-50;
+    }
+
+    table tfoot tr td:nth-child(5) {
+        background-color: v.$slate-50;
+    }
+
+    table tfoot tr td:nth-child(2) {
+        border-bottom: none;
+        border-left: none;
+    }
+
+    table tfoot tr td:nth-child(4) {
+        border-bottom: none;
+    }
+
+    .w-100 {
+        width: 100%;
+    }
+
+    .text-right {
+        text-align: right;
+    }
+}
+
 .budgeted {
     display: flex;
     flex-direction: column;

@@ -294,6 +294,7 @@
             }
 
             p {
+                font-weight: 400;
                 margin-top: 10px;
 
                 @include m.tablet {
@@ -331,6 +332,10 @@
 
             @include m.tablet {
                 justify-content: flex-end;
+            }
+
+            img {
+                border-radius: 16px;
             }
         }
     }
@@ -771,6 +776,16 @@
                     box-shadow: v.$shadow-lg;
                 }
 
+                .image {
+                    max-height: 220px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
                 .text {
                     display: flex;
                     flex-direction: column;
@@ -785,6 +800,7 @@
                         font-size: 1.8rem;
                         font-weight: 600;
                         letter-spacing: normal;
+                        text-align: center;
                     }
 
                     hr {
@@ -929,12 +945,6 @@
                     cite {
                         font-style: normal;
                     }
-
-                    // .stars {
-                    //     display: flex;
-                    //     gap: 4px;
-                    //     color: #FFD700;
-                    // }
                 }
             }
         }

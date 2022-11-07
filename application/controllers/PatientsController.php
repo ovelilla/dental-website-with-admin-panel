@@ -20,6 +20,7 @@ class PatientsController {
         try {
             $patients = DB::table('patients')
                 ->select()
+                ->orderBy('id', 'DESC')
                 ->get();
 
             $consents = DB::table('consents_accepted')
@@ -371,19 +372,6 @@ class PatientsController {
         $history->setId($data['history']['id'] ?? null);
         $history->setPatientId($data['history']['patient_id'] ?? $data['id']);
         $history->setExamination($data['history']['examination'] ?? '');
-
-        $errors = $history->validate();
-
-        if (!empty($errors)) {
-            $response = [
-                'status' => 'error',
-                'message' => 'Error actualizar el historial',
-                'type' => 'history',
-                'errors' => $errors,
-            ];
-            $router->response($response);
-            return;
-        }
 
         $reports = [];
         $errors = [];

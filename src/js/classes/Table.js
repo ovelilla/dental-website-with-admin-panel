@@ -53,6 +53,14 @@ class Table {
         this.createTable();
     }
 
+    addRowAtStart(row) {
+        this.rows = [row, ...this.rows];
+        this.copyRows = [row, ...this.copyRows];
+        this.destroy();
+        this.setPages(this.calculatePages());
+        this.createTable();
+    }
+
     updateRow(updateRow) {
         this.rows = this.rows.map((row) => (row.id === updateRow.id ? updateRow : row));
         this.copyRows = this.copyRows.map((row) => (row.id === updateRow.id ? updateRow : row));
@@ -72,12 +80,8 @@ class Table {
     }
 
     deleteRows(deleteRows) {
-        this.rows = this.rows.filter(
-            (row) => !deleteRows.some((deleteRow) => deleteRow.id === row.id)
-        );
-        this.copyRows = this.copyRows.filter(
-            (row) => !deleteRows.some((deleteRow) => deleteRow.id === row.id)
-        );
+        this.rows = this.rows.filter((row) => !deleteRows.some((deleteRow) => deleteRow.id === row.id));
+        this.copyRows = this.copyRows.filter((row) => !deleteRows.some((deleteRow) => deleteRow.id === row.id));
         this.clearSelectedRows();
         this.setPages(this.calculatePages());
         this.checkPage();
@@ -86,26 +90,35 @@ class Table {
     }
 
     searchRow(search) {
-        if (this.findFields) {
-            this.rows = this.copyRows.filter((row) => {
-                const value = this.findFields.reduce(
-                    (previousValue, currentValue, currentIndex) => {
-                        return !currentIndex
-                            ? row[currentValue]
-                            : previousValue + " " + row[currentValue];
-                    },
-                    ""
-                );
+        this.rows = this.copyRows.filter((row) => {
+            const fields = this.findFields ? this.findFields : Object.keys(row);
 
-                return value.toLowerCase().includes(search.toLowerCase());
+            const value = fields.reduce((previousValue, currentValue, currentIndex) => {
+                return !currentIndex ? row[currentValue] : previousValue + " " + row[currentValue];
+            }, "");
+
+            const valueNormalized = value
+                .toString()
+                .toLowerCase()
+                .trim()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .replace(/\s+/g, " ");
+
+            const searchParts = search
+                .toLowerCase()
+                .normalize("NFD")
+                .trim()
+                .replace(/[\u0300-\u036f]/g, "")
+                .replace(/\s+/g, " ")
+                .split(" ");
+
+            const bool = searchParts.every((searchPart) => {
+                return valueNormalized.includes(searchPart);
             });
-        } else {
-            this.rows = this.copyRows.filter((row) => {
-                return Object.values(row).some((value) => {
-                    return value && value.toString().toLowerCase().includes(search.toLowerCase());
-                });
-            });
-        }
+
+            return bool;
+        });
 
         this.clearSelectedRows();
         this.setPages(this.calculatePages());
@@ -272,10 +285,7 @@ class Table {
         const tbody = document.createElement("tbody");
 
         this.rows.forEach((row, index) => {
-            if (
-                index < this.rowsPerPage * (this.page - 1) ||
-                index >= this.rowsPerPage * this.page
-            ) {
+            if (index < this.rowsPerPage * (this.page - 1) || index >= this.rowsPerPage * this.page) {
                 return;
             }
 

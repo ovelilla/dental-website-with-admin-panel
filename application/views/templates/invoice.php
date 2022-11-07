@@ -333,7 +333,7 @@
                         <?php if ($discount) : ?>
                             <td class="text-right"><?php echo $budgeted['piece'] ?></td>
                             <td class="text-right"><?php echo number_format($budgeted['unit_price'], 2, ',', '') ?> €</td>
-                            <td class="text-center"><?php echo number_format($budgeted['discount'], 2, ',', '') ?> %</td>
+                            <td class="text-center"><?php  echo $budgeted['discount'] ? number_format($budgeted['discount'], 2, ',', '') . ' %' : '' ?></td>
                             <td class="text-right"><?php echo number_format($budgeted['total_price'], 2, ',', '') ?> €</td>
                         <?php else : ?>
                             <td class="min-w-100 text-right"><?php echo $budgeted['piece'] ?></td>

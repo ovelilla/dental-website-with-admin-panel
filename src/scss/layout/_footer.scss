@@ -2,7 +2,6 @@
 @use "../abstract/variables" as v;
 
 footer {
-    // background-color: #eef5ff;
     background-color: v.$blue-light-50;
 
     .container {

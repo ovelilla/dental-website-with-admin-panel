@@ -43,6 +43,9 @@ class Input extends Form {
         if (this.input.maxlength) {
             textarea.maxLength = this.input.maxlength;
         }
+        if (this.input.disabled) {
+            textarea.disabled = true;
+        }
 
         textarea.addEventListener("focus", this.handleFocus.bind(this));
         textarea.addEventListener("blur", this.handleBlur.bind(this));

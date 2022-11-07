@@ -6,6 +6,8 @@ use Models\Router;
 use Models\DB;
 use Models\Budget;
 use Models\Budgeted;
+use Models\SignatureBudget;
+use Models\History;
 
 use Dompdf\Dompdf;
 
@@ -14,6 +16,81 @@ use Error;
 use Exception;
 
 class BudgetsController {
+    public static function readPatient($id) {
+        try {
+            $patient = DB::table('patients')
+                ->select()
+                ->where('id', '=', $id)
+                ->limit(1)
+                ->getOne();
+
+            $consents = DB::table('consents_accepted')
+                ->select()
+                ->where('patient_id', '=', $id)
+                ->get();
+
+            $signatures = DB::table('signatures')
+                ->select()
+                ->where('patient_id', '=', $id)
+                ->get();
+
+            $histories = DB::table('histories')
+                ->select()
+                ->get();
+
+            $reports = DB::table('reports')
+                ->select()
+                ->get();
+
+            $patient['age'] = calculateAge($patient['birth_date']);
+            $patient['gender'] = $patient['gender'];
+            $patient['meet'] = $patient['meet'];
+
+            $tmp_consents = [];
+            $tmp_history = [];
+            $tmp_reports = [];
+
+            foreach ($consents as $consent) {
+                if ($consent['patient_id'] === $patient['id']) {
+                    foreach ($signatures as $signature) {
+                        if ($signature['consent_id'] === $consent['id']) {
+                            $consent['signature'] = $signature;
+                        }
+                    }
+                    $tmp_consents[] = $consent;
+                }
+            }
+
+            foreach ($histories as $history) {
+                if ($history['patient_id'] === $patient['id']) {
+                    foreach ($reports as $report) {
+                        if ($report['history_id'] === $history['id']) {
+                            $tmp_reports[] = $report;
+                        }
+                    }
+                    $tmp_history = $history;
+                }
+            }
+
+            $patient['consents'] = $tmp_consents;
+            $patient['history'] = $tmp_history;
+            $patient['history']['reports'] = $tmp_reports;
+
+            $response = [
+                'status' => 'success',
+                'message' => 'Pacientes obtenidos correctamente',
+                'patient' => $patient
+            ];
+        } catch (Exception | Error $e) {
+            $response = [
+                'status' => 'error',
+                'message' => $e->getMessage()
+            ];
+        }
+
+        return $response;
+    }
+
     public static function readAllBudgets(Router $router) {
         try {
             $budgets = DB::table('budgets')
@@ -24,15 +101,18 @@ class BudgetsController {
 
             foreach ($budgets as $key1 => $budget) {
                 $date = new DateTime($budget['created_at']);
+                $budgets[$key1]['created_at_original'] = $budget['created_at'];
                 $budgets[$key1]['created_at'] = $date->format('d/m/Y');
 
-                $patient = DB::table('patients')
+                $patient = self::readPatient($budget['patient_id'])['patient'];
+                $budgets[$key1]['patient'] = $patient;
+
+                $signature = DB::table('signatures_budgets')
                     ->select()
-                    ->where('id', '=', $budget['patient_id'])
+                    ->where('budget_id', '=', $budget['id'])
                     ->limit(1)
                     ->getOne();
-
-                $budgets[$key1]['patient'] = $patient;
+                $budgets[$key1]['signature'] = $signature;
 
                 $budgeteds = DB::table('budgeted')
                     ->select()
@@ -104,15 +184,19 @@ class BudgetsController {
                 ->getOne();
 
             $date = new DateTime($budget['created_at']);
+            $budget['created_at_original'] = $budget['created_at'];
             $budget['created_at'] = $date->format('d/m/Y');
 
-            $patient = DB::table('patients')
+            $patient = self::readPatient($budget['patient_id'])['patient'];
+            $budget['patient'] = $patient;
+
+            $signature = DB::table('signatures_budgets')
                 ->select()
-                ->where('id', '=', $budget['patient_id'])
+                ->where('budget_id', '=', $budget['id'])
                 ->limit(1)
                 ->getOne();
 
-            $budget['patient'] = $patient;
+            $budget['signature'] = $signature;
 
             $budgeteds = DB::table('budgeted')
                 ->select()
@@ -202,9 +286,9 @@ class BudgetsController {
 
             $budgeted->setTreatmentId($bdgtd['treatment']['id'] ?? '');
             $budgeted->setPiece($bdgtd['piece'] ?? '');
-            $budgeted->setUnitPrice($bdgtd['unit_price'] ?? '');
-            $budgeted->setDiscount($bdgtd['discount'] ?? '');
-            $budgeted->setTotalPrice($budgeted->calculateTotalPrice());
+            $budgeted->setUnitPrice($bdgtd['unit_price'] ?? 0);
+            $budgeted->setDiscount($bdgtd['discount'] ?? 0);
+            $budgeted->setTotalPrice($bdgtd['total_price'] ?? 0);
             $budgeted->setSelectedPieces($bdgtd['selectedPieces'] ?? []);
             $budgeted->setSelectedGroup($bdgtd['selectedGroup'] ?? []);
 
@@ -270,6 +354,24 @@ class BudgetsController {
                 }
             }
 
+            $history = new History();
+            $history->setId($data['patient']['history']['id'] ?? null);
+            $history->setPatientId($data['patient']['history']['patient_id'] ?? $data['patient']['id']);
+            $history->setExamination($data['patient']['history']['examination'] ?? '');
+
+            if ($history->getId()) {
+                DB::table('histories')
+                    ->update($history->getData())
+                    ->where('id', '=', $history->getId())
+                    ->execute();
+            } else {
+                $history_insert_data = DB::table('histories')
+                    ->insert($history->getData())
+                    ->execute();
+
+                $history->setId($history_insert_data['insert_id']);
+            }
+
             DB::commit();
 
             $budget = self::readBudget($insert_budget_data['insert_id'])['budget'];
@@ -322,9 +424,9 @@ class BudgetsController {
             $budgeted->setBudgetId($budget->getId());
             $budgeted->setTreatmentId($bdgtd['treatment']['id'] ?? '');
             $budgeted->setPiece($bdgtd['piece'] ?? '');
-            $budgeted->setUnitPrice($bdgtd['unit_price'] ?? '');
-            $budgeted->setDiscount($bdgtd['discount'] ?? '');
-            $budgeted->setTotalPrice($budgeted->calculateTotalPrice());
+            $budgeted->setUnitPrice($bdgtd['unit_price'] ?? 0);
+            $budgeted->setDiscount($bdgtd['discount'] ?? 0);
+            $budgeted->setTotalPrice($bdgtd['total_price'] ?? 0);
             $budgeted->setSelectedPieces($bdgtd['selectedPieces'] ?? []);
             $budgeted->setSelectedGroup($bdgtd['selectedGroup'] ?? []);
 
@@ -418,6 +520,24 @@ class BudgetsController {
                         ->insert($group)
                         ->execute();
                 }
+            }
+
+            $history = new History();
+            $history->setId($data['patient']['history']['id'] ?? null);
+            $history->setPatientId($data['patient']['history']['patient_id'] ?? $data['patient']['id']);
+            $history->setExamination($data['patient']['history']['examination'] ?? '');
+
+            if ($history->getId()) {
+                DB::table('histories')
+                    ->update($history->getData())
+                    ->where('id', '=', $history->getId())
+                    ->execute();
+            } else {
+                $history_insert_data = DB::table('histories')
+                    ->insert($history->getData())
+                    ->execute();
+
+                $history->setId($history_insert_data['insert_id']);
             }
 
             DB::commit();
@@ -618,6 +738,59 @@ class BudgetsController {
             'base64' => $base64,
             'fileName' => $name
         ];
+
+        $router->response($response);
+    }
+
+    public static function signBudget(Router $router) {
+        $data = $router->getData();
+
+        $signatureBudget = new SignatureBudget($data);
+
+        $exists_signature = DB::table('signatures_budgets')
+            ->select()
+            ->where('budget_id', '=', $signatureBudget->getBudgetId())
+            ->limit(1)
+            ->getOne();
+
+        try {
+            DB::beginTransaction();
+
+            if ($exists_signature) {
+                $signatureBudget->setData($exists_signature);
+                $signatureBudget->setSignature($data['signature']);
+
+                DB::table('signatures_budgets')
+                    ->update($signatureBudget->getData())
+                    ->where('budget_id', '=', $signatureBudget->getBudgetId())
+                    ->execute();
+            } else {
+                $signatureBudget->setData($data);
+                $signatureBudget->setCreatedAt(date('Y-m-d H:i:s'));
+
+                DB::table('signatures_budgets')
+                    ->insert($signatureBudget->getData())
+                    ->execute();
+            }
+
+            DB::commit();
+
+            $budget = self::readBudget($signatureBudget->getBudgetId())['budget'];
+
+            $response = [
+                'status' => 'success',
+                'message' => 'Presupuesto firmado correctamente',
+                'budget' => $budget,
+                'prueba' => 'prueba'
+            ];
+        } catch (Exception | Error $e) {
+            DB::rollback();
+
+            $response = [
+                'status' => 'error',
+                'message' => $e->getMessage()
+            ];
+        }
 
         $router->response($response);
     }

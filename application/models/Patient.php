@@ -28,7 +28,7 @@ class Patient {
     private string $smoker;
     private string $infectious;
     private string $comment;
-    private bool $active;
+    private int $active;
     private string $created_at;
 
     private array $errors = [];
@@ -60,7 +60,7 @@ class Patient {
         $this->created_at = $args['created_at'] ?? '';
     }
 
-    public function getId(): int {
+    public function getId(): ?int {
         return $this->id;
     }
 
@@ -236,11 +236,11 @@ class Patient {
         $this->comment = $comment;
     }
 
-    public function getActive(): bool {
+    public function getActive(): int {
         return $this->active;
     }
 
-    public function setActive(bool $active): void {
+    public function setActive(int $active): void {
         $this->active = $active;
     }
 

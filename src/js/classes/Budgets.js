@@ -6,7 +6,9 @@ import Autocomplete from "./Autocomplete.js";
 import Budgeteds from "./Budgeteds.js";
 import Input from "./mio/Input.js";
 import Textarea from "./mio/Textarea.js";
+import Signature from "./Signature.js";
 import { icon } from "../modules/Icon.js";
+import { dateFormat, formatCurrency } from "../helpers.js";
 
 class Budgets {
     constructor() {
@@ -15,7 +17,8 @@ class Budgets {
 
         this.budget = {
             patient: null,
-            comment: "Este presupuesto tiene una validez de 30 días naturales y puede variar por razón de los resultados de las pruebas radiológicas.",
+            comment:
+                "Este presupuesto tiene una validez de 30 días naturales y puede variar por razón de los resultados de las pruebas radiológicas.",
             budgeteds: [],
             errors: null,
         };
@@ -44,7 +47,8 @@ class Budgets {
     resetBudget() {
         this.budget = {
             patient: null,
-            comment: "",
+            comment:
+                "Este presupuesto tiene una validez de 30 días naturales y puede variar por razón de los resultados de las pruebas radiológicas.",
             budgeteds: [],
             errors: null,
         };
@@ -123,7 +127,11 @@ class Budgets {
 
         await this.modal.close();
 
-        this.table.addRow(response.budget);
+        const budgetsTable = document.querySelector("#budgets-table");
+
+        if (budgetsTable) {
+            this.table.addRowAtStart(response.budget);
+        }
     }
 
     async handleUpdateBudget(budget) {
@@ -191,8 +199,7 @@ class Budgets {
     async deleteBudget(budget) {
         const confirm = new Confirm({
             title: "¿Eliminar presupuesto?",
-            description:
-                "¿Estás seguro de eliminar esta presupuesto? Los datos no podrán ser recuperados.",
+            description: "¿Estás seguro de eliminar esta presupuesto? Los datos no podrán ser recuperados.",
             accept: "Eliminar",
             cancel: "Cancelar",
         });
@@ -241,13 +248,9 @@ class Budgets {
 
         await popup.open({
             type: "success",
-            title: `¡${
-                selectedBudgets.length > 1 ? "Presupuestos eliminados" : "Presupuesto eliminado"
-            }!`,
+            title: `¡${selectedBudgets.length > 1 ? "Presupuestos eliminados" : "Presupuesto eliminado"}!`,
             message: `${
-                selectedBudgets.length > 1
-                    ? "Los presupuestos han sido eliminados"
-                    : "El presupuesto ha sido eliminado"
+                selectedBudgets.length > 1 ? "Los presupuestos han sido eliminados" : "El presupuesto ha sido eliminado"
             } correctamente!`,
             timer: 3000,
         });
@@ -293,13 +296,10 @@ class Budgets {
                 type: "text",
                 name: "patient",
                 id: "patient",
-                value: this.budget.patient
-                    ? `${this.budget.patient.name} ${this.budget.patient.surname}`
-                    : "",
+                value: this.budget.patient ? `${this.budget.patient.name} ${this.budget.patient.surname}` : "",
             },
             error: this.budget.errors && this.budget.errors.patient,
-            message:
-                this.budget.errors && this.budget.errors.patient ? this.budget.errors.patient : "",
+            message: this.budget.errors && this.budget.errors.patient ? this.budget.errors.patient : "",
             callback: () => {
                 this.budget.errors = null;
             },
@@ -315,8 +315,29 @@ class Budgets {
             size: 6,
             callback: (patient) => {
                 this.budget.patient = patient;
+                this.budgeteds.repaint(this.budgeteds.getBudgeteds());
+                this.modal.repaint(this.createBudgetForm());
             },
         });
+
+        if (this.budget.patient) {
+            const examination = new Textarea({
+                label: {
+                    text: "Diagnóstico",
+                    for: "examination",
+                },
+                input: {
+                    name: "examination",
+                    id: "examination",
+                    rows: 3,
+                    value: this.budget.patient.history.examination,
+                },
+                callback: (value) => {
+                    this.budget.patient.history.examination = value;
+                },
+            });
+            form.appendChild(examination.getField());
+        }
 
         const comment = new Textarea({
             label: {
@@ -362,6 +383,11 @@ class Budgets {
             showActionsMenu: true,
             extraActions: [
                 {
+                    name: "Firmar presupuesto",
+                    icon: icon.get("pen"),
+                    callback: this.handleSignBudget.bind(this),
+                },
+                {
                     name: "Generar PDF",
                     icon: icon.get("filePDF"),
                     callback: this.generatePDF.bind(this),
@@ -373,6 +399,190 @@ class Budgets {
                 },
             ],
         });
+    }
+
+    handleSignBudget(budget) {
+        this.budget = structuredClone(budget);
+
+        this.modal = new Modal({
+            title: "Firmar presupuesto",
+            customTitle: () => {
+                const logo = document.createElement("img");
+                logo.src = "/build/img/varios/logo-blue.png";
+                logo.classList.add("custom-title");
+                return logo;
+            },
+            content: this.createSign(),
+            action: "Firmar",
+            fullscreenButton: true,
+            actionCallback: this.signBudget.bind(this),
+            closeCallback: () => {
+                this.resetBudget();
+            },
+            maxWidth: "800px",
+        });
+    }
+
+    createSign() {
+        const sign = document.createElement("div");
+        sign.classList.add("budget-sign");
+
+        const info = document.createElement("div");
+        info.classList.add("info");
+        sign.appendChild(info);
+
+        const name = document.createElement("p");
+        name.classList.add("name");
+        name.textContent = "Paciente: ";
+        info.appendChild(name);
+
+        const nameSpan = document.createElement("span");
+        nameSpan.textContent = this.budget.full_patient_name;
+        name.appendChild(nameSpan);
+
+        const date = document.createElement("p");
+        date.classList.add("date");
+        date.textContent = "Fecha: ";
+        info.appendChild(date);
+
+        const dateSpan = document.createElement("span");
+        dateSpan.textContent = dateFormat(this.budget.created_at_original);
+        date.appendChild(dateSpan);
+
+        const hasDiscount = this.budget.budgeteds.some((budgeted) => budgeted.discount > 0);
+
+        const table = document.createElement("table");
+        table.classList.add("table");
+        sign.appendChild(table);
+
+        const columns = {
+            withDiscount: ["Tratamiento", "Pieza", "Precio u.", "Dto.", "Total"],
+            withoutDiscount: ["Tratamiento", "Pieza", "Precio"],
+        };
+
+        const thead = document.createElement("thead");
+        table.appendChild(thead);
+
+        const trHeader = document.createElement("tr");
+        thead.appendChild(trHeader);
+
+        columns[hasDiscount ? "withDiscount" : "withoutDiscount"].forEach((column) => {
+            const th = document.createElement("th");
+            th.textContent = column;
+            trHeader.appendChild(th);
+        });
+
+        const tbody = document.createElement("tbody");
+        table.appendChild(tbody);
+
+        this.budget.budgeteds.forEach((budgeted) => {
+            const tr = document.createElement("tr");
+            tbody.appendChild(tr);
+
+            const tdTreatment = document.createElement("td");
+            tdTreatment.classList.add("w-100");
+            tdTreatment.textContent = budgeted.treatment.name;
+            tr.appendChild(tdTreatment);
+
+            const tdPieces = document.createElement("td");
+            tdPieces.textContent = budgeted.piece;
+            tr.appendChild(tdPieces);
+
+            if (hasDiscount) {
+                const tdUnitPrice = document.createElement("td");
+                tdUnitPrice.textContent = `${budgeted.unit_price} €`;
+                tr.appendChild(tdUnitPrice);
+
+                const tdDiscount = document.createElement("td");
+                tdDiscount.textContent = budgeted.discount;
+                tr.appendChild(tdDiscount);
+            }
+
+            const tdTotalPrice = document.createElement("td");
+            tdTotalPrice.textContent = `${budgeted.total_price} €`;
+            tr.appendChild(tdTotalPrice);
+        });
+
+        let subtotal = 0;
+        let total = 0;
+
+        this.budget.budgeteds.forEach((budgeted) => {
+            subtotal += parseFloat(budgeted.total_price);
+            total +=
+                parseFloat(budgeted.total_price) -
+                (parseFloat(budgeted.total_price) * parseInt(budgeted.discount)) / 100;
+        });
+
+        const tfooter = document.createElement("tfoot");
+        table.appendChild(tfooter);
+
+        const trFooter = document.createElement("tr");
+        tfooter.appendChild(trFooter);
+
+        const tdFake = document.createElement("td");
+        trFooter.appendChild(tdFake);
+
+        const tdTotal = document.createElement("td");
+        tdTotal.textContent = "Total";
+        tdTotal.classList.add("text-right");
+        trFooter.appendChild(tdTotal);
+
+        const tdTotalPrice = document.createElement("td");
+        tdTotalPrice.textContent = formatCurrency(subtotal);
+        trFooter.appendChild(tdTotalPrice);
+
+        if (hasDiscount) {
+            const tdDiscount = document.createElement("td");
+            tdDiscount.textContent = "T. dto.";
+            trFooter.appendChild(tdDiscount);
+
+            const tdDiscountAmount = document.createElement("td");
+            tdDiscountAmount.textContent = formatCurrency(total);
+            trFooter.appendChild(tdDiscountAmount);
+        }
+
+        const signatureField = document.createElement("div");
+        signatureField.classList.add("mio-field");
+        sign.appendChild(signatureField);
+
+        this.signature = new Signature({
+            container: signatureField,
+            title: "Firma",
+            clear: true,
+            signature: this.budget.signature.signature,
+        });
+
+        return sign;
+    }
+
+    async signBudget() {
+        const data = {
+            budget_id: this.budget.id,
+            patient_id: this.budget.patient_id,
+            signature: this.signature.getBase64(),
+        };
+
+        const response = await api.post("/api/admin/budgets/sign", data);
+
+        if (response.status === "error") {
+            await popup.open({
+                type: "error",
+                title: "Error al firmar el presupuesto",
+                message: response.message,
+                timer: 3000,
+            });
+            return;
+        }
+
+        await popup.open({
+            type: "success",
+            title: "¡Presupuesto firmado!",
+            message: "El presupuesto ha sido firmado correctamente.",
+            timer: 3000,
+        });
+
+        this.modal.close();
+        this.table.updateRow(response.budget);
     }
 
     async generatePDF(budget) {
@@ -414,6 +624,10 @@ class Budgets {
             dateStyle: "short",
         };
         return new Intl.DateTimeFormat("es-ES", options).format(newDate);
+    }
+
+    repaint() {
+        this.budgeteds.repaint();
     }
 }
 

@@ -51,6 +51,10 @@ class Autocomplete {
         let count = 0;
 
         this.filteredData = this.data.filter((row) => {
+            if (this.search === "") {
+                return false;
+            }
+
             if (count > 20) {
                 return false;
             }
@@ -59,12 +63,40 @@ class Autocomplete {
                 return !currentIndex ? row[currentValue] : previousValue + " " + row[currentValue];
             }, "");
 
-            if (value.toLowerCase().includes(this.search.toLowerCase())) {
-                count++;
-                return true;
-            } else {
+            const valueNormalized = value
+                .toString()
+                .toLowerCase()
+                .trim()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .replace(/\s+/g, " ");
+
+            const searchParts = this.search
+                .toLowerCase()
+                .normalize("NFD")
+                .trim()
+                .replace(/[\u0300-\u036f]/g, "")
+                .replace(/\s+/g, " ")
+                .split(" ");
+
+            let lastIndex = 0;
+
+            const bool = searchParts.every((searchPart) => {
+                const index = valueNormalized.indexOf(searchPart, lastIndex);
+
+                if (index >= lastIndex) {
+                    lastIndex = index + searchPart.length;
+                    return true;
+                }
+
                 return false;
+            });
+
+            if (bool) {
+                count++;
             }
+
+            return bool;
         });
     }
 
@@ -153,13 +185,8 @@ class Autocomplete {
             this.autocomplete.firstChild.style.maxHeight = 48 * this.size + 10 * 2 + "px";
         }
 
-        if (
-            rect.top + this.autocomplete.firstChild.offsetHeight + this.target.offsetHeight + 2 >
-            window.innerHeight
-        ) {
-            this.autocomplete.firstChild.style.top = `${
-                rect.top - this.autocomplete.firstChild.offsetHeight - 2
-            }px`;
+        if (rect.top + this.autocomplete.firstChild.offsetHeight + this.target.offsetHeight + 2 > window.innerHeight) {
+            this.autocomplete.firstChild.style.top = `${rect.top - this.autocomplete.firstChild.offsetHeight - 2}px`;
         } else {
             this.autocomplete.firstChild.style.top = `${rect.top + this.target.offsetHeight + 2}px`;
         }
@@ -168,17 +195,49 @@ class Autocomplete {
     }
 
     boldString(string, substring) {
-        const index = string.toLowerCase().indexOf(substring.toLowerCase());
-        if (index === -1) {
-            return string;
+        const valueNormalized = string
+            .toString()
+            .toLowerCase()
+            .trim()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/\s+/g, " ");
+
+        const searchParts = substring
+            .toLowerCase()
+            .normalize("NFD")
+            .trim()
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/\s+/g, " ")
+            .split(" ");
+
+        let boldString = "";
+        let lastIndex = 0;
+
+        searchParts.forEach((searchPart) => {
+            const index = valueNormalized.indexOf(searchPart, lastIndex);
+
+            if (index >= lastIndex) {
+                boldString += string.substring(lastIndex, index);
+                boldString += `<b>${string.substring(index, index + searchPart.length)}</b>`;
+                lastIndex = index + searchPart.length;
+            }
+        });
+
+        boldString += string.substring(lastIndex, string.length);
+
+        return boldString;
+    }
+
+    getAllIndexes(array, value) {
+        let indexes = [];
+        let i = -1;
+
+        while ((i = array.indexOf(value, i + 1)) != -1) {
+            indexes.push(i);
         }
-        return (
-            string.substring(0, index) +
-            "<b>" +
-            string.substring(index, index + substring.length) +
-            "</b>" +
-            string.substring(index + substring.length)
-        );
+
+        return indexes;
     }
 
     close() {

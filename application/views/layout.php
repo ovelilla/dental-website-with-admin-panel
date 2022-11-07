@@ -24,18 +24,18 @@
     <meta name="author" content="Oscar Velilla Abril" />
     <meta name="copyright" content="Oscar Velilla Abril" />
 
-    <title>Clínica dental Castellón | Odontología | Dentiny | <?php echo $title ?></title>
+    <title>Clínica dental Castellón | Odontología | Dentiny<?php echo empty($title) ? '' : ' | ' . $title ?></title>
 
-    <link rel="shortcut icon" href="/build/img/iconos/icono16-light.ico">
+    <link rel="shortcut icon" href="/build/img/iconos/icono-svg.svg">
 
-    <link rel="icon" type="image/png" href="/build/img/iconos/icono16-light.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="/build/img/iconos/icono32-light.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/build/img/iconos/icono96-light.png" sizes="96x96">
+    <!-- <link rel="icon" type="image/png" href="/build/img/iconos/icono16-blue.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/build/img/iconos/icono32-blue.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/build/img/iconos/icono96-blue.png" sizes="96x96">
 
-    <link rel="apple-touch-icon" href="/build/img/iconos/icono120-light.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/build/img/iconos/icono152-light.png">
-    <link rel="apple-touch-icon" sizes="167x167" href="/build/img/iconos/icono167-light.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/build/img/iconos/icono180-light.png">
+    <link rel="apple-touch-icon" href="/build/img/iconos/icono120-blue.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/build/img/iconos/icono152-blue.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="/build/img/iconos/icono167-blue.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/build/img/iconos/icono180-blue.png"> -->
 
     <link rel="preload" href="/build/css/app.css" as="style">
     <link rel="stylesheet" href="/build/css/app.css">

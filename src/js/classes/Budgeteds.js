@@ -173,12 +173,9 @@ class Budgeteds {
                 this.targetFocus.input.isEqualNode(inputTreatment)
             ) {
                 inputTreatment.focus();
-                inputTreatment.setSelectionRange(
-                    this.targetFocus.position,
-                    this.targetFocus.position
-                );
+                inputTreatment.setSelectionRange(this.targetFocus.position, this.targetFocus.position);
             }
-        }).observe(tdTreatment, { childList: true });;
+        }).observe(tdTreatment, { childList: true });
         tdTreatment.appendChild(inputTreatment);
 
         new Autocomplete({
@@ -190,6 +187,7 @@ class Budgeteds {
             callback: (treatment) => {
                 budgeted.treatment = treatment;
                 budgeted.unit_price = treatment ? treatment.price : null;
+                budgeted.total_price = this.getTotalTreatment(budgeted);
                 inputPrice.value = treatment ? treatment.price : "";
                 inputTotal.value = this.getTotalTreatment(budgeted).toFixed(2);
                 this.callback();
@@ -226,6 +224,7 @@ class Budgeteds {
 
                     budgeted.selectedPieces = selectedPieces;
                     budgeted.selectedGroup = selectedGroup;
+                    budgeted.total_price = this.getTotalTreatment(budgeted);
 
                     if (selectedGroup) {
                         budgeted.piece = selectedGroup.name;
@@ -285,6 +284,7 @@ class Budgeteds {
         inputDiscount.addEventListener("input", () => {
             if (budgeted.treatment) {
                 budgeted.discount = inputDiscount.value;
+                budgeted.total_price = this.getTotalTreatment(budgeted);
             }
             this.targetFocus = {
                 budgeted,
@@ -301,10 +301,7 @@ class Budgeteds {
                 this.targetFocus.input.isEqualNode(inputDiscount)
             ) {
                 inputDiscount.focus();
-                inputDiscount.setSelectionRange(
-                    this.targetFocus.position,
-                    this.targetFocus.position
-                );
+                inputDiscount.setSelectionRange(this.targetFocus.position, this.targetFocus.position);
             }
         }).observe(tdDiscount, { childList: true });
         tdDiscount.appendChild(inputDiscount);
@@ -343,7 +340,11 @@ class Budgeteds {
         const priceValue = budgeted.unit_price ? parseFloat(budgeted.unit_price) : 0;
         const discountValue = budgeted.discount ? parseFloat(budgeted.discount) : 0;
         const discount = (priceValue * discountValue) / 100;
-        const total = priceValue - discount;
+        let total = priceValue - discount;
+
+        if (!budgeted.selectedGroup && budgeted.selectedPieces.length > 0) {
+            total = total * budgeted.selectedPieces.length;
+        }
 
         return total;
     }
@@ -353,7 +354,13 @@ class Budgeteds {
             const priceValue = budgeted.unit_price ? parseFloat(budgeted.unit_price) : 0;
             const discountValue = budgeted.discount ? parseFloat(budgeted.discount) : 0;
             const discount = (priceValue * discountValue) / 100;
-            return total + priceValue - discount;
+            let sum = priceValue - discount;
+
+            if (!budgeted.selectedGroup && budgeted.selectedPieces.length > 0) {
+                sum = sum * budgeted.selectedPieces.length;
+            }
+
+            return total + sum;
         }, 0);
     }
 
@@ -373,6 +380,7 @@ class Budgeteds {
                 piece: null,
                 unit_price: null,
                 discount: null,
+                total_price: null,
                 selectedPieces: [],
                 selectedGroup: null,
             };
