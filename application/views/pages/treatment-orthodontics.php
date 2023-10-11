@@ -172,7 +172,7 @@
 
             <h2>¿Que preguntar a mi ortodoncista?</h2>
 
-            <p>Cualquier tipo de preguntas que se te ocurra antes, mediante o después del tratamiento se lo puedes comunicar a la ortodoncista, tenemos un teléfono 24 horas los 7 días de la semana. Queremos que el paciente se sienta el más cuidado posible.</p>
+            <p>Cualquier tipo de preguntas que se te ocurra antes, mediante o después del tratamiento se lo puedes comunicar a la ortodoncista, tenemos un teléfono 24 horas los 7 días de la semana. Queremos que el paciente se sienta lo más cuidado posible.</p>
 
             <h2>¿Cuándo se empieza a notar los efectos de la ortodoncia?</h2>
 

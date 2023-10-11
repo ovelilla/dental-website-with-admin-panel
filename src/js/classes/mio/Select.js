@@ -149,13 +149,13 @@ class Select extends Form {
     }
 
     focusSelect() {
-        this.selectEl.focus();
+        // this.selectEl.focus();
         this.field.classList.add("active");
         this.field.classList.add("focus");
     }
 
     blurSelect() {
-        this.selectEl.blur();
+        // this.selectEl.blur();
         if (!this.selectedOption) {
             this.field.classList.remove("active");
         }

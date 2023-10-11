@@ -9,6 +9,8 @@ use Models\ConsentAccepted;
 use Models\Signature;
 use Models\History;
 use Models\Report;
+use Models\PatientEmail;
+use Models\Email;
 
 use Dompdf\Dompdf;
 
@@ -265,7 +267,9 @@ class PatientsController {
             return;
         }
 
-        $patient->setBirthDate($patient_exists['birth_date']);
+        if (!$patient->getBirthDate()) {
+            $patient->setBirthDate(null);
+        }
         $patient->setCreatedAt($patient_exists['created_at']);
 
         try {
@@ -573,6 +577,48 @@ class PatientsController {
             'message' => 'PDF generado correctamente',
             'base64' => $base64,
             'fileName' => $name
+        ];
+
+        $router->response($response);
+    }
+
+    public static function sendEmail(Router $router) {
+        $data = $router->getData();
+
+        $patientEmail = new PatientEmail($data['email']);
+
+        $errors = $patientEmail->validate();
+
+        if (!empty($errors)) {
+            $response = [
+                'status' => 'error',
+                'errors' => $errors
+            ];
+
+            $router->response($response);
+            return;
+        }
+
+        $patients = [];
+
+        foreach ($data['patients'] as $patient_data) {
+            if (!empty($patient_data['email']) && filter_var($patient_data['email'], FILTER_VALIDATE_EMAIL) && $patient_data['active']) {
+                $patient = new Patient($patient_data);
+                $patients[] = $patient;
+            }
+        }
+
+        $emailData = [
+            'email' => $patientEmail,
+            'patients' => $patients
+        ];
+
+        $email = new Email($emailData);
+        $email->sendPatientMessage();
+
+        $response = [
+            'status' => 'success',
+            'msg' => 'Mensaje enviado correctamente'
         ];
 
         $router->response($response);

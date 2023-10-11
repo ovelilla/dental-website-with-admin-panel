@@ -16,7 +16,7 @@ use Error;
 use Exception;
 
 class BudgetsController {
-    public static function readPatient($id) {
+    public static function readPatient(int $id): array {
         try {
             $patient = DB::table('patients')
                 ->select()
@@ -34,6 +34,64 @@ class BudgetsController {
                 ->where('patient_id', '=', $id)
                 ->get();
 
+            $history = DB::table('histories')
+                ->select()
+                ->where('patient_id', '=', $id)
+                ->limit(1)
+                ->getOne();
+                
+            $reports = $history ? DB::table('reports')
+                ->select()
+                ->where('history_id', '=', $history['id'])
+                ->get() : [];
+
+
+            $patient['age'] = calculateAge($patient['birth_date']);
+            $patient['gender'] = $patient['gender'];
+            $patient['meet'] = $patient['meet'];
+            $patient['history'] = $history ? $history + ['reports' => $reports] : null;
+
+            $signatureMap = [];
+            foreach ($signatures as $signature) {
+                $signatureMap[$signature['consent_id']] = $signature;
+            }
+            $tmp_consents = [];
+            foreach ($consents as $consent) {
+                $consent['signature'] = $signatureMap[$consent['id']] ?? null;
+                $tmp_consents[] = $consent;
+            }
+            $patient['consents'] = $tmp_consents;
+
+            $response = [
+                'status' => 'success',
+                'message' => 'Pacientes obtenidos correctamente',
+                'patient' => $patient
+            ];
+        } catch (Exception | Error $e) {
+            $response = [
+                'status' => 'error',
+                'message' => $e->getMessage()
+            ];
+        }
+
+        return $response;
+    }
+
+    public static function readAllPatients() {
+        try {
+            $patients = DB::table('patients')
+                ->select()
+                ->orderBy('id', 'DESC')
+                ->get();
+
+            $consents = DB::table('consents_accepted')
+                ->select()
+                ->get();
+
+            $signatures = DB::table('signatures')
+                ->select()
+                ->get();
+
             $histories = DB::table('histories')
                 ->select()
                 ->get();
@@ -42,44 +100,38 @@ class BudgetsController {
                 ->select()
                 ->get();
 
-            $patient['age'] = calculateAge($patient['birth_date']);
-            $patient['gender'] = $patient['gender'];
-            $patient['meet'] = $patient['meet'];
+            $signaturesMap = [];
+            foreach ($signatures as $signature) {
+                $signaturesMap[$signature['consent_id']] = $signature;
+            }
 
-            $tmp_consents = [];
-            $tmp_history = [];
-            $tmp_reports = [];
-
+            $consentsMap = [];
             foreach ($consents as $consent) {
-                if ($consent['patient_id'] === $patient['id']) {
-                    foreach ($signatures as $signature) {
-                        if ($signature['consent_id'] === $consent['id']) {
-                            $consent['signature'] = $signature;
-                        }
-                    }
-                    $tmp_consents[] = $consent;
-                }
+                $consent['signature'] = $signaturesMap[$consent['id']] ?? null;
+                $consentsMap[$consent['patient_id']][] = $consent;
             }
 
+            $reportsMap = [];
+            foreach ($reports as $report) {
+                $reportsMap[$report['history_id']][] = $report;
+            }
+
+            $historiesMap = [];
             foreach ($histories as $history) {
-                if ($history['patient_id'] === $patient['id']) {
-                    foreach ($reports as $report) {
-                        if ($report['history_id'] === $history['id']) {
-                            $tmp_reports[] = $report;
-                        }
-                    }
-                    $tmp_history = $history;
-                }
+                $history['reports'] = $reportsMap[$history['id']] ?? [];
+                $historiesMap[$history['patient_id']] = $history;
             }
 
-            $patient['consents'] = $tmp_consents;
-            $patient['history'] = $tmp_history;
-            $patient['history']['reports'] = $tmp_reports;
+            foreach ($patients as $key => $patient) {
+                $patients[$key]['age'] = calculateAge($patient['birth_date']);
+                $patients[$key]['consents'] = $consentsMap[$patient['id']] ?? [];
+                $patients[$key]['history'] = $historiesMap[$patient['id']] ?? null;
+            }
 
             $response = [
                 'status' => 'success',
                 'message' => 'Pacientes obtenidos correctamente',
-                'patient' => $patient
+                'patients' => $patients
             ];
         } catch (Exception | Error $e) {
             $response = [
@@ -99,70 +151,84 @@ class BudgetsController {
                 ->orderBy('budgets.created_at', 'desc')
                 ->get();
 
-            foreach ($budgets as $key1 => $budget) {
-                $date = new DateTime($budget['created_at']);
-                $budgets[$key1]['created_at_original'] = $budget['created_at'];
-                $budgets[$key1]['created_at'] = $date->format('d/m/Y');
+            $patients = self::readAllPatients();
 
-                $patient = self::readPatient($budget['patient_id'])['patient'];
-                $budgets[$key1]['patient'] = $patient;
+            $signatures = DB::table('signatures_budgets')
+                ->select()
+                ->get();
 
-                $signature = DB::table('signatures_budgets')
-                    ->select()
-                    ->where('budget_id', '=', $budget['id'])
-                    ->limit(1)
-                    ->getOne();
-                $budgets[$key1]['signature'] = $signature;
+            $budgeteds = DB::table('budgeted')
+                ->select()
+                ->get();
 
-                $budgeteds = DB::table('budgeted')
-                    ->select()
-                    ->where('budget_id', '=', $budget['id'])
-                    ->get();
+            $treatments = DB::table('treatments')
+                ->select()
+                ->get();
 
-                $budgets[$key1]['budgeteds'] = $budgeteds;
+            $selected_pieces = DB::table('selected_pieces')
+                ->select()
+                ->get();
+
+            $selected_groups = DB::table('selected_group')
+                ->select()
+                ->get();
+
+            $patientsMap = [];
+            foreach ($patients['patients'] as $patient) {
+                $patientsMap[$patient['id']] = $patient;
+            }
+
+            $signaturesMap = [];
+            foreach ($signatures as $signature) {
+                $signaturesMap[$signature['budget_id']] = $signature;
+            }
+
+            $treatmentsMap = [];
+            foreach ($treatments as $treatment) {
+                $treatmentsMap[$treatment['id']] = $treatment;
+            }
+
+            $selectedPiecesMap = [];
+            foreach ($selected_pieces as $selected_piece) {
+                $selectedPiecesMap[$selected_piece['budgeted_id']][] = $selected_piece;
+            }
+
+            $selectedGroupsMap = [];
+            foreach ($selected_groups as $selected_group) {
+                $selectedGroupsMap[$selected_group['budgeted_id']] = $selected_group;
+            }
+
+            foreach ($budgets as $i => $budget) {
+                $budgets[$i]['created_at_original'] = $budget['created_at'];
+                $budgets[$i]['created_at'] = (new DateTime($budget['created_at']))->format('d/m/Y');
+
+                $budgets[$i]['patient'] = $patientsMap[$budget['patient_id']] ?? null;
+                $budgets[$i]['signature'] = $signaturesMap[$budget['id']] ?? null;
 
                 $total = 0;
+                $tmp_budgeteds = [];
+                foreach ($budgeteds as $budgeted) {
+                    if ($budgeted['budget_id'] === $budget['id']) {
+                        $total += $budgeted['total_price'];
 
-                foreach ($budgeteds as $key2 => $budgeted) {
-                    $total += $budgeted['total_price'];
+                        $budgeted['treatment'] = $treatmentsMap[$budgeted['treatment_id']] ?? null;
+                        $budgeted['selectedPieces'] = $selectedPiecesMap[$budgeted['id']] ?? [];
+                        $budgeted['selectedGroup'] = $selectedGroupsMap[$budgeted['id']] ?? null;
 
-                    $treatment = DB::table('treatments')
-                        ->select()
-                        ->where('id', '=', $budgeted['treatment_id'])
-                        ->limit(1)
-                        ->getOne();
-
-                    $budgets[$key1]['budgeteds'][$key2]['treatment'] = $treatment;
-
-                    $selected_pieces = DB::table('selected_pieces')
-                        ->select('pieces.*')
-                        ->join('pieces', 'selected_pieces.piece_id', 'pieces.id')
-                        ->where('budgeted_id', '=', $budgeted['id'])
-                        ->get();
-
-                    $budgets[$key1]['budgeteds'][$key2]['selectedPieces'] = $selected_pieces;
-
-                    $selected_group = DB::table('selected_group')
-                        ->select('groups.*')
-                        ->join('groups', 'selected_group.group_id', 'groups.id')
-                        ->where('budgeted_id', '=', $budgeted['id'])
-                        ->limit(1)
-                        ->getOne();
-
-                    if (empty($selected_group)) {
-                        $selected_group = null;
+                        $tmp_budgeteds[] = $budgeted;
                     }
-
-                    $budgets[$key1]['budgeteds'][$key2]['selectedGroup'] = $selected_group;
                 }
 
-                $budgets[$key1]['total'] = number_format($total, 2, ',', '');
+                $budgets[$i]['budgeteds'] = $tmp_budgeteds;
+                $budgets[$i]['total'] = number_format($total, 2, ',', '');
             }
 
             $response = [
                 'status' => 'success',
                 'message' => 'Presupuestos obtenidos correctamente',
-                'budgets' => $budgets
+                'budgets' => $budgets,
+                'prueba' => self::readBudget(1),
+                'prueba2' => self::readPatient(1)
             ];
         } catch (Exception | Error $e) {
             $response = [
@@ -174,7 +240,7 @@ class BudgetsController {
         $router->response($response);
     }
 
-    public static function readBudget($id) {
+    public static function readBudget(int $id): array {
         try {
             $budget = DB::table('budgets')
                 ->select('budgets.*', "CONCAT(patients.name, ' ', patients.surname) AS full_patient_name")
@@ -195,49 +261,49 @@ class BudgetsController {
                 ->where('budget_id', '=', $budget['id'])
                 ->limit(1)
                 ->getOne();
-
             $budget['signature'] = $signature;
 
             $budgeteds = DB::table('budgeted')
                 ->select()
                 ->where('budget_id', '=', $budget['id'])
                 ->get();
-
             $budget['budgeteds'] = $budgeteds;
 
-            $total = 0;
+            $allTreatmentIds = array_column($budget['budgeteds'], 'treatment_id');
+            $treatments = DB::table('treatments')
+                ->select()
+                ->whereIn('id', $allTreatmentIds)
+                ->get();
+            $treatmentsMap = array_column($treatments, null, 'id');
 
+            $allBudgetedIds = array_column($budget['budgeteds'], 'id');
+            $allSelectedPieces = DB::table('selected_pieces')
+                ->select('pieces.*', 'selected_pieces.budgeted_id')
+                ->join('pieces', 'selected_pieces.piece_id', 'pieces.id')
+                ->whereIn('budgeted_id', $allBudgetedIds)
+                ->get();
+            $selectedPiecesMap = [];
+            foreach ($allSelectedPieces as $selected_piece) {
+                $selectedPiecesMap[$selected_piece['budgeted_id']][] = $selected_piece;
+            }
+
+            $allSelectedGroups = DB::table('selected_group')
+                ->select('groups.*', 'selected_group.budgeted_id')
+                ->join('groups', 'selected_group.group_id', 'groups.id')
+                ->whereIn('budgeted_id', $allBudgetedIds)
+                ->get();
+            $selectedGroupsMap = [];
+            foreach ($allSelectedGroups as $selectedGroup) {
+                $selectedGroupsMap[$selectedGroup['budgeted_id']] = $selectedGroup;
+            }
+            
+            $total = 0;
             foreach ($budgeteds as $key => $budgeted) {
                 $total += $budgeted['total_price'] - $budgeted['total_price'] * $budgeted['discount'] / 100;
 
-                $treatment = DB::table('treatments')
-                    ->select()
-                    ->where('id', '=', $budgeted['treatment_id'])
-                    ->limit(1)
-                    ->getOne();
-
-                $budget['budgeteds'][$key]['treatment'] = $treatment;
-
-                $selected_pieces = DB::table('selected_pieces')
-                    ->select('pieces.*')
-                    ->join('pieces', 'selected_pieces.piece_id', 'pieces.id')
-                    ->where('budgeted_id', '=', $budgeted['id'])
-                    ->get();
-
-                $budget['budgeteds'][$key]['selectedPieces'] = $selected_pieces;
-
-                $selected_group = DB::table('selected_group')
-                    ->select('groups.*')
-                    ->join('groups', 'selected_group.group_id', 'groups.id')
-                    ->where('budgeted_id', '=', $budgeted['id'])
-                    ->limit(1)
-                    ->getOne();
-
-                if (empty($selected_group)) {
-                    $selected_group = null;
-                }
-
-                $budget['budgeteds'][$key]['selectedGroup'] = $selected_group;
+                $budget['budgeteds'][$key]['treatment'] = $treatmentsMap[$budgeted['treatment_id']] ?? null;
+                $budget['budgeteds'][$key]['selectedPieces'] = $selectedPiecesMap[$budgeted['id']] ?? [];
+                $budget['budgeteds'][$key]['selectedGroup'] = $selectedGroupsMap[$budgeted['id']] ?? null;
             }
 
             $budget['total'] = number_format($total, 2, ',', '');

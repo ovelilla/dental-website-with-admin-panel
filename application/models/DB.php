@@ -185,9 +185,11 @@ class DB {
     }
 
     public static function rollback(): void {
-        self::$transaction = false;
-        self::$connection->rollback();
-        self::disconnect();
+        if (self::$transaction) {
+            self::$transaction = false;
+            self::$connection->rollback();
+            self::disconnect();
+        }
     }
 
     public static function get(): array {
@@ -252,6 +254,7 @@ class DB {
     }
 
     public static function delete(): DB {
+        
         self::$query = "DELETE FROM " . self::escape([self::$table]);
 
         return new self();
@@ -292,7 +295,7 @@ class DB {
         return $array ?? [];
     }
 
-    private static function escape(array $columns): string {
+    private static function escapeOld(array $columns): string {
         return implode(', ', array_map(function ($column) {
             return implode(' AS ', array_map(function ($column) {
                 $exists = str_contains($column, 'CONCAT');
@@ -314,6 +317,38 @@ class DB {
                 return $exists ? 'CONCAT(' . $column . ')' : $column;
             }, explode(' AS ', $column)));
         }, $columns));
+    }
+
+    private static function escape(array $columns): string {
+      return implode(', ', array_map([self::class, 'processColumn'], $columns));
+    }
+    
+    private static function processColumn(string $column): string {
+        return implode(' AS ', array_map([self::class, 'processAsSegments'], explode(' AS ', $column)));
+    }
+    
+    private static function processAsSegments(string $segment): string {
+        $isConcat = str_contains($segment, 'CONCAT');
+    
+        if ($isConcat) {
+            $segment = str_replace(['CONCAT(', ')'], '', $segment);
+        }
+    
+        $segment = implode(', ', array_map([self::class, 'processCommaSegments'], explode(', ', $segment)));
+    
+        return $isConcat ? 'CONCAT(' . $segment . ')' : $segment;
+    }
+    
+    private static function processCommaSegments(string $segment): string {
+        return implode('.', array_map([self::class, 'escapeSqlIdentifier'], explode('.', $segment)));
+    }
+    
+    private static function escapeSqlIdentifier(string $identifier): string {
+        if ($identifier === '*' || $identifier === "' '" || is_numeric($identifier)) {
+            return $identifier;
+        }
+        
+        return "`" . str_replace("`", "``", $identifier) . "`";
     }
 
     public static function getQuery(): string {

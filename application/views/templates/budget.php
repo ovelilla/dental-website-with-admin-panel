@@ -289,7 +289,15 @@
         if (!$discount && $budgeted['discount'] > 0) {
             $discount = true;
         }
-        $subtotal += $budgeted['discount'] !== 100 ? $budgeted['total_price'] / (1 - $budgeted['discount']/100) : 0;
+
+        if ($budgeted['selectedPieces'] > 0 && !$budgeted['selectedGroup']) {
+            $subtotal += $budgeted['unit_price'] * count($budgeted['selectedPieces']);
+        }
+
+        if (($budgeted['selectedPieces'] > 0 && $budgeted['selectedGroup']) || empty($budgeted['selectedPieces'])) {
+            $subtotal += $budgeted['unit_price'];
+        }
+        
         $total += $budgeted['total_price'];
     }
     ?>

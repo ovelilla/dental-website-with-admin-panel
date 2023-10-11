@@ -12,6 +12,7 @@ import Autocomplete from "./Autocomplete.js";
 import History from "./History.js";
 import { dateFormat } from "../helpers.js";
 import { budgets } from "../app.js";
+import Datepicker from "../components/datepicker";
 
 class Patients {
     constructor() {
@@ -66,6 +67,14 @@ class Patients {
         };
         this.consentErrors = null;
 
+        this.email = {
+            subject: "Novedades en clínica dental",
+            header: "¡Hola {name}...",
+            body: "Hola {name}, desde Dentiny te informamos que...",
+            footer: "Recibe un cordial saludo...",
+        };
+        this.emailErrors = null
+
         this.init();
     }
 
@@ -118,12 +127,12 @@ class Patients {
         }
     }
 
-    resetValues() {
-        for (const key of Object.keys(this.values)) {
+    resetValues(values) {
+        for (const key of Object.keys(values)) {
             if (key === "active") {
-                this.values[key] = true;
+                values[key] = true;
             } else {
-                this.values[key] = "";
+                values[key] = "";
             }
         }
     }
@@ -143,7 +152,7 @@ class Patients {
             fullscreenButton: true,
             actionCallback: () => this.createPatient(),
             closeCallback: () => {
-                this.resetValues();
+                this.resetValues(this.values);
                 this.errors = null;
                 this.patient = null;
             },
@@ -176,7 +185,7 @@ class Patients {
 
         this.table.addRowAtStart(response.patient);
 
-        this.resetValues();
+        this.resetValues(this.values);
         this.errors = null;
     }
 
@@ -198,7 +207,7 @@ class Patients {
             fullscreenButton: true,
             actionCallback: () => this.updatePatient(),
             closeCallback: () => {
-                this.resetValues();
+                this.resetValues(this.values);
                 this.errors = null;
                 this.patient = null;
             },
@@ -242,7 +251,7 @@ class Patients {
         this.table.updateRow(response.patient);
 
         this.patient = null;
-        this.resetValues();
+        this.resetValues(this.values);
         this.errors = null;
     }
 
@@ -451,22 +460,25 @@ class Patients {
         double3.classList.add("mio-double");
         form.appendChild(double3);
 
-        const birthDate = new Input({
+        const birthDate = new Datepicker({
             label: {
                 text: "Fecha de nacimiento",
                 for: "birth_date",
             },
             input: {
-                type: "date",
                 name: "birth_date",
                 id: "birth_date",
                 value: this.values.birth_date,
+                readOnly: true,
+                format: "short",
             },
-            callback: (value) => {
-                this.values.birth_date = value;
+            onSelect: (date) => {
+                const offset = new Date().getTimezoneOffset();
+                const dateUTC = new Date(date.getTime() - offset * 60 * 1000);
+                this.values.birth_date = dateUTC.toISOString().split("T")[0];
             },
         });
-        double3.appendChild(birthDate.getField());
+        double3.appendChild(birthDate.get());
 
         const gender = new Select({
             label: {
@@ -1384,17 +1396,145 @@ class Patients {
     }
 
     handleSendEmail(selected) {
-        console.log(selected);
-        const div = document.createElement("div");
-        div.textContent = "Enviar email";
         this.modal = new Modal({
-            title: "Enviar email",
-            content: div,
+            title: "Enviar email a " + selected.length + " pacientes",
+            content: this.createEmailForm(),
             action: "Enviar",
             maxWidth: "700px",
-            actionCallback: () => {},
-            closeCallback: () => {},
+            actionCallback: () => {
+                this.sendEmail(selected);
+            },
+            closeCallback: () => {
+                this.email = {
+                    subject: "Novedades en clínica dental",
+                    header: "¡Hola {name}...",
+                    body: "Hola {name}, desde Dentiny te informamos que...",
+                    footer: "Recibe un cordial saludo...",
+                };
+                this.emailErrors = null;
+            },
         });
+    }
+
+    async sendEmail(selected) {
+        const data = {
+            patients: selected,
+            email: this.email,
+        }
+
+        const response = await api.post("/api/admin/patients/email", data);
+        console.log(response);
+
+        if (response.status === "error") {
+            this.emailErrors = response.errors;
+            this.modal.repaint(this.createEmailForm());
+            return;
+        }
+
+        await popup.open({
+            type: "success",
+            title: "¡Mensaje enviado!",
+            message: "El mensaje ha sido enviado correctamente.",
+            timer: 3000,
+        });
+
+        await this.modal.close();
+
+        this.email = {
+            subject: "Novedades en clínica dental",
+            header: "¡Hola {name}...",
+            body: "Hola {name}, desde Dentiny te informamos que...",
+            footer: "Recibe un cordial saludo...",
+        };
+        this.emailErrors = null;
+    }
+
+    createEmailForm() {
+        const form = document.createElement("form");
+        form.noValidate = true;
+        form.classList.add("mio-form");
+
+        const subject = new Input({
+            label: {
+                text: "Asunto",
+                for: "subject",
+            },
+            input: {
+                type: "text",
+                name: "subject",
+                id: "subject",
+                value: this.email.subject,
+            },
+            error: this.emailErrors && this.emailErrors.subject,
+            message: this.emailErrors && this.emailErrors.subject ? this.emailErrors.subject : "",
+            callback: (value) => {
+                this.email.subject = value;
+                this.emailErrors = null;
+            },
+        });
+        form.appendChild(subject.getField());
+
+        const header = new Input({
+            label: {
+                text: "Encabezado",
+                for: "header",
+            },
+            input: {
+                type: "text",
+                name: "header",
+                id: "header",
+                value: this.email.header,
+            },
+            error: this.emailErrors && this.emailErrors.header,
+            message: this.emailErrors && this.emailErrors.header ? this.emailErrors.header : "",
+            callback: (value) => {
+                this.email.header = value;
+                this.emailErrors = null;
+            },
+        });
+        form.appendChild(header.getField());
+
+        const body = new Textarea({
+            label: {
+                text: "Mensaje",
+                for: "body",
+            },
+            input: {
+                name: "body",
+                id: "body",
+                rows: 6,
+                value: this.email.body,
+            },
+            error: this.emailErrors && this.emailErrors.body,
+            message: this.emailErrors && this.emailErrors.body ? this.emailErrors.body : "",
+            callback: (value) => {
+                this.email.body = value;
+                this.emailErrors = null;
+            },
+        });
+        form.appendChild(body.getField());
+
+        const footer = new Input({
+            label: {
+                text: "Despedida",
+                for: "footer",
+            },
+            input: {
+                type: "text",
+                name: "footer",
+                id: "footer",
+                value: this.email.footer,
+            },
+            error: this.emailErrors && this.emailErrors.footer,
+            message: this.emailErrors && this.emailErrors.footer ? this.emailErrors.footer : "",
+            callback: (value) => {
+                this.email.footer = value;
+                this.emailErrors = null;
+            },
+        });
+        form.appendChild(footer.getField());
+
+        return form;
     }
 
     handleCreateBudget(selected) {

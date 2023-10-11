@@ -104,7 +104,7 @@
         <div class="col">
             <h2>¿Son todas las ortodoncias invisibles iguales?</h2>
 
-            <p>En absoluto, las mejores y únicas marcas que te corrigen toda la mordida con la mínima invasión dental son <strong>Spark, Secretaligner e Insisalign.</strong> Huye de ofertas low-cost. Lo barato cuando se trata de salud puede llegar a salirte muy muy caro. Por favor, infórmate bien antes de tomar alguna decisión sin compromiso con nuestro equipo humano de expertos.</p>
+            <p>En absoluto, las mejores y únicas marcas que te corrigen toda la mordida con la mínima invasión dental son <strong>Spark, Secretaligner e Invisalign.</strong> Huye de ofertas low-cost. Lo barato cuando se trata de salud puede llegar a salirte muy muy caro. Por favor, infórmate bien antes de tomar alguna decisión sin compromiso con nuestro equipo humano de expertos.</p>
         </div>
 
         <div class="col">

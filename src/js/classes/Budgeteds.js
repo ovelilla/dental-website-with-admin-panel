@@ -134,9 +134,9 @@ class Budgeteds {
         tdTotalText.textContent = "Total";
         tr.appendChild(tdTotalText);
 
-        const tdTotalNumber = document.createElement("td");
-        tdTotalNumber.textContent = this.getTotal().toFixed(2).replace(".", ",");
-        tr.appendChild(tdTotalNumber);
+        this.tdTotalNumber = document.createElement("td");
+        this.tdTotalNumber.textContent = this.getTotal().toFixed(2).replace(".", ",");
+        tr.appendChild(this.tdTotalNumber);
 
         return tfoot;
     }
@@ -159,23 +159,7 @@ class Budgeteds {
             inputTreatment.classList.remove("error");
             inputPrice.classList.remove("error");
             budgeted.errors = null;
-            this.targetFocus = {
-                budgeted,
-                input: inputTreatment,
-                position: inputTreatment.selectionStart,
-            };
         });
-
-        new MutationObserver(() => {
-            if (
-                this.targetFocus &&
-                this.targetFocus.budgeted === budgeted &&
-                this.targetFocus.input.isEqualNode(inputTreatment)
-            ) {
-                inputTreatment.focus();
-                inputTreatment.setSelectionRange(this.targetFocus.position, this.targetFocus.position);
-            }
-        }).observe(tdTreatment, { childList: true });
         tdTreatment.appendChild(inputTreatment);
 
         new Autocomplete({
@@ -256,21 +240,11 @@ class Budgeteds {
             budgeted.errors = null;
             if (budgeted.treatment) {
                 budgeted.unit_price = inputPrice.value;
+                budgeted.total_price = this.getTotalTreatment(budgeted);
+                inputTotal.value = this.getTotalTreatment(budgeted).toFixed(2);
+                this.tdTotalNumber.textContent = this.getTotal().toFixed(2).replace(".", ",");
             }
-            this.targetFocus = { budgeted, input: inputPrice, position: inputPrice.selectionStart };
-            this.callback();
         });
-
-        new MutationObserver(() => {
-            if (
-                this.targetFocus &&
-                this.targetFocus.budgeted === budgeted &&
-                this.targetFocus.input.isEqualNode(inputPrice)
-            ) {
-                inputPrice.focus();
-                inputPrice.setSelectionRange(this.targetFocus.position, this.targetFocus.position);
-            }
-        }).observe(tdPrice, { childList: true });
         tdPrice.appendChild(inputPrice);
 
         const tdDiscount = document.createElement("td");
@@ -283,27 +257,12 @@ class Budgeteds {
         inputDiscount.value = budgeted.discount ? budgeted.discount : "";
         inputDiscount.addEventListener("input", () => {
             if (budgeted.treatment) {
-                budgeted.discount = inputDiscount.value;
+                budgeted.discount = parseInt(inputDiscount.value);
                 budgeted.total_price = this.getTotalTreatment(budgeted);
+                inputTotal.value = this.getTotalTreatment(budgeted).toFixed(2);
+                this.tdTotalNumber.textContent = this.getTotal().toFixed(2).replace(".", ",");
             }
-            this.targetFocus = {
-                budgeted,
-                input: inputDiscount,
-                position: inputDiscount.selectionStart,
-            };
-            this.callback();
         });
-
-        new MutationObserver(() => {
-            if (
-                this.targetFocus &&
-                this.targetFocus.budgeted === budgeted &&
-                this.targetFocus.input.isEqualNode(inputDiscount)
-            ) {
-                inputDiscount.focus();
-                inputDiscount.setSelectionRange(this.targetFocus.position, this.targetFocus.position);
-            }
-        }).observe(tdDiscount, { childList: true });
         tdDiscount.appendChild(inputDiscount);
 
         const tdTotal = document.createElement("td");

@@ -1,7 +1,7 @@
 <div class="menu hidden out">
     <div class="container">
         <div class="body">
-            <a href="/tratamientos/rehabilitacion-oral-protesis-dentales">
+            <a href="/rehabilitacion-oral-protesis-dentales">
                 <div class="icon">
                     <img loading="lazy" src="/build/img/iconos/23-blue.png" alt="Icono ortodoncia">
                 </div>
@@ -12,7 +12,7 @@
                 </div>
             </a>
 
-            <a href="/tratamientos/implantes-dentales">
+            <a href="/implantes-dentales">
                 <div class="icon">
                     <img loading="lazy" src="/build/img/iconos/35-blue.png" alt="Icono ortodoncia invisible">
                 </div>
@@ -23,7 +23,7 @@
                 </div>
             </a>
 
-            <a href="/tratamientos/estetica-dental">
+            <a href="/estetica-dental">
                 <div class="icon">
                     <img loading="lazy" src="/build/img/iconos/27-blue.png" alt="Icono implantes dentales">
                 </div>
@@ -34,7 +34,7 @@
                 </div>
             </a>
 
-            <a href="/tratamientos/ortodoncia-invisible">
+            <a href="/ortodoncia-invisible">
                 <div class="icon">
                     <img loading="lazy" src="/build/img/iconos/21-blue.png" alt="Icono blanqueamiento dental">
                 </div>
@@ -45,7 +45,7 @@
                 </div>
             </a>
 
-            <a href="/tratamientos/ortodoncia">
+            <a href="/ortodoncia">
                 <div class="icon">
                     <img loading="lazy" src="/build/img/iconos/20-blue.png" alt="Icono priodoncia">
                 </div>
@@ -56,7 +56,7 @@
                 </div>
             </a>
 
-            <a href="/tratamientos/blanqueamiento-dental">
+            <a href="/blanqueamiento-dental">
                 <div class="icon">
                     <img loading="lazy" src="/build/img/iconos/7-blue.png" alt="Icono endodoncia">
                 </div>

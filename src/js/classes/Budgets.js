@@ -56,6 +56,7 @@ class Budgets {
 
     async readAllBudgets() {
         const response = await api.get("/api/admin/budgets");
+        console.log(response);
         if (response.status === "error") {
             return;
         }
@@ -132,6 +133,8 @@ class Budgets {
         if (budgetsTable) {
             this.table.addRowAtStart(response.budget);
         }
+
+        this.resetBudget();
     }
 
     async handleUpdateBudget(budget) {
@@ -194,6 +197,8 @@ class Budgets {
         await this.modal.close();
 
         this.table.updateRow(response.budget);
+
+        this.resetBudget();
     }
 
     async deleteBudget(budget) {
@@ -256,6 +261,8 @@ class Budgets {
         });
 
         this.table.deleteRows(selectedBudgets);
+
+        this.resetBudget();
     }
 
     createSearch() {
@@ -549,7 +556,7 @@ class Budgets {
             container: signatureField,
             title: "Firma",
             clear: true,
-            signature: this.budget.signature.signature,
+            signature: this.budget.signature.signature
         });
 
         return sign;
@@ -586,6 +593,7 @@ class Budgets {
     }
 
     async generatePDF(budget) {
+        console.log(budget);
         const response = await api.post("/api/admin/budgets/pdf", budget);
 
         const linkSource = `data:application/pdf;base64,${response.base64}`;

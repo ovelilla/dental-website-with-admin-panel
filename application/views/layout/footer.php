@@ -20,11 +20,11 @@
                 <div class="treatments">
                     <h2>Tratamientos</h2>
                     <nav>
-                        <a href="/tratamientos/implantes-dentales">Implantes</a>
-                        <a href="/tratamientos/blanqueamiento-dental">Blanqueamiento</a>
-                        <a href="/tratamientos/ortodoncia">Ortodoncia</a>
-                        <a href="/tratamientos/periodoncia">Periodoncia</a>
-                        <a href="/tratamientos/endodoncia">Endodoncia</a>
+                        <a href="/implantes-dentales">Implantes</a>
+                        <a href="/blanqueamiento-dental">Blanqueamiento</a>
+                        <a href="/ortodoncia">Ortodoncia</a>
+                        <a href="/periodoncia">Periodoncia</a>
+                        <a href="/endodoncia">Endodoncia</a>
                     </nav>
                 </div>
 

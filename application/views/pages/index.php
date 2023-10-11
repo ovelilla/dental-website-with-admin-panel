@@ -28,7 +28,7 @@
 <section class="section quick-access">
     <div class="container">
         <div class="grid">
-            <a href="/tratamientos/implantes-dentales" class="card">
+            <a href="/implantes-dentales" class="card">
                 <div class="icon">
                     <div class="icon-container">
                         <img loading="lazy" src="/build/img/iconos/35.png" alt="Icono implantes dentales">
@@ -46,7 +46,7 @@
                 </div>
             </a>
 
-            <a href="/tratamientos/ortodoncia-invisible" class="card">
+            <a href="/ortodoncia-invisible" class="card">
                 <div class="icon">
                     <div class="icon-container">
                         <img loading="lazy" src="/build/img/iconos/21.png" alt="Icono ortodoncia invisible">
@@ -64,7 +64,7 @@
                 </div>
             </a>
 
-            <a href="/tratamientos/rehabilitacion-oral-protesis-dentales" class="card">
+            <a href="/rehabilitacion-oral-protesis-dentales" class="card">
                 <div class="icon">
                     <div class="icon-container">
                         <img loading="lazy" src="/build/img/iconos/23.png" alt="Icono rehabilitación oral y prótesis dentales">
@@ -177,7 +177,7 @@
         <p>Nuestros profesionales trabajan en sinergia para obtener los mejores resultados.</p>
 
         <div class="grid">
-            <a href="/tratamientos/rehabilitacion-oral-protesis-dentales" class="card">
+            <a href="/rehabilitacion-oral-protesis-dentales" class="card">
                 <div class="icon">
                     <div class="icon-container">
                         <img loading="lazy" src="/build/img/iconos/23.png" alt="Icono rehabilitación oral y prótesis dentales">
@@ -195,7 +195,7 @@
                 </div>
             </a>
 
-            <a href="/tratamientos/implantes-dentales" class="card">
+            <a href="/implantes-dentales" class="card">
                 <div class="icon">
                     <div class="icon-container">
                         <img loading="lazy" src="/build/img/iconos/35.png" alt="Icono implantes dentales">
@@ -213,7 +213,7 @@
                 </div>
             </a>
 
-            <a href="/tratamientos/estetica-dental" class="card">
+            <a href="/estetica-dental" class="card">
                 <div class="icon">
                     <div class="icon-container">
                         <img loading="lazy" src="/build/img/iconos/27.png" alt="Icono estética dental">
@@ -231,7 +231,7 @@
                 </div>
             </a>
 
-            <a href="/tratamientos/ortodoncia-invisible" class="card">
+            <a href="/ortodoncia-invisible" class="card">
                 <div class="icon">
                     <div class="icon-container">
                         <img loading="lazy" src="/build/img/iconos/21.png" alt="Icono ortodoncia invisible">
@@ -249,7 +249,7 @@
                 </div>
             </a>
 
-            <a href="/tratamientos/ortodoncia" class="card">
+            <a href="/ortodoncia" class="card">
                 <div class="icon">
                     <div class="icon-container">
                         <img loading="lazy" src="/build/img/iconos/20.png" alt="Icono ortodoncia">
@@ -267,7 +267,7 @@
                 </div>
             </a>
 
-            <a href="/tratamientos/blanqueamiento-dental" class="card">
+            <a href="/blanqueamiento-dental" class="card">
                 <div class="icon">
                     <div class="icon-container">
                         <img loading="lazy" src="/build/img/iconos/07.png" alt="Icono blanqueamiento dental">
@@ -285,7 +285,7 @@
                 </div>
             </a>
 
-            <a href="/tratamientos/cirugia-dental" class="card">
+            <a href="/cirugia-dental" class="card">
                 <div class="icon">
                     <div class="icon-container">
                         <img loading="lazy" src="/build/img/iconos/34.png" alt="Icono cirugía dental">
@@ -303,7 +303,7 @@
                 </div>
             </a>
 
-            <a href="/tratamientos/periodoncia" class="card">
+            <a href="/periodoncia" class="card">
                 <div class="icon">
                     <div class="icon-container">
                         <img loading="lazy" src="/build/img/iconos/31.png" alt="Icono periodoncia">
@@ -321,7 +321,7 @@
                 </div>
             </a>
 
-            <a href="/tratamientos/endodoncia" class="card">
+            <a href="/endodoncia" class="card">
                 <div class="icon">
                     <div class="icon-container">
                         <img loading="lazy" src="/build/img/iconos/11.png" alt="Icono endodoncia">
@@ -352,7 +352,7 @@
         <div class="grid">
             <a href="/equipo/dra-claudia" class="card">
                 <div class="image">
-                    <img loading="lazy" src="/build/img/equipo/thumbs/doctora-claudia-v2.png" alt="Doctora Claudia Raa brazos cruzados">
+                    <img loading="lazy" src="/build/img/equipo/thumbs/doctora-claudia-v2.png" alt="Doctora Claudia Rada brazos cruzados">
                 </div>
 
                 <div class="info">
@@ -369,6 +369,17 @@
                 <div class="info">
                     <h3 class="name">Dr. Joan Llop Cabedo</h3>
                     <p class="specialty">Odontólogo</p>
+                </div>
+            </a>
+
+            <a href="/equipo/dra-aurora" class="card">
+                <div class="image">
+                    <img loading="lazy" src="/build/img/equipo/thumbs/doctora-aurora.png" alt="Doctora Aurora Deza">
+                </div>
+
+                <div class="info">
+                    <h3 class="name">Dra. Aurora Deza</h3>
+                    <p class="specialty">Odontóloga</p>
                 </div>
             </a>
 

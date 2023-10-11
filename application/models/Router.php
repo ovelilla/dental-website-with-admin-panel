@@ -17,7 +17,7 @@ class Router {
     public function __construct(Session $session) {
         $this->session = $session;
 
-        $this->url = $_SERVER['REQUEST_URI'];
+        $this->url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
         $this->request_method = $_SERVER['REQUEST_METHOD'];
 
         $this->data = json_decode(file_get_contents('php://input'), true) ?? $_POST;
